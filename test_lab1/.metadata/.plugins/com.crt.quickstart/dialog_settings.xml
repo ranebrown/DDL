@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/Users/Rane/Google Drive/School/Classes/Fall 2015/DDL/NXP_LPCXpresso1114-302_2011-02-07.zip"/>
+			<item value="/Applications/lpcxpresso_7.9.0_455/lpcxpresso/Examples/Legacy/NXP/LPC1000/LPC11xx/LPCXpresso1114_cmsis2.zip"/>
+		</list>
+	</section>
+	<section name="com.crt.quickstart.views.wizards.examples.QSExampleSelectionPage">
+		<item value="/Users/Rane/Google Drive/School/Classes/Fall 2015/DDL" key="dirname"/>
+	</section>
+</section>

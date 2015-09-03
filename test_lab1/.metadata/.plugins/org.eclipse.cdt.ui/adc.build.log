@@ -1,0 +1,6 @@
+14:30:16 **** Incremental Build of configuration Debug for project adc ****
+make -r all 
+make: Nothing to be done for `all'.
+
+14:30:16 Build Finished (took 92ms)
+
