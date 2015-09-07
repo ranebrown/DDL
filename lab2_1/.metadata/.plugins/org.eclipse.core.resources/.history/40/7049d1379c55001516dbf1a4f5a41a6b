@@ -1,0 +1,40 @@
+
+#include "board.h"
+#include <stdio.h>
+
+void TIMER32_0_IRQHandler(void)
+{
+	if (Chip_TIMER_MatchPending(LPC_TIMER32_0, 1)) {
+		Chip_TIMER_ClearMatch(LPC_TIMER32_0, 1);
+		Board_LED_Set(0, true);
+	}
+}
+
+int main(void) {
+	// variables
+	uint32_t timerFreq;
+
+	// board initilization
+	SystemCoreClockUpdate();
+	Board_Init();
+
+	// timer setup
+	Chip_TIMER_Init(LPC_TIMER32_0);
+	timerFreq = Chip_Clock_GetSystemClockRate();
+	Chip_TIMER_Reset(LPC_TIMER32_0);
+	Chip_TIMER_MatchEnableInt(LPC_TIMER32_0, 1);
+	Chip_TIMER_SetMatch(LPC_TIMER32_0, 1, (timerFreq / 10));
+	Chip_TIMER_ResetOnMatchEnable(LPC_TIMER32_0, 1);
+	Chip_TIMER_Enable(LPC_TIMER32_0);
+
+	/* Enable timer interrupt */
+	NVIC_ClearPendingIRQ(TIMER_32_0_IRQn);
+	NVIC_EnableIRQ(TIMER_32_0_IRQn);
+
+	/* LEDs toggle in interrupt handlers */
+	while (1) {
+		__WFI();
+	}
+
+	return 0;
+}

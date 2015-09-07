@@ -1,0 +1,6 @@
+13:13:04 **** Incremental Build of configuration Debug for project LPCX1114_cmsis2_blinky ****
+make -r all 
+make: Nothing to be done for `all'.
+
+13:13:04 Build Finished (took 39ms)
+

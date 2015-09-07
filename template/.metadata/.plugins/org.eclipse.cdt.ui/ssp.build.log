@@ -1,0 +1,58 @@
+13:35:28 **** Build of configuration Debug for project ssp ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/ssp_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/ssp_main.d" -MT"src/ssp_main.o" -MT"src/ssp_main.d" -o "src/ssp_main.o" "../src/ssp_main.c"
+Finished building: ../src/ssp_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/ssp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
+Finished building: ../driver/ssp.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: ssp.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=ssp.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "ssp.axf"  ./startup/cr_startup_lpc11.o  ./src/ssp_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/ssp.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: ssp.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size ssp.axf; arm-none-eabi-objcopy -O binary ssp.axf ssp.bin ; checksum -p LPC1114_302 -d ssp.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3716	      4	     56	   3776	    ec0	ssp.axf
+Written checksum 0xefffd635 at offset 0x1c in file ssp.bin
+Previous value 0x00000000 at offset 0x1c in file ssp.bin
+ 
+
+13:35:31 Build Finished (took 2s.867ms)
+

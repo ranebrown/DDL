@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fibonacci/src/asm_sum_cm0.s&apos; to &apos;fib.s&apos;" description="Rename resource &apos;asm_sum_cm0.s&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/asm_sum_cm0.s" name="fib.s" stamp="1441652810758" updateReferences="true"/>
+</session>

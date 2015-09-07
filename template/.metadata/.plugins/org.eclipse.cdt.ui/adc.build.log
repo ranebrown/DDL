@@ -1,0 +1,53 @@
+13:35:19 **** Build of configuration Debug for project adc ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.o" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+Finished building: ../src/adc_main.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   5227	      4	    124	   5355	   14eb	adc.axf
+Written checksum 0xefffd635 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+
+13:35:19 Build Finished (took 836ms)
+

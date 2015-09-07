@@ -1,0 +1,725 @@
+!SESSION 2015-09-03 13:23:26.916 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Rane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/Rane/LPCXpresso/template -keyring /Users/Rane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-09-03 13:23:34.340
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2015-09-03 13:23:38.341
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-09-03 13:23:38.341
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:24.998
+!MESSAGE Indexed 'adc' (7 sources, 16 headers) in 6.34 sec: 851 declarations; 1,615 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:30.504
+!MESSAGE Indexed 'blinky' (20 sources, 28 headers) in 5.12 sec: 939 declarations; 2,246 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:32.856
+!MESSAGE Indexed 'extint' (7 sources, 14 headers) in 2.27 sec: 888 declarations; 1,670 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:36.357
+!MESSAGE Indexed 'freertos' (14 sources, 34 headers) in 3.27 sec: 1,939 declarations; 4,597 references; 0 unresolved inclusions; 18 syntax errors; 2 unresolved names (0.031%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:38.361
+!MESSAGE Indexed 'i2c' (8 sources, 16 headers) in 1.89 sec: 858 declarations; 1,679 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:40.262
+!MESSAGE Indexed 'i2cslave' (8 sources, 16 headers) in 1.7 sec: 907 declarations; 1,895 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:42.188
+!MESSAGE Indexed 'intpriority' (6 sources, 15 headers) in 1.77 sec: 846 declarations; 1,640 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:43.301
+!MESSAGE Indexed 'invokeisp' (6 sources, 13 headers) in 0.764 sec: 824 declarations; 1,309 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:43.623
+!MESSAGE Indexed 'lib_small_printf_m0' (4 sources, 10 headers) in 0.273 sec: 345 declarations; 577 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:44.798
+!MESSAGE Indexed 'power_api_demo' (20 sources, 28 headers) in 1.13 sec: 839 declarations; 1,642 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:45.284
+!MESSAGE Indexed 'pwm' (9 sources, 16 headers) in 0.444 sec: 990 declarations; 2,796 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:45.924
+!MESSAGE Indexed 'rs485' (8 sources, 15 headers) in 0.59 sec: 912 declarations; 1,956 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:46.507
+!MESSAGE Indexed 'ssp' (8 sources, 16 headers) in 0.394 sec: 938 declarations; 2,349 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:46.832
+!MESSAGE Indexed 'stackusage' (7 sources, 16 headers) in 0.295 sec: 848 declarations; 1,383 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:47.383
+!MESSAGE Indexed 'swuart' (8 sources, 15 headers) in 0.513 sec: 1,001 declarations; 2,582 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:47.662
+!MESSAGE Indexed 'systick' (6 sources, 11 headers) in 0.268 sec: 748 declarations; 1,254 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:47.684
+!MESSAGE Indexed 'template' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:48.067
+!MESSAGE Indexed 'timedwakeup' (7 sources, 15 headers) in 0.352 sec: 901 declarations; 2,410 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:48.448
+!MESSAGE Indexed 'uart' (7 sources, 14 headers) in 0.346 sec: 846 declarations; 1,601 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:24:48.787
+!MESSAGE Indexed 'wdt' (8 sources, 15 headers) in 0.299 sec: 951 declarations; 2,371 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-09-03 13:25:57.467
+!MESSAGE Indexed 'lab2' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.quickstart 4 -1 2015-09-03 13:25:57.709
+!MESSAGE Source directory does not exist: /Applications/lpcxpresso_7.9.0_455/lpcxpresso/Wizards/System/NXP/lpc11/Common
+
+!STACK 0
+java.lang.Exception: Source directory does not exist: /Applications/lpcxpresso_7.9.0_455/lpcxpresso/Wizards/System/NXP/lpc11/Common
+	at com.crt.quickstart.views.helpers.ImportInfo.importResources(ImportInfo.java:336)
+	at com.crt.quickstart.views.helpers.ImportInfo.importFiles(ImportInfo.java:285)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.importFiles(ImportXMLProject.java:476)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.importFiles(ImportXMLProject.java:506)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.process(ImportXMLProject.java:772)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.doFinishInUIThread(ImportXMLScriptWizard.java:315)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.access$1(ImportXMLScriptWizard.java:293)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard$1.run(ImportXMLScriptWizard.java:528)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:466)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:374)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:527)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:1190)
+	at org.eclipse.ui.internal.progress.ProgressManager$RunnableWithStatus.run(ProgressManager.java:1380)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager$5.run(ProgressManager.java:1214)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4732)
+	at org.eclipse.ui.internal.progress.ProgressManager.runInUI(ProgressManager.java:1211)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.performFinish(ImportXMLScriptWizard.java:537)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1475)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4042)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3669)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at com.crt.quickstart.views.links.AbstractQSLink.runWizard(AbstractQSLink.java:463)
+	at com.crt.quickstart.views.links.QSGenericImportXML.linkSelected(QSGenericImportXML.java:117)
+	at com.crt.quickstart.views.links.ui.QSLinkAction$2.run(QSLinkAction.java:135)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1475)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4042)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3669)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.crt.quickstart 4 4 2015-09-03 13:25:57.715
+!MESSAGE Source directory does not exist: /Applications/lpcxpresso_7.9.0_455/lpcxpresso/Wizards/System/NXP/lpc11/Common
+
+!STACK 0
+java.lang.Exception: Source directory does not exist: /Applications/lpcxpresso_7.9.0_455/lpcxpresso/Wizards/System/NXP/lpc11/Common
+	at com.crt.quickstart.views.helpers.ImportInfo.importResources(ImportInfo.java:336)
+	at com.crt.quickstart.views.helpers.ImportInfo.importFiles(ImportInfo.java:285)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.importFiles(ImportXMLProject.java:476)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.importFiles(ImportXMLProject.java:506)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.process(ImportXMLProject.java:772)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.doFinishInUIThread(ImportXMLScriptWizard.java:315)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.access$1(ImportXMLScriptWizard.java:293)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard$1.run(ImportXMLScriptWizard.java:528)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:466)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:374)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:527)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:1190)
+	at org.eclipse.ui.internal.progress.ProgressManager$RunnableWithStatus.run(ProgressManager.java:1380)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager$5.run(ProgressManager.java:1214)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4732)
+	at org.eclipse.ui.internal.progress.ProgressManager.runInUI(ProgressManager.java:1211)
+	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.performFinish(ImportXMLScriptWizard.java:537)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1475)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4042)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3669)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at com.crt.quickstart.views.links.AbstractQSLink.runWizard(AbstractQSLink.java:463)
+	at com.crt.quickstart.views.links.QSGenericImportXML.linkSelected(QSGenericImportXML.java:117)
+	at com.crt.quickstart.views.links.ui.QSLinkAction$2.run(QSLinkAction.java:135)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1475)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4042)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3669)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.715
+!MESSAGE 	at com.crt.quickstart.views.helpers.ImportInfo.importResources(ImportInfo.java:336)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.715
+!MESSAGE 	at com.crt.quickstart.views.helpers.ImportInfo.importFiles(ImportInfo.java:285)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.715
+!MESSAGE 	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.importFiles(ImportXMLProject.java:476)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.715
+!MESSAGE 	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.importFiles(ImportXMLProject.java:506)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.715
+!MESSAGE 	at com.crt.quickstart.views.wizards.advimport.ImportXMLProject.process(ImportXMLProject.java:772)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.doFinishInUIThread(ImportXMLScriptWizard.java:315)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.access$1(ImportXMLScriptWizard.java:293)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard$1.run(ImportXMLScriptWizard.java:528)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:466)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:374)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:527)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:1190)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.ui.internal.progress.ProgressManager$RunnableWithStatus.run(ProgressManager.java:1380)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.ui.internal.progress.ProgressManager$5.run(ProgressManager.java:1214)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4732)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.ui.internal.progress.ProgressManager.runInUI(ProgressManager.java:1211)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at com.crt.quickstart.views.wizards.advimport.ImportXMLScriptWizard.performFinish(ImportXMLScriptWizard.java:537)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:853)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:438)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.716
+!MESSAGE 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1475)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4042)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3669)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.jface.window.Window.open(Window.java:808)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at com.crt.quickstart.views.links.AbstractQSLink.runWizard(AbstractQSLink.java:463)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at com.crt.quickstart.views.links.QSGenericImportXML.linkSelected(QSGenericImportXML.java:117)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at com.crt.quickstart.views.links.ui.QSLinkAction$2.run(QSLinkAction.java:135)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.jface.action.Action.runWithEvent(Action.java:519)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:462)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1467)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1490)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.717
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1475)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4042)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3669)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.718
+!MESSAGE 	at java.lang.reflect.Method.invoke(Method.java:606)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.719
+!MESSAGE 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.719
+!MESSAGE 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+!SUBENTRY 1 com.crt.quickstart 4 0 2015-09-03 13:25:57.719
+!MESSAGE 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.crt.dsfdebug 4 0 2015-09-03 13:36:00.435
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:00.435
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:00.435
+!MESSAGE Invalid emulator index - get list of available emulators.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:00.435
+!MESSAGE 31: No connection to emulator device
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:00.435
+!MESSAGE (using emulator index 0)
+
+!ENTRY com.crt.log 1 0 2015-09-03 13:36:16.202
+!MESSAGE Drivers loaded in 2603 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2015-09-03 13:36:22.069
+!MESSAGE 10: Could not start execution from stop
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:22.069
+!MESSAGE 10: Could not start execution from stop
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:22.069
+!MESSAGE Unknown error
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:22.069
+!MESSAGE 15: Target error from Register access
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:36:22.069
+!MESSAGE Not connected to emulator.
+
+!ENTRY com.crt.log 1 0 2015-09-03 13:36:39.242
+!MESSAGE Drivers loaded in 2641 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2015-09-03 13:37:06.118
+!MESSAGE 37: Unknown peripheral name: faults
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-09-03 13:37:06.118
+!MESSAGE 37: Unknown peripheral name: faults
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2015-09-04 07:58:23.754
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:390)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:143)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:76)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:107)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:70)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:974)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:954)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$3(PartRenderingEngine.java:862)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$8.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1937)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1560)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1527)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1592)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1589)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1137)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1079)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1410)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1407)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1380)
+	at org.eclipse.ui.internal.Workbench$58.handleEvent(Workbench.java:2849)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4189)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5295)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationNextEventMatchingMask(Display.java:5000)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5378)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.nextEventMatchingMask(NSApplication.java:94)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:783)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:573)
+	at org.eclipse.swt.widgets.Shell.getSize(Shell.java:1182)
+	at org.eclipse.ui.internal.quickaccess.SearchField.storeDialog(SearchField.java:580)
+	at org.eclipse.ui.internal.quickaccess.SearchField.dispose(SearchField.java:557)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 59 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2015-09-04 07:58:23.756
+!MESSAGE Exception occurred while unrendering: org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@deca329 (elementId: IDEWindow, tags: [topLevel], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: %trimmedwindow.label.eclipseSDK, iconURI: null, tooltip: null, context: null, variables: [], x: 35, y: 32, width: 1024, height: 768)
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:390)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:143)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:76)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:107)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:70)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:974)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:954)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$3(PartRenderingEngine.java:862)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$8.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1937)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1560)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1527)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1592)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1589)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1137)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1079)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1410)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1407)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1380)
+	at org.eclipse.ui.internal.Workbench$58.handleEvent(Workbench.java:2849)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4199)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4189)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5295)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSendSuper(Native Method)
+	at org.eclipse.swt.widgets.Display.applicationNextEventMatchingMask(Display.java:5000)
+	at org.eclipse.swt.widgets.Display.applicationProc(Display.java:5378)
+	at org.eclipse.swt.internal.cocoa.OS.objc_msgSend(Native Method)
+	at org.eclipse.swt.internal.cocoa.NSApplication.nextEventMatchingMask(NSApplication.java:94)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:783)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:573)
+	at org.eclipse.swt.widgets.Shell.getSize(Shell.java:1182)
+	at org.eclipse.ui.internal.quickaccess.SearchField.storeDialog(SearchField.java:580)
+	at org.eclipse.ui.internal.quickaccess.SearchField.dispose(SearchField.java:557)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 59 more
+
+!ENTRY org.eclipse.cdt.dsf 4 -1 2015-09-04 07:58:25.813
+!MESSAGE Invocation exception when calling a service event handler method
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:519)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:463)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:390)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@3dd5b1d6 is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:85)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:260)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:103)
+	... 13 more
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1094)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:593)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
+	... 15 more
+Root exception:
+java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@3dd5b1d6 is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:85)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:260)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:103)
+	at sun.reflect.GeneratedMethodAccessor43.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:519)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:463)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:390)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1094)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:593)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
+	... 15 more
+
+!ENTRY org.eclipse.cdt.core 4 0 2015-09-04 07:58:25.983
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:756)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:100)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:94)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1372)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:214)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:113)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:138)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:79)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:421)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:406)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:65)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:200)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:190)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:71)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:34)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:161)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:101)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:92)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:85)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:47)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:36)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:79)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:56)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:235)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:113)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:150)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:196)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:500)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:237)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:437)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:419)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:413)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:406)
+	at org.eclipse.cdt.core.model.CoreModel.getProjectDescription(CoreModel.java:1424)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getLanguage(TranslationUnit.java:769)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getLanguages(ProjectIndexerInputAdapter.java:231)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getLanguage(AbstractIndexerTask.java:1127)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:898)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:554)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:94)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-09-04 07:58:25.986
+!MESSAGE An internal error occurred during: "C/C++ Indexer".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:756)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:100)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:94)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1372)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:214)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:113)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:138)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:79)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:421)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:406)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:65)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:200)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:190)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:71)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:34)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:161)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:101)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:92)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:85)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:47)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:36)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:79)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:56)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:235)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:113)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:150)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:196)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:500)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:237)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:437)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:419)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:413)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:406)
+	at org.eclipse.cdt.core.model.CoreModel.getProjectDescription(CoreModel.java:1424)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getLanguage(TranslationUnit.java:769)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getLanguages(ProjectIndexerInputAdapter.java:231)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getLanguage(AbstractIndexerTask.java:1127)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:898)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:554)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:94)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

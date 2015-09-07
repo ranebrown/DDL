@@ -1,0 +1,254 @@
+
+Discarded input sections
+
+ .group         0x0000000000000000        0x8 ./src/cr_startup_lpc11.o
+ .text          0x0000000000000000        0x0 ./src/cr_startup_lpc11.o
+ .data          0x0000000000000000        0x0 ./src/cr_startup_lpc11.o
+ .bss           0x0000000000000000        0x0 ./src/cr_startup_lpc11.o
+ .data          0x0000000000000000        0x0 ./src/fib.o
+ .bss           0x0000000000000000        0x0 ./src/fib.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .text          0x0000000000000000        0x0 ./src/main.o
+ .data          0x0000000000000000        0x0 ./src/main.o
+ .debug_macro   0x0000000000000000      0x82c ./src/main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash32         0x0000000000000000 0x0000000000008000 xr
+RamLoc4          0x0000000010000000 0x0000000000001000 xrw
+RamUsb2          0x0000000020004000 0x0000000000000800 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./src/cr_startup_lpc11.o
+LOAD ./src/fib.o
+LOAD ./src/main.o
+START GROUP
+LOAD /Applications/lpcxpresso_7.9.0_455/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libcr_semihost.a
+LOAD /Applications/lpcxpresso_7.9.0_455/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libcr_c.a
+LOAD /Applications/lpcxpresso_7.9.0_455/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libcr_eabihelpers.a
+END GROUP
+                0x0000000000008000                __top_MFlash32 = 0x8000
+                0x0000000000008000                __top_Flash = 0x8000
+                0x0000000010001000                __top_RamLoc4 = 0x10001000
+                0x0000000010001000                __top_RAM = 0x10001000
+                0x0000000020004800                __top_RamUsb2 = 0x20004800
+                0x0000000020004800                __top_RAM2 = 0x20004800
+
+.text           0x0000000000000000      0x1e4
+ FILL mask 0xff
+                0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x0000000000000000       0xc0 ./src/cr_startup_lpc11.o
+                0x0000000000000000                g_pfnVectors
+                0x00000000000000c0                . = ALIGN (0x4)
+                0x00000000000000c0                __section_table_start = .
+                0x00000000000000c0                __data_section_table = .
+                0x00000000000000c0        0x4 LONG 0x1e4 LOADADDR (.data)
+                0x00000000000000c4        0x4 LONG 0x10000000 ADDR (.data)
+                0x00000000000000c8        0x4 LONG 0x0 SIZEOF (.data)
+                0x00000000000000cc        0x4 LONG 0x1e4 LOADADDR (.data_RAM2)
+                0x00000000000000d0        0x4 LONG 0x20004000 ADDR (.data_RAM2)
+                0x00000000000000d4        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x00000000000000d8                __data_section_table_end = .
+                0x00000000000000d8                __bss_section_table = .
+                0x00000000000000d8        0x4 LONG 0x10000000 ADDR (.bss)
+                0x00000000000000dc        0x4 LONG 0x4 SIZEOF (.bss)
+                0x00000000000000e0        0x4 LONG 0x20004000 ADDR (.bss_RAM2)
+                0x00000000000000e4        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x00000000000000e8                __bss_section_table_end = .
+                0x00000000000000e8                __section_table_end = .
+ *(.after_vectors*)
+ *(.text*)
+ .text.Reset_Handler
+                0x00000000000000e8       0x6c ./src/cr_startup_lpc11.o
+                0x00000000000000e8                Reset_Handler
+                0x00000000000000e8                ResetISR
+ .text.NMI_Handler
+                0x0000000000000154        0x8 ./src/cr_startup_lpc11.o
+                0x0000000000000154                NMI_Handler
+ .text.HardFault_Handler
+                0x000000000000015c        0x8 ./src/cr_startup_lpc11.o
+                0x000000000000015c                HardFault_Handler
+ .text.SVCall_Handler
+                0x0000000000000164        0x8 ./src/cr_startup_lpc11.o
+                0x0000000000000164                SVCall_Handler
+ .text.PendSV_Handler
+                0x000000000000016c        0x8 ./src/cr_startup_lpc11.o
+                0x000000000000016c                PendSV_Handler
+ .text.SysTick_Handler
+                0x0000000000000174        0x8 ./src/cr_startup_lpc11.o
+                0x0000000000000174                SysTick_Handler
+ .text.IntDefaultHandler
+                0x000000000000017c        0x8 ./src/cr_startup_lpc11.o
+                0x000000000000017c                FMC_IRQHandler
+                0x000000000000017c                UART_IRQHandler
+                0x000000000000017c                TIMER32_0_IRQHandler
+                0x000000000000017c                TIMER32_1_IRQHandler
+                0x000000000000017c                IntDefaultHandler
+                0x000000000000017c                PIOINT1_IRQHandler
+                0x000000000000017c                SSP_IRQHandler
+                0x000000000000017c                TIMER16_1_IRQHandler
+                0x000000000000017c                USB_FIQHandler
+                0x000000000000017c                ADC_IRQHandler
+                0x000000000000017c                PIOINT2_IRQHandler
+                0x000000000000017c                USB_IRQHandler
+                0x000000000000017c                BOD_IRQHandler
+                0x000000000000017c                WAKEUP_IRQHandler
+                0x000000000000017c                PIOINT0_IRQHandler
+                0x000000000000017c                I2C_IRQHandler
+                0x000000000000017c                WDT_IRQHandler
+                0x000000000000017c                PIOINT3_IRQHandler
+                0x000000000000017c                TIMER16_0_IRQHandler
+ .text          0x0000000000000184       0x18 ./src/fib.o
+                0x0000000000000184                fib
+ .text.sum      0x000000000000019c       0x18 ./src/main.o
+                0x000000000000019c                sum
+ .text.main     0x00000000000001b4       0x30 ./src/main.o
+                0x00000000000001b4                main
+ *(.rodata .rodata.* .constdata .constdata.*)
+                0x00000000000001e4                . = ALIGN (0x4)
+
+.glue_7         0x00000000000001e4        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x00000000000001e4        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x00000000000001e4        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x00000000000001e4        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x00000000000001e4        0x0
+ .iplt          0x0000000000000000        0x0 ./src/cr_startup_lpc11.o
+
+.rel.dyn        0x00000000000001e4        0x0
+ .rel.iplt      0x0000000000000000        0x0 ./src/cr_startup_lpc11.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00000000000001e4                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000000000001e4                __exidx_end = .
+                0x00000000000001e4                _etext = .
+
+.data_RAM2      0x0000000020004000        0x0 load address 0x00000000000001e4
+ FILL mask 0xff
+                0x0000000020004000                PROVIDE (__start_data_RAM2, .)
+ *(.ramfunc.$RAM2)
+ *(.ramfunc.$RamUsb2)
+ *(.data.$RAM2*)
+ *(.data.$RamUsb2*)
+                0x0000000020004000                . = ALIGN (0x4)
+                0x0000000020004000                PROVIDE (__end_data_RAM2, .)
+
+.uninit_RESERVED
+                0x0000000010000000        0x0
+ *(.bss.$RESERVED*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _end_uninit_RESERVED = .
+
+.data           0x0000000010000000        0x0 load address 0x00000000000001e4
+ FILL mask 0xff
+                0x0000000010000000                _data = .
+ *(vtable)
+ *(.ramfunc*)
+ *(.data*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _edata = .
+
+.igot.plt       0x0000000010000000        0x0 load address 0x00000000000001e4
+ .igot.plt      0x0000000000000000        0x0 ./src/cr_startup_lpc11.o
+
+.bss_RAM2       0x0000000020004000        0x0
+                0x0000000020004000                PROVIDE (__start_bss_RAM2, .)
+ *(.bss.$RAM2*)
+ *(.bss.$RamUsb2*)
+                0x0000000020004000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0000000020004000                PROVIDE (__end_bss_RAM2, .)
+
+.bss            0x0000000010000000        0x4
+                0x0000000010000000                _bss = .
+ *(.bss*)
+ .bss           0x0000000010000000        0x4 ./src/main.o
+ *(COMMON)
+                0x0000000010000004                . = ALIGN (0x4)
+                0x0000000010000004                _ebss = .
+                0x0000000010000004                PROVIDE (end, .)
+
+.noinit_RAM2    0x0000000020004000        0x0
+ *(.noinit.$RAM2*)
+ *(.noinit.$RamUsb2*)
+                0x0000000020004000                . = ALIGN (0x4)
+
+.noinit         0x0000000010000004        0x0
+                0x0000000010000004                _noinit = .
+ *(.noinit*)
+                0x0000000010000004                . = ALIGN (0x4)
+                0x0000000010000004                _end_noinit = .
+                0x0000000010000004                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x0000000010001000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc4 - 0x0))
+                0xffffffffefffec65                PROVIDE (__valid_user_code_checksum, (0x0 - (((_vStackTop + (ResetISR + 0x1)) + (DEFINED (NMI_Handler)?NMI_Handler:M0_NMI_Handler + 0x1)) + (DEFINED (HardFault_Handler)?HardFault_Handler:M0_HardFault_Handler + 0x1))))
+OUTPUT(fibonacci.axf elf32-littlearm)
+
+.debug_info     0x0000000000000000      0x251
+ .debug_info    0x0000000000000000      0x145 ./src/cr_startup_lpc11.o
+ .debug_info    0x0000000000000145       0x61 ./src/fib.o
+ .debug_info    0x00000000000001a6       0xab ./src/main.o
+
+.debug_abbrev   0x0000000000000000      0x177
+ .debug_abbrev  0x0000000000000000       0xd5 ./src/cr_startup_lpc11.o
+ .debug_abbrev  0x00000000000000d5       0x14 ./src/fib.o
+ .debug_abbrev  0x00000000000000e9       0x8e ./src/main.o
+
+.debug_aranges  0x0000000000000000       0x98
+ .debug_aranges
+                0x0000000000000000       0x50 ./src/cr_startup_lpc11.o
+ .debug_aranges
+                0x0000000000000050       0x20 ./src/fib.o
+ .debug_aranges
+                0x0000000000000070       0x28 ./src/main.o
+
+.debug_ranges   0x0000000000000000       0x58
+ .debug_ranges  0x0000000000000000       0x40 ./src/cr_startup_lpc11.o
+ .debug_ranges  0x0000000000000040       0x18 ./src/main.o
+
+.debug_macro    0x0000000000000000      0x85a
+ .debug_macro   0x0000000000000000       0x1d ./src/cr_startup_lpc11.o
+ .debug_macro   0x000000000000001d      0x82c ./src/cr_startup_lpc11.o
+ .debug_macro   0x0000000000000849       0x11 ./src/main.o
+
+.debug_line     0x0000000000000000      0x187
+ .debug_line    0x0000000000000000       0xec ./src/cr_startup_lpc11.o
+ .debug_line    0x00000000000000ec       0x45 ./src/fib.o
+ .debug_line    0x0000000000000131       0x56 ./src/main.o
+
+.debug_str      0x0000000000000000     0x2441
+ .debug_str     0x0000000000000000     0x2429 ./src/cr_startup_lpc11.o
+                                       0x2437 (size before relaxing)
+ .debug_str     0x0000000000002429       0x18 ./src/main.o
+                                       0x2324 (size before relaxing)
+
+.comment        0x0000000000000000       0x70
+ .comment       0x0000000000000000       0x70 ./src/cr_startup_lpc11.o
+                                         0x71 (size before relaxing)
+ .comment       0x0000000000000000       0x71 ./src/main.o
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x31 ./src/cr_startup_lpc11.o
+ .ARM.attributes
+                0x0000000000000031       0x21 ./src/fib.o
+ .ARM.attributes
+                0x0000000000000052       0x31 ./src/main.o
+
+.debug_frame    0x0000000000000000      0x128
+ .debug_frame   0x0000000000000000       0xd8 ./src/cr_startup_lpc11.o
+ .debug_frame   0x00000000000000d8       0x50 ./src/main.o

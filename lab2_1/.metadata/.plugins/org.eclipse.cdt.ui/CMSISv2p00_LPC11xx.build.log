@@ -1,0 +1,28 @@
+13:12:50 **** Build of configuration Debug for project CMSISv2p00_LPC11xx ****
+make -r all 
+Building file: ../src/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/core_cm0.d" -MT"src/core_cm0.o" -MT"src/core_cm0.d" -o "src/core_cm0.o" "../src/core_cm0.c"
+Finished building: ../src/core_cm0.c
+ 
+Building file: ../src/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11xx.d" -MT"src/system_LPC11xx.o" -MT"src/system_LPC11xx.d" -o "src/system_LPC11xx.o" "../src/system_LPC11xx.c"
+Finished building: ../src/system_LPC11xx.c
+ 
+Building target: libCMSISv2p00_LPC11xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSISv2p00_LPC11xx.a"  ./src/core_cm0.o ./src/system_LPC11xx.o   
+arm-none-eabi-ar: creating libCMSISv2p00_LPC11xx.a
+Finished building target: libCMSISv2p00_LPC11xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libCMSISv2p00_LPC11xx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC11xx.a >libCMSISv2p00_LPC11xx.lss
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	core_cm0.o (ex libCMSISv2p00_LPC11xx.a)
+    368	      4	      0	    372	    174	system_LPC11xx.o (ex libCMSISv2p00_LPC11xx.a)
+ 
+
+13:12:51 Build Finished (took 399ms)
+

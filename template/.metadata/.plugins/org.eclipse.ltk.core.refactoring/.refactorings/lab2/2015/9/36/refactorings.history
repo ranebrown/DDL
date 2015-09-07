@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;lab2/src/blinky_main.c&apos; to &apos;fibonacci&apos;" description="Rename resource &apos;blinky_main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/blinky_main.c" name="fibonacci" stamp="1441308673738" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;lab2/src/fibonacci&apos; to &apos;fibonacci.c&apos;" description="Rename resource &apos;fibonacci&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/fibonacci" name="fibonacci.c" stamp="1441308692648" updateReferences="true"/>
+</session>

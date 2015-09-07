@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;nxp_lpcxpresso_11u14_periph_blinky/example/src/blinky.c&apos; to &apos;fib_morse.c&apos;" description="Rename resource &apos;blinky.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="example/src/blinky.c" name="fib_morse.c" stamp="1441656627424" updateReferences="true"/>
+</session>

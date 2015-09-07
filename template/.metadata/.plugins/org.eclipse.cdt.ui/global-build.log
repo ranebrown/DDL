@@ -1,0 +1,1460 @@
+13:33:33 **** Clean-only build of configuration Debug for project blinky ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/blinky_main.d  ./driver/adc.d ./driver/can.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer16.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  blinky.axf
+ 
+13:33:33 **** Build of configuration Debug for project blinky ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/blinky_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/blinky_main.d" -MT"src/blinky_main.o" -MT"src/blinky_main.d" -o "src/blinky_main.o" "../src/blinky_main.c"
+Finished building: ../src/blinky_main.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/clkconfig.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
+Finished building: ../driver/clkconfig.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building file: ../driver/i2cslave.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
+Finished building: ../driver/i2cslave.c
+ 
+Building file: ../driver/lpc_swu.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
+Finished building: ../driver/lpc_swu.c
+ 
+Building file: ../driver/rs485.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
+Finished building: ../driver/rs485.c
+ 
+Building file: ../driver/small_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
+Finished building: ../driver/small_gpio.c
+ 
+Building file: ../driver/ssp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
+Finished building: ../driver/ssp.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../driver/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
+Finished building: ../driver/uart.c
+ 
+Building file: ../driver/wdt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
+Finished building: ../driver/wdt.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=blinky.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "blinky.axf"  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size blinky.axf; arm-none-eabi-objcopy -O binary blinky.axf blinky.bin ; checksum -p LPC11U14_201 -d blinky.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2352	      4	      8	   2364	    93c	blinky.axf
+Written checksum 0xefffd635 at offset 0x1c in file blinky.bin
+Previous value 0x00000000 at offset 0x1c in file blinky.bin
+ 
+13:33:46 **** Incremental Build of configuration Debug for project blinky ****
+make -r all 
+make: Nothing to be done for `all'.
+13:34:57 **** Clean-only build of configuration Debug for project adc ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/adc_main.d  ./driver/adc.d ./driver/crp.d ./driver/debug_printf.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  adc.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project blinky ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/blinky_main.d  ./driver/adc.d ./driver/can.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer16.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  blinky.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project extint ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/extint_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/extint_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  extint.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project freertos ****
+make -r clean 
+rm -rf  ./src/freertos_main.o  ./freertos/src/croutine.o ./freertos/src/list.o ./freertos/src/queue.o ./freertos/src/tasks.o  ./freertos/port/memmang/heap_2.o  ./freertos/port/lpcxpresso/m0/port.o  ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/small_gpio.o  ./config/freertos_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./src/freertos_main.d  ./freertos/src/croutine.d ./freertos/src/list.d ./freertos/src/queue.d ./freertos/src/tasks.d  ./freertos/port/memmang/heap_2.d  ./freertos/port/lpcxpresso/m0/port.d  ./driver/can.d ./driver/crp.d ./driver/debug_printf.d ./driver/small_gpio.d  ./config/freertos_cr_startup_lpc11.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  freertos.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project i2c ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/i2c_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/i2c_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/i2c.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  i2c.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project i2cslave ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/i2cslave_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2cslave.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/i2cslave_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/i2cslave.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  i2c.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project intpriority ****
+make -r clean 
+rm -rf  ./src/intpriority_main.o  ./driver/crp.o ./driver/debug_printf.o  ./config/intpriority_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./src/intpriority_main.d  ./driver/crp.d ./driver/debug_printf.d  ./config/intpriority_cr_startup_lpc11.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  intpriority.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project invokeisp ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/invokeisp_main.o  ./driver/can.o ./driver/crp.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/invokeisp_main.d  ./driver/can.d ./driver/crp.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  invokeisp.axf
+ 
+13:34:57 **** Clean-only build of configuration Debug for project lab2 ****
+make -r clean 
+rm -rf  ./src/cr_startup_lpc11.o ./src/fibonacci.o  ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./src/cr_startup_lpc11.d ./src/fibonacci.d  ./driver/debug_printf.d ./driver/gpio.d ./driver/timer32.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  lab2.axf
+ 
+13:34:57 **** Clean-only build of configuration Lib for project lib_small_printf_m0 ****
+make -r clean 
+rm -rf  ./src/small_printf_float.o ./src/small_printf_nofloat.o ./src/small_printf_support.o ./src/small_utils.o  ./src/small_printf_float.d ./src/small_printf_nofloat.d ./src/small_printf_support.d ./src/small_utils.d  liblib_small_printf_m0.a
+ 
+13:34:57 **** Clean-only build of configuration Debug for project power_api_demo ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/power_api_demo.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/power_api_demo.d  ./driver/adc.d ./driver/can.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer16.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  power_api_demo.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project pwm ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/pwm_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/pwm_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/timer16.d ./driver/timer32.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  pwm.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project rs485 ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/rs485_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/rs485.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/rs485_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/rs485.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  rs485.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project ssp ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/ssp_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/ssp.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/ssp_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/ssp.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  ssp.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project stackusage ****
+make -r clean 
+rm -rf  ./src/stack.o ./src/stackusage_main.o  ./driver/crp.o ./driver/debug_printf.o  ./config/stackusage_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./src/stack.d ./src/stackusage_main.d  ./driver/crp.d ./driver/debug_printf.d  ./config/stackusage_cr_startup_lpc11.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  stackusage.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project swuart ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/swuart_main.o  ./driver/can.o ./driver/gpio.o ./driver/lpc_swu.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/swuart_main.d  ./driver/can.d ./driver/gpio.d ./driver/lpc_swu.d ./driver/timer32.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  model.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project systick ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/systick_main.o  ./driver/crp.o ./driver/small_gpio.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/systick_main.d  ./driver/crp.d ./driver/small_gpio.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  systick.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project timedwakeup ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/main.o  ./driver/crp.o ./driver/gpio.o ./driver/timer16.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/main.d  ./driver/crp.d ./driver/gpio.d ./driver/timer16.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  timedwakeup.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project uart ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/uart_main.d  ./driver/can.d ./driver/crp.d ./driver/uart.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  uart.axf
+ 
+13:34:58 **** Clean-only build of configuration Debug for project wdt ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/wdt_main.o  ./driver/can.o ./driver/gpio.o ./driver/timer16.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/wdt_main.d  ./driver/can.d ./driver/gpio.d ./driver/timer16.d ./driver/wdt.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  wdt.axf
+ 
+13:34:59 **** Build of configuration Debug for project blinky ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/blinky_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/blinky_main.d" -MT"src/blinky_main.o" -MT"src/blinky_main.d" -o "src/blinky_main.o" "../src/blinky_main.c"
+Finished building: ../src/blinky_main.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/clkconfig.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
+Finished building: ../driver/clkconfig.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building file: ../driver/i2cslave.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
+Finished building: ../driver/i2cslave.c
+ 
+Building file: ../driver/lpc_swu.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
+Finished building: ../driver/lpc_swu.c
+ 
+Building file: ../driver/rs485.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
+Finished building: ../driver/rs485.c
+ 
+Building file: ../driver/small_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
+Finished building: ../driver/small_gpio.c
+ 
+Building file: ../driver/ssp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
+Finished building: ../driver/ssp.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../driver/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
+Finished building: ../driver/uart.c
+ 
+Building file: ../driver/wdt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
+Finished building: ../driver/wdt.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: blinky.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=blinky.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "blinky.axf"  ./startup/cr_startup_lpc11.o  ./src/blinky_main.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: blinky.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size blinky.axf; arm-none-eabi-objcopy -O binary blinky.axf blinky.bin ; checksum -p LPC11U14_201 -d blinky.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2352	      4	      8	   2364	    93c	blinky.axf
+Written checksum 0xefffd635 at offset 0x1c in file blinky.bin
+Previous value 0x00000000 at offset 0x1c in file blinky.bin
+ 
+13:35:02 **** Clean-only build of configuration Debug for project extint ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/extint_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/extint_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  extint.axf
+ 
+13:35:03 **** Build of configuration Debug for project extint ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/extint_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/extint_main.d" -MT"src/extint_main.o" -MT"src/extint_main.d" -o "src/extint_main.o" "../src/extint_main.c"
+Finished building: ../src/extint_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: extint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=extint.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "extint.axf"  ./startup/cr_startup_lpc11.o  ./src/extint_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: extint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size extint.axf; arm-none-eabi-objcopy -O binary extint.axf extint.bin ; checksum -p LPC1114_302 -d extint.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2892	      4	      8	   2904	    b58	extint.axf
+Written checksum 0xefffd635 at offset 0x1c in file extint.bin
+Previous value 0x00000000 at offset 0x1c in file extint.bin
+ 
+13:35:04 **** Clean-only build of configuration Debug for project i2c ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/i2c_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/i2c_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/i2c.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  i2c.axf
+ 
+13:35:04 **** Build of configuration Debug for project i2c ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/i2c_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/i2c_main.d" -MT"src/i2c_main.o" -MT"src/i2c_main.d" -o "src/i2c_main.o" "../src/i2c_main.c"
+Finished building: ../src/i2c_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: i2c.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=i2c.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "i2c.axf"  ./startup/cr_startup_lpc11.o  ./src/i2c_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: i2c.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size i2c.axf; arm-none-eabi-objcopy -O binary i2c.axf i2c.bin ; checksum -p LPC1114_302 -d i2c.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2612	      4	    156	   2772	    ad4	i2c.axf
+Written checksum 0xefffd635 at offset 0x1c in file i2c.bin
+Previous value 0x00000000 at offset 0x1c in file i2c.bin
+ 
+13:35:06 **** Clean-only build of configuration Debug for project i2cslave ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/i2cslave_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2cslave.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/i2cslave_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/i2cslave.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  i2c.axf
+ 
+13:35:06 **** Build of configuration Debug for project i2cslave ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/i2cslave_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/i2cslave_main.d" -MT"src/i2cslave_main.o" -MT"src/i2cslave_main.d" -o "src/i2cslave_main.o" "../src/i2cslave_main.c"
+Finished building: ../src/i2cslave_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2cslave.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
+Finished building: ../driver/i2cslave.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: i2c.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=i2c.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "i2c.axf"  ./startup/cr_startup_lpc11.o  ./src/i2cslave_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2cslave.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: i2c.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size i2c.axf; arm-none-eabi-objcopy -O binary i2c.axf i2c.bin ; checksum -p LPC1114_302 -d i2c.bin;
+   text	   data	    bss	    dec	    hex	filename
+   1936	      4	     38	   1978	    7ba	i2c.axf
+Written checksum 0xefffd635 at offset 0x1c in file i2c.bin
+Previous value 0x00000000 at offset 0x1c in file i2c.bin
+ 
+13:35:08 **** Clean-only build of configuration Debug for project invokeisp ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/invokeisp_main.o  ./driver/can.o ./driver/crp.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/invokeisp_main.d  ./driver/can.d ./driver/crp.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  invokeisp.axf
+ 
+13:35:08 **** Build of configuration Debug for project invokeisp ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/invokeisp_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/invokeisp_main.d" -MT"src/invokeisp_main.o" -MT"src/invokeisp_main.d" -o "src/invokeisp_main.o" "../src/invokeisp_main.c"
+Finished building: ../src/invokeisp_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: invokeisp.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=invokeisp.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "invokeisp.axf"  ./startup/cr_startup_lpc11.o  ./src/invokeisp_main.o  ./driver/can.o ./driver/crp.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: invokeisp.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size invokeisp.axf; arm-none-eabi-objcopy -O binary invokeisp.axf invokeisp.bin ; checksum -p LPC1114_302 -d invokeisp.bin;
+   text	   data	    bss	    dec	    hex	filename
+   1424	      8	     36	   1468	    5bc	invokeisp.axf
+Written checksum 0xefffd635 at offset 0x1c in file invokeisp.bin
+Previous value 0x00000000 at offset 0x1c in file invokeisp.bin
+ 
+13:35:10 **** Build of configuration Lib for project lib_small_printf_m0 ****
+make -r all 
+Building file: ../src/small_printf_float.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_float.d" -MT"src/small_printf_float.o" -MT"src/small_printf_float.d" -o "src/small_printf_float.o" "../src/small_printf_float.c"
+Finished building: ../src/small_printf_float.c
+ 
+Building file: ../src/small_printf_nofloat.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_nofloat.d" -MT"src/small_printf_nofloat.o" -MT"src/small_printf_nofloat.d" -o "src/small_printf_nofloat.o" "../src/small_printf_nofloat.c"
+Finished building: ../src/small_printf_nofloat.c
+ 
+Building file: ../src/small_printf_support.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_printf_support.d" -MT"src/small_printf_support.o" -MT"src/small_printf_support.d" -o "src/small_printf_support.o" "../src/small_printf_support.c"
+Finished building: ../src/small_printf_support.c
+ 
+Building file: ../src/small_utils.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/small_utils.d" -MT"src/small_utils.o" -MT"src/small_utils.d" -o "src/small_utils.o" "../src/small_utils.c"
+Finished building: ../src/small_utils.c
+ 
+Building target: liblib_small_printf_m0.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblib_small_printf_m0.a"  ./src/small_printf_float.o ./src/small_printf_nofloat.o ./src/small_printf_support.o ./src/small_utils.o   
+arm-none-eabi-ar: creating liblib_small_printf_m0.a
+Finished building target: liblib_small_printf_m0.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size liblib_small_printf_m0.a ; # arm-none-eabi-objdump -h -S liblib_small_printf_m0.a >liblib_small_printf_m0.lss
+   text	   data	    bss	    dec	    hex	filename
+    845	      0	     81	    926	    39e	small_printf_float.o (ex liblib_small_printf_m0.a)
+    449	      0	      0	    449	    1c1	small_printf_nofloat.o (ex liblib_small_printf_m0.a)
+    364	      0	     12	    376	    178	small_printf_support.o (ex liblib_small_printf_m0.a)
+    284	      0	      0	    284	    11c	small_utils.o (ex liblib_small_printf_m0.a)
+ 
+13:35:12 **** Build of configuration Debug for project lab2 ****
+make -r all 
+Building file: ../src/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC11U14/201 -D__USE_CMSIS=1 -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lab2/cmsis" -I"/Users/Rane/LPCXpresso/template/lab2/config" -I"/Users/Rane/LPCXpresso/template/lab2/driver" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc11.d" -MT"src/cr_startup_lpc11.o" -MT"src/cr_startup_lpc11.d" -o "src/cr_startup_lpc11.o" "../src/cr_startup_lpc11.c"
+Finished building: ../src/cr_startup_lpc11.c
+ 
+Building file: ../src/fibonacci.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC11U14/201 -D__USE_CMSIS=1 -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lab2/cmsis" -I"/Users/Rane/LPCXpresso/template/lab2/config" -I"/Users/Rane/LPCXpresso/template/lab2/driver" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/fibonacci.d" -MT"src/fibonacci.o" -MT"src/fibonacci.d" -o "src/fibonacci.o" "../src/fibonacci.c"
+Finished building: ../src/fibonacci.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC11U14/201 -D__USE_CMSIS=1 -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lab2/cmsis" -I"/Users/Rane/LPCXpresso/template/lab2/config" -I"/Users/Rane/LPCXpresso/template/lab2/driver" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC11U14/201 -D__USE_CMSIS=1 -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lab2/cmsis" -I"/Users/Rane/LPCXpresso/template/lab2/config" -I"/Users/Rane/LPCXpresso/template/lab2/driver" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC11U14/201 -D__USE_CMSIS=1 -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lab2/cmsis" -I"/Users/Rane/LPCXpresso/template/lab2/config" -I"/Users/Rane/LPCXpresso/template/lab2/driver" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC11U14/201 -D__USE_CMSIS=1 -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lab2/cmsis" -I"/Users/Rane/LPCXpresso/template/lab2/config" -I"/Users/Rane/LPCXpresso/template/lab2/driver" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC11U14/201 -D__USE_CMSIS=1 -D__REDLIB__ -I"/Users/Rane/LPCXpresso/template/lab2/cmsis" -I"/Users/Rane/LPCXpresso/template/lab2/config" -I"/Users/Rane/LPCXpresso/template/lab2/driver" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.o" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: lab2.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/Lib" -Xlinker -Map="lab2.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "lab2_Debug.ld" -o "lab2.axf"  ./src/cr_startup_lpc11.o ./src/fibonacci.o  ./driver/debug_printf.o ./driver/gpio.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: lab2.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "lab2.axf"; # arm-none-eabi-objcopy -v -O binary "lab2.axf" "lab2.bin" ; # checksum -p LPC11U14_201 -d "lab2.bin";
+   text	   data	    bss	    dec	    hex	filename
+   2996	      4	    352	   3352	    d18	lab2.axf
+ 
+13:35:14 **** Clean-only build of configuration Debug for project intpriority ****
+make -r clean 
+rm -rf  ./src/intpriority_main.o  ./driver/crp.o ./driver/debug_printf.o  ./config/intpriority_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./src/intpriority_main.d  ./driver/crp.d ./driver/debug_printf.d  ./config/intpriority_cr_startup_lpc11.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  intpriority.axf
+ 
+13:35:14 **** Build of configuration Debug for project intpriority ****
+make -r all 
+Building file: ../src/intpriority_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/intpriority_main.d" -MT"src/intpriority_main.o" -MT"src/intpriority_main.d" -o "src/intpriority_main.o" "../src/intpriority_main.c"
+Finished building: ../src/intpriority_main.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../config/intpriority_cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"config/intpriority_cr_startup_lpc11.d" -MT"config/intpriority_cr_startup_lpc11.o" -MT"config/intpriority_cr_startup_lpc11.d" -o "config/intpriority_cr_startup_lpc11.o" "../config/intpriority_cr_startup_lpc11.c"
+Finished building: ../config/intpriority_cr_startup_lpc11.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.o" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: intpriority.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/Lib" -Xlinker -Map=intpriority.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "intpriority.axf"  ./src/intpriority_main.o  ./driver/crp.o ./driver/debug_printf.o  ./config/intpriority_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: intpriority.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size intpriority.axf; arm-none-eabi-objcopy -O binary intpriority.axf intpriority.bin ; checksum -p LPC1114_302 -d intpriority.bin;
+   text	   data	    bss	    dec	    hex	filename
+   4363	      4	    576	   4943	   134f	intpriority.axf
+Written checksum 0xefffbf3d at offset 0x1c in file intpriority.bin
+Previous value 0x00000000 at offset 0x1c in file intpriority.bin
+ 
+13:35:16 **** Clean-only build of configuration Debug for project freertos ****
+make -r clean 
+rm -rf  ./src/freertos_main.o  ./freertos/src/croutine.o ./freertos/src/list.o ./freertos/src/queue.o ./freertos/src/tasks.o  ./freertos/port/memmang/heap_2.o  ./freertos/port/lpcxpresso/m0/port.o  ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/small_gpio.o  ./config/freertos_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./src/freertos_main.d  ./freertos/src/croutine.d ./freertos/src/list.d ./freertos/src/queue.d ./freertos/src/tasks.d  ./freertos/port/memmang/heap_2.d  ./freertos/port/lpcxpresso/m0/port.d  ./driver/can.d ./driver/crp.d ./driver/debug_printf.d ./driver/small_gpio.d  ./config/freertos_cr_startup_lpc11.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  freertos.axf
+ 
+13:35:16 **** Build of configuration Debug for project freertos ****
+make -r all 
+Building file: ../src/freertos_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/freertos_main.d" -MT"src/freertos_main.o" -MT"src/freertos_main.d" -o "src/freertos_main.o" "../src/freertos_main.c"
+Finished building: ../src/freertos_main.c
+ 
+Building file: ../freertos/src/croutine.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/croutine.d" -MT"freertos/src/croutine.o" -MT"freertos/src/croutine.d" -o "freertos/src/croutine.o" "../freertos/src/croutine.c"
+Finished building: ../freertos/src/croutine.c
+ 
+Building file: ../freertos/src/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/list.d" -MT"freertos/src/list.o" -MT"freertos/src/list.d" -o "freertos/src/list.o" "../freertos/src/list.c"
+Finished building: ../freertos/src/list.c
+ 
+Building file: ../freertos/src/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/queue.d" -MT"freertos/src/queue.o" -MT"freertos/src/queue.d" -o "freertos/src/queue.o" "../freertos/src/queue.c"
+Finished building: ../freertos/src/queue.c
+ 
+Building file: ../freertos/src/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/tasks.d" -MT"freertos/src/tasks.o" -MT"freertos/src/tasks.d" -o "freertos/src/tasks.o" "../freertos/src/tasks.c"
+Finished building: ../freertos/src/tasks.c
+ 
+Building file: ../freertos/port/memmang/heap_2.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/port/memmang/heap_2.d" -MT"freertos/port/memmang/heap_2.o" -MT"freertos/port/memmang/heap_2.d" -o "freertos/port/memmang/heap_2.o" "../freertos/port/memmang/heap_2.c"
+Finished building: ../freertos/port/memmang/heap_2.c
+ 
+Building file: ../freertos/port/lpcxpresso/m0/port.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/port/lpcxpresso/m0/port.d" -MT"freertos/port/lpcxpresso/m0/port.o" -MT"freertos/port/lpcxpresso/m0/port.d" -o "freertos/port/lpcxpresso/m0/port.o" "../freertos/port/lpcxpresso/m0/port.c"
+Finished building: ../freertos/port/lpcxpresso/m0/port.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/small_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
+Finished building: ../driver/small_gpio.c
+ 
+Building file: ../config/freertos_cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"config/freertos_cr_startup_lpc11.d" -MT"config/freertos_cr_startup_lpc11.o" -MT"config/freertos_cr_startup_lpc11.d" -o "config/freertos_cr_startup_lpc11.o" "../config/freertos_cr_startup_lpc11.c"
+Finished building: ../config/freertos_cr_startup_lpc11.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I"/Users/Rane/LPCXpresso/template/freertos/freertos/inc" -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I"/Users/Rane/LPCXpresso/template/freertos/cmsis" -I"/Users/Rane/LPCXpresso/template/freertos/freertos/port/lpcxpresso/m0" -I"/Users/Rane/LPCXpresso/template/freertos/config" -I"/Users/Rane/LPCXpresso/template/freertos/driver" -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: freertos.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/Lib" -Xlinker -Map=freertos.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "freertos.axf"  ./src/freertos_main.o  ./freertos/src/croutine.o ./freertos/src/list.o ./freertos/src/queue.o ./freertos/src/tasks.o  ./freertos/port/memmang/heap_2.o  ./freertos/port/lpcxpresso/m0/port.o  ./driver/can.o ./driver/crp.o ./driver/debug_printf.o ./driver/small_gpio.o  ./config/freertos_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: freertos.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size freertos.axf; arm-none-eabi-objcopy -O binary freertos.axf freertos.bin ; checksum -p LPC1114_302 -d freertos.bin;
+   text	   data	    bss	    dec	    hex	filename
+   6260	      8	   2368	   8636	   21bc	freertos.axf
+Written checksum 0xefffa2a5 at offset 0x1c in file freertos.bin
+Previous value 0x00000000 at offset 0x1c in file freertos.bin
+ 
+13:35:19 **** Clean-only build of configuration Debug for project adc ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/adc_main.d  ./driver/adc.d ./driver/crp.d ./driver/debug_printf.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  adc.axf
+ 
+13:35:19 **** Build of configuration Debug for project adc ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/adc_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/adc_main.d" -MT"src/adc_main.o" -MT"src/adc_main.d" -o "src/adc_main.o" "../src/adc_main.c"
+Finished building: ../src/adc_main.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/Lib" -Xlinker -Map=adc.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "adc.axf"  ./startup/cr_startup_lpc11.o  ./src/adc_main.o  ./driver/adc.o ./driver/crp.o ./driver/debug_printf.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size adc.axf; arm-none-eabi-objcopy -O binary adc.axf adc.bin ; checksum -p LPC1114_302 -d adc.bin;
+   text	   data	    bss	    dec	    hex	filename
+   5227	      4	    124	   5355	   14eb	adc.axf
+Written checksum 0xefffd635 at offset 0x1c in file adc.bin
+Previous value 0x00000000 at offset 0x1c in file adc.bin
+ 
+13:35:20 **** Clean-only build of configuration Debug for project power_api_demo ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/power_api_demo.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/power_api_demo.d  ./driver/adc.d ./driver/can.d ./driver/clkconfig.d ./driver/crp.d ./driver/debug_printf.d ./driver/gpio.d ./driver/i2c.d ./driver/i2cslave.d ./driver/lpc_swu.d ./driver/rs485.d ./driver/small_gpio.d ./driver/ssp.d ./driver/timer16.d ./driver/timer32.d ./driver/uart.d ./driver/wdt.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  power_api_demo.axf
+ 
+13:35:21 **** Build of configuration Debug for project power_api_demo ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/power_api_demo.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/power_api_demo.d" -MT"src/power_api_demo.o" -MT"src/power_api_demo.d" -o "src/power_api_demo.o" "../src/power_api_demo.c"
+Finished building: ../src/power_api_demo.c
+ 
+Building file: ../driver/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/adc.d" -MT"driver/adc.o" -MT"driver/adc.d" -o "driver/adc.o" "../driver/adc.c"
+Finished building: ../driver/adc.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/clkconfig.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/clkconfig.d" -MT"driver/clkconfig.o" -MT"driver/clkconfig.d" -o "driver/clkconfig.o" "../driver/clkconfig.c"
+Finished building: ../driver/clkconfig.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building file: ../driver/i2cslave.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2cslave.d" -MT"driver/i2cslave.o" -MT"driver/i2cslave.d" -o "driver/i2cslave.o" "../driver/i2cslave.c"
+Finished building: ../driver/i2cslave.c
+ 
+Building file: ../driver/lpc_swu.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
+Finished building: ../driver/lpc_swu.c
+ 
+Building file: ../driver/rs485.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
+Finished building: ../driver/rs485.c
+ 
+Building file: ../driver/small_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
+Finished building: ../driver/small_gpio.c
+ 
+Building file: ../driver/ssp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
+Finished building: ../driver/ssp.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../driver/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
+Finished building: ../driver/uart.c
+ 
+Building file: ../driver/wdt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
+Finished building: ../driver/wdt.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DTARGET_SHORTCHIP=lpc11 -DTARGET_CHIP=LPC1114/302 -I"/Users/Rane/LPCXpresso/template/power_api_demo/cmsis" -I"/Users/Rane/LPCXpresso/template/power_api_demo/config" -I"/Users/Rane/LPCXpresso/template/power_api_demo/startup" -I"/Users/Rane/LPCXpresso/template/power_api_demo/driver" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.o" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: power_api_demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=power_api_demo.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "power_api_demo_Debug.ld" -o "power_api_demo.axf"  ./startup/cr_startup_lpc11.o  ./src/power_api_demo.o  ./driver/adc.o ./driver/can.o ./driver/clkconfig.o ./driver/crp.o ./driver/debug_printf.o ./driver/gpio.o ./driver/i2c.o ./driver/i2cslave.o ./driver/lpc_swu.o ./driver/rs485.o ./driver/small_gpio.o ./driver/ssp.o ./driver/timer16.o ./driver/timer32.o ./driver/uart.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: power_api_demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size power_api_demo.axf; # arm-none-eabi-objcopy -O binary power_api_demo.axf power_api_demo.bin ; checksum -p LPC1114_302 -d power_api_demo.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3332	      4	    380	   3716	    e84	power_api_demo.axf
+ 
+13:35:25 **** Clean-only build of configuration Debug for project pwm ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/pwm_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/pwm_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/timer16.d ./driver/timer32.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  pwm.axf
+ 
+13:35:25 **** Build of configuration Debug for project pwm ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/pwm_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/pwm_main.d" -MT"src/pwm_main.o" -MT"src/pwm_main.d" -o "src/pwm_main.o" "../src/pwm_main.c"
+Finished building: ../src/pwm_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: pwm.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=pwm.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "pwm.axf"  ./startup/cr_startup_lpc11.o  ./src/pwm_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/timer16.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: pwm.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size pwm.axf; arm-none-eabi-objcopy -O binary pwm.axf pwm.bin ; checksum -p LPC1114_302 -d pwm.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3908	      8	     40	   3956	    f74	pwm.axf
+Written checksum 0xefffd635 at offset 0x1c in file pwm.bin
+Previous value 0x00000000 at offset 0x1c in file pwm.bin
+ 
+13:35:26 **** Clean-only build of configuration Debug for project rs485 ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/rs485_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/rs485.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/rs485_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/rs485.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  rs485.axf
+ 
+13:35:27 **** Build of configuration Debug for project rs485 ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/rs485_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/rs485_main.d" -MT"src/rs485_main.o" -MT"src/rs485_main.d" -o "src/rs485_main.o" "../src/rs485_main.c"
+Finished building: ../src/rs485_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/rs485.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
+Finished building: ../driver/rs485.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: rs485.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=rs485.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "rs485.axf"  ./startup/cr_startup_lpc11.o  ./src/rs485_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/rs485.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: rs485.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size rs485.axf; arm-none-eabi-objcopy -O binary rs485.axf rs485.bin ; checksum -p LPC1114_302 -d rs485.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2216	      8	     76	   2300	    8fc	rs485.axf
+Written checksum 0xefffd635 at offset 0x1c in file rs485.bin
+Previous value 0x00000000 at offset 0x1c in file rs485.bin
+ 
+13:35:28 **** Clean-only build of configuration Debug for project ssp ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/ssp_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/ssp.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/ssp_main.d  ./driver/can.d ./driver/crp.d ./driver/gpio.d ./driver/ssp.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  ssp.axf
+ 
+13:35:28 **** Build of configuration Debug for project ssp ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/ssp_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/ssp_main.d" -MT"src/ssp_main.o" -MT"src/ssp_main.d" -o "src/ssp_main.o" "../src/ssp_main.c"
+Finished building: ../src/ssp_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/ssp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/ssp.d" -MT"driver/ssp.o" -MT"driver/ssp.d" -o "driver/ssp.o" "../driver/ssp.c"
+Finished building: ../driver/ssp.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: ssp.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=ssp.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "ssp.axf"  ./startup/cr_startup_lpc11.o  ./src/ssp_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/ssp.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: ssp.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size ssp.axf; arm-none-eabi-objcopy -O binary ssp.axf ssp.bin ; checksum -p LPC1114_302 -d ssp.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3716	      4	     56	   3776	    ec0	ssp.axf
+Written checksum 0xefffd635 at offset 0x1c in file ssp.bin
+Previous value 0x00000000 at offset 0x1c in file ssp.bin
+ 
+13:35:33 **** Clean-only build of configuration Debug for project stackusage ****
+make -r clean 
+rm -rf  ./src/stack.o ./src/stackusage_main.o  ./driver/crp.o ./driver/debug_printf.o  ./config/stackusage_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./src/stack.d ./src/stackusage_main.d  ./driver/crp.d ./driver/debug_printf.d  ./config/stackusage_cr_startup_lpc11.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  stackusage.axf
+ 
+13:35:34 **** Build of configuration Debug for project stackusage ****
+make -r all 
+Building file: ../src/stack.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/stack.d" -MT"src/stack.o" -MT"src/stack.d" -o "src/stack.o" "../src/stack.c"
+Finished building: ../src/stack.c
+ 
+Building file: ../src/stackusage_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/stackusage_main.d" -MT"src/stackusage_main.o" -MT"src/stackusage_main.d" -o "src/stackusage_main.o" "../src/stackusage_main.c"
+Finished building: ../src/stackusage_main.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../config/stackusage_cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"config/stackusage_cr_startup_lpc11.d" -MT"config/stackusage_cr_startup_lpc11.o" -MT"config/stackusage_cr_startup_lpc11.d" -o "config/stackusage_cr_startup_lpc11.o" "../config/stackusage_cr_startup_lpc11.c"
+../config/stackusage_cr_startup_lpc11.c: In function 'ResetISR':
+../config/stackusage_cr_startup_lpc11.c:219:5: warning: implicit declaration of function 'StackHeapInit' [-Wimplicit-function-declaration]
+     StackHeapInit();
+     ^
+Finished building: ../config/stackusage_cr_startup_lpc11.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: stackusage.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/Lib" -Xlinker -Map=stackusage.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "stackusage.axf"  ./src/stack.o ./src/stackusage_main.o  ./driver/crp.o ./driver/debug_printf.o  ./config/stackusage_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: stackusage.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size stackusage.axf; arm-none-eabi-objcopy -O binary stackusage.axf stackusage.bin ; checksum -p LPC1114_302 -d stackusage.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3167	      4	    388	   3559	    de7	stackusage.axf
+Written checksum 0xefffcabd at offset 0x1c in file stackusage.bin
+Previous value 0x00000000 at offset 0x1c in file stackusage.bin
+ 
+13:35:35 **** Clean-only build of configuration Debug for project swuart ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/swuart_main.o  ./driver/can.o ./driver/gpio.o ./driver/lpc_swu.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/swuart_main.d  ./driver/can.d ./driver/gpio.d ./driver/lpc_swu.d ./driver/timer32.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  model.axf
+ 
+13:35:35 **** Build of configuration Debug for project swuart ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/swuart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/swuart_main.d" -MT"src/swuart_main.o" -MT"src/swuart_main.d" -o "src/swuart_main.o" "../src/swuart_main.c"
+Finished building: ../src/swuart_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/lpc_swu.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/lpc_swu.d" -MT"driver/lpc_swu.o" -MT"driver/lpc_swu.d" -o "driver/lpc_swu.o" "../driver/lpc_swu.c"
+Finished building: ../driver/lpc_swu.c
+ 
+Building file: ../driver/timer32.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer32.d" -MT"driver/timer32.o" -MT"driver/timer32.d" -o "driver/timer32.o" "../driver/timer32.c"
+Finished building: ../driver/timer32.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: model.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=model.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "model.axf"  ./startup/cr_startup_lpc11.o  ./src/swuart_main.o  ./driver/can.o ./driver/gpio.o ./driver/lpc_swu.o ./driver/timer32.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: model.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size model.axf; arm-none-eabi-objcopy -O binary model.axf model.bin ; checksum -p LPC1114_302 -d model.bin;
+   text	   data	    bss	    dec	    hex	filename
+   4120	      4	    176	   4300	   10cc	model.axf
+Written checksum 0xefffd649 at offset 0x1c in file model.bin
+Previous value 0x00000000 at offset 0x1c in file model.bin
+ 
+13:35:37 **** Clean-only build of configuration Debug for project systick ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/systick_main.o  ./driver/crp.o ./driver/small_gpio.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/systick_main.d  ./driver/crp.d ./driver/small_gpio.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  systick.axf
+ 
+13:35:37 **** Build of configuration Debug for project systick ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/systick_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/systick_main.d" -MT"src/systick_main.o" -MT"src/systick_main.d" -o "src/systick_main.o" "../src/systick_main.c"
+Finished building: ../src/systick_main.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/small_gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/small_gpio.d" -MT"driver/small_gpio.o" -MT"driver/small_gpio.d" -o "driver/small_gpio.o" "../driver/small_gpio.c"
+Finished building: ../driver/small_gpio.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: systick.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=systick.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "systick.axf"  ./startup/cr_startup_lpc11.o  ./src/systick_main.o  ./driver/crp.o ./driver/small_gpio.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: systick.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size systick.axf; arm-none-eabi-objcopy -O binary systick.axf systick.bin ; checksum -p LPC1114_302 -d systick.bin;
+   text	   data	    bss	    dec	    hex	filename
+   1712	      4	      4	   1720	    6b8	systick.axf
+Written checksum 0xefffd635 at offset 0x1c in file systick.bin
+Previous value 0x00000000 at offset 0x1c in file systick.bin
+ 
+
+**** Build of configuration Debug for project template ****
+
+Nothing to build for project template
+13:35:38 **** Clean-only build of configuration Debug for project timedwakeup ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/main.o  ./driver/crp.o ./driver/gpio.o ./driver/timer16.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/main.d  ./driver/crp.d ./driver/gpio.d ./driver/timer16.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  timedwakeup.axf
+ 
+13:35:39 **** Build of configuration Debug for project timedwakeup ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.o" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: timedwakeup.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=timedwakeup.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "timedwakeup.axf"  ./startup/cr_startup_lpc11.o  ./src/main.o  ./driver/crp.o ./driver/gpio.o ./driver/timer16.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: timedwakeup.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size timedwakeup.axf; arm-none-eabi-objcopy -O binary timedwakeup.axf timedwakeup.bin ; checksum -p LPC1114_302 -d timedwakeup.bin;
+   text	   data	    bss	    dec	    hex	filename
+   1936	      0	     16	   1952	    7a0	timedwakeup.axf
+Written checksum 0xefffd63d at offset 0x1c in file timedwakeup.bin
+Previous value 0x00000000 at offset 0x1c in file timedwakeup.bin
+ 
+13:35:40 **** Clean-only build of configuration Debug for project uart ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/uart_main.d  ./driver/can.d ./driver/crp.d ./driver/uart.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  uart.axf
+ 
+13:35:40 **** Build of configuration Debug for project uart ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/uart_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/uart_main.d" -MT"src/uart_main.o" -MT"src/uart_main.d" -o "src/uart_main.o" "../src/uart_main.c"
+Finished building: ../src/uart_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/uart.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/uart.d" -MT"driver/uart.o" -MT"driver/uart.d" -o "driver/uart.o" "../driver/uart.c"
+Finished building: ../driver/uart.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: uart.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=uart.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "uart.axf"  ./startup/cr_startup_lpc11.o  ./src/uart_main.o  ./driver/can.o ./driver/crp.o ./driver/uart.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: uart.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size uart.axf; arm-none-eabi-objcopy -O binary uart.axf uart.bin ; checksum -p LPC1114_302 -d uart.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2056	      8	     72	   2136	    858	uart.axf
+Written checksum 0xefffd635 at offset 0x1c in file uart.bin
+Previous value 0x00000000 at offset 0x1c in file uart.bin
+ 
+13:35:43 **** Clean-only build of configuration Debug for project wdt ****
+make -r clean 
+rm -rf  ./startup/cr_startup_lpc11.o  ./src/wdt_main.o  ./driver/can.o ./driver/gpio.o ./driver/timer16.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o  ./startup/cr_startup_lpc11.d  ./src/wdt_main.d  ./driver/can.d ./driver/gpio.d ./driver/timer16.d ./driver/wdt.d  ./cmsis/core_cm0.d ./cmsis/system_LPC11xx.d  wdt.axf
+ 
+13:35:43 **** Build of configuration Debug for project wdt ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/wdt_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/wdt_main.d" -MT"src/wdt_main.o" -MT"src/wdt_main.d" -o "src/wdt_main.o" "../src/wdt_main.c"
+Finished building: ../src/wdt_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/timer16.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/timer16.d" -MT"driver/timer16.o" -MT"driver/timer16.d" -o "driver/timer16.o" "../driver/timer16.c"
+Finished building: ../driver/timer16.c
+ 
+Building file: ../driver/wdt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/wdt.d" -MT"driver/wdt.o" -MT"driver/wdt.d" -o "driver/wdt.o" "../driver/wdt.c"
+Finished building: ../driver/wdt.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: wdt.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=wdt.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "wdt.axf"  ./startup/cr_startup_lpc11.o  ./src/wdt_main.o  ./driver/can.o ./driver/gpio.o ./driver/timer16.o ./driver/wdt.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: wdt.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size wdt.axf; arm-none-eabi-objcopy -O binary wdt.axf wdt.bin ; checksum -p LPC1114_302 -d wdt.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2496	      4	     20	   2520	    9d8	wdt.axf
+Written checksum 0xefffd641 at offset 0x1c in file wdt.bin
+Previous value 0x00000000 at offset 0x1c in file wdt.bin
+ 
+13:35:57 **** Incremental Build of configuration Debug for project blinky ****
+make -r all 
+make: Nothing to be done for `all'.
+13:36:11 **** Incremental Build of configuration Debug for project blinky ****
+make -r all 
+make: Nothing to be done for `all'.
+13:36:34 **** Incremental Build of configuration Debug for project blinky ****
+make -r all 
+make: Nothing to be done for `all'.

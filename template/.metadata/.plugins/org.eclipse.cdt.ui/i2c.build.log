@@ -1,0 +1,58 @@
+13:35:04 **** Build of configuration Debug for project i2c ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/i2c_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/i2c_main.d" -MT"src/i2c_main.o" -MT"src/i2c_main.d" -o "src/i2c_main.o" "../src/i2c_main.c"
+Finished building: ../src/i2c_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/i2c.d" -MT"driver/i2c.o" -MT"driver/i2c.d" -o "driver/i2c.o" "../driver/i2c.c"
+Finished building: ../driver/i2c.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: i2c.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=i2c.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "i2c.axf"  ./startup/cr_startup_lpc11.o  ./src/i2c_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/i2c.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: i2c.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size i2c.axf; arm-none-eabi-objcopy -O binary i2c.axf i2c.bin ; checksum -p LPC1114_302 -d i2c.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2612	      4	    156	   2772	    ad4	i2c.axf
+Written checksum 0xefffd635 at offset 0x1c in file i2c.bin
+Previous value 0x00000000 at offset 0x1c in file i2c.bin
+ 
+
+13:35:05 Build Finished (took 938ms)
+

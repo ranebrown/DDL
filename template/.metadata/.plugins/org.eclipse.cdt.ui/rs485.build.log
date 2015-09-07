@@ -1,0 +1,58 @@
+13:35:27 **** Build of configuration Debug for project rs485 ****
+make -r all 
+Building file: ../startup/cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"startup/cr_startup_lpc11.d" -MT"startup/cr_startup_lpc11.o" -MT"startup/cr_startup_lpc11.d" -o "startup/cr_startup_lpc11.o" "../startup/cr_startup_lpc11.c"
+Finished building: ../startup/cr_startup_lpc11.c
+ 
+Building file: ../src/rs485_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/rs485_main.d" -MT"src/rs485_main.o" -MT"src/rs485_main.d" -o "src/rs485_main.o" "../src/rs485_main.c"
+Finished building: ../src/rs485_main.c
+ 
+Building file: ../driver/can.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/can.d" -MT"driver/can.o" -MT"driver/can.d" -o "driver/can.o" "../driver/can.c"
+Finished building: ../driver/can.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/gpio.d" -MT"driver/gpio.o" -MT"driver/gpio.d" -o "driver/gpio.o" "../driver/gpio.c"
+Finished building: ../driver/gpio.c
+ 
+Building file: ../driver/rs485.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/rs485.d" -MT"driver/rs485.o" -MT"driver/rs485.d" -o "driver/rs485.o" "../driver/rs485.c"
+Finished building: ../driver/rs485.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: rs485.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map=rs485.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "rs485.axf"  ./startup/cr_startup_lpc11.o  ./src/rs485_main.o  ./driver/can.o ./driver/crp.o ./driver/gpio.o ./driver/rs485.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   
+Finished building target: rs485.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size rs485.axf; arm-none-eabi-objcopy -O binary rs485.axf rs485.bin ; checksum -p LPC1114_302 -d rs485.bin;
+   text	   data	    bss	    dec	    hex	filename
+   2216	      8	     76	   2300	    8fc	rs485.axf
+Written checksum 0xefffd635 at offset 0x1c in file rs485.bin
+Previous value 0x00000000 at offset 0x1c in file rs485.bin
+ 
+
+13:35:27 Build Finished (took 982ms)
+

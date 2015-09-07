@@ -1,0 +1,57 @@
+13:35:34 **** Build of configuration Debug for project stackusage ****
+make -r all 
+Building file: ../src/stack.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/stack.d" -MT"src/stack.o" -MT"src/stack.d" -o "src/stack.o" "../src/stack.c"
+Finished building: ../src/stack.c
+ 
+Building file: ../src/stackusage_main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/stackusage_main.d" -MT"src/stackusage_main.o" -MT"src/stackusage_main.d" -o "src/stackusage_main.o" "../src/stackusage_main.c"
+Finished building: ../src/stackusage_main.c
+ 
+Building file: ../driver/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/crp.d" -MT"driver/crp.o" -MT"driver/crp.d" -o "driver/crp.o" "../driver/crp.c"
+Finished building: ../driver/crp.c
+ 
+Building file: ../driver/debug_printf.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"driver/debug_printf.d" -MT"driver/debug_printf.o" -MT"driver/debug_printf.d" -o "driver/debug_printf.o" "../driver/debug_printf.c"
+Finished building: ../driver/debug_printf.c
+ 
+Building file: ../config/stackusage_cr_startup_lpc11.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"config/stackusage_cr_startup_lpc11.d" -MT"config/stackusage_cr_startup_lpc11.o" -MT"config/stackusage_cr_startup_lpc11.d" -o "config/stackusage_cr_startup_lpc11.o" "../config/stackusage_cr_startup_lpc11.c"
+../config/stackusage_cr_startup_lpc11.c: In function 'ResetISR':
+../config/stackusage_cr_startup_lpc11.c:219:5: warning: implicit declaration of function 'StackHeapInit' [-Wimplicit-function-declaration]
+     StackHeapInit();
+     ^
+Finished building: ../config/stackusage_cr_startup_lpc11.c
+ 
+Building file: ../cmsis/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/core_cm0.d" -MT"cmsis/core_cm0.o" -MT"cmsis/core_cm0.d" -o "cmsis/core_cm0.o" "../cmsis/core_cm0.c"
+Finished building: ../cmsis/core_cm0.c
+ 
+Building file: ../cmsis/system_LPC11xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -D__USE_CMSIS -DDEBUG -D__CODE_RED -I../cmsis -I"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/inc" -I../config -I../driver -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cmsis/system_LPC11xx.d" -MT"cmsis/system_LPC11xx.d" -o "cmsis/system_LPC11xx.o" "../cmsis/system_LPC11xx.c"
+Finished building: ../cmsis/system_LPC11xx.c
+ 
+Building target: stackusage.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/Rane/LPCXpresso/template/lib_small_printf_m0/Lib" -Xlinker -Map=stackusage.map -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "../linker/lpc1114_flash_crp.ld" -o "stackusage.axf"  ./src/stack.o ./src/stackusage_main.o  ./driver/crp.o ./driver/debug_printf.o  ./config/stackusage_cr_startup_lpc11.o  ./cmsis/core_cm0.o ./cmsis/system_LPC11xx.o   -llib_small_printf_m0
+Finished building target: stackusage.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size stackusage.axf; arm-none-eabi-objcopy -O binary stackusage.axf stackusage.bin ; checksum -p LPC1114_302 -d stackusage.bin;
+   text	   data	    bss	    dec	    hex	filename
+   3167	      4	    388	   3559	    de7	stackusage.axf
+Written checksum 0xefffcabd at offset 0x1c in file stackusage.bin
+Previous value 0x00000000 at offset 0x1c in file stackusage.bin
+ 
+
+13:35:34 Build Finished (took 821ms)
+
