@@ -131,8 +131,7 @@ int main(void) {
 	// calculate fibonacci sequence for index n fibonacci(n)
 	f = fibonacci(10);
 	// extract individual hex digits from fibonacci number and convert to morse code
-	while(1)
-		extract(f);
+	extract(f);
 
 	return 0;
 }

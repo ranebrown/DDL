@@ -2,7 +2,6 @@
 #include "board.h"
 #include "stdio.h"
 
-#define t_unit 24000000
 static const short table[16][6] = {
 {5,1,1,1,1,1}, /* 0 r0*/
 {5,0,1,1,1,1}, /* 1 r1*/
@@ -32,52 +31,11 @@ int fibonacci(int n)
     	return ( fibonacci(n-1) + fibonacci(n-2) );
 }
 
-void dot() {
-	uint32_t x=0;
-	Chip_TIMER_Reset(LPC_TIMER32_0);
-	Board_LED_Set(0, true);
-	while(x <= t_unit)
-		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
-	Board_LED_Set(0, false);
-}
-
-void dash() {
-	uint32_t x=0;
-	Chip_TIMER_Reset(LPC_TIMER32_0);
-	Board_LED_Set(0, true);
-	while(x <= t_unit*3)
-		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
-	Board_LED_Set(0, false);
-}
-
-void space() {
-	uint32_t x=0;
-	Chip_TIMER_Reset(LPC_TIMER32_0);
-	Board_LED_Set(0, false);
-	while(x <= t_unit*3)
-		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
-}
-
-void short_space() {
-	uint32_t x=0;
-	Chip_TIMER_Reset(LPC_TIMER32_0);
-	Board_LED_Set(0, false);
-	while(x <= t_unit)
-		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
-}
-
-
 void lookup(int dig) {
 	// morse code lookup
-	int i, temp;
-	for(i=1; i<table[dig][0]+1; i++) {
-		temp = table[dig][i];
-		if(temp == 0)
-			dot();
-		else
-			dash();
-		short_space();
-	}
+	int i;
+	for(i=1; i<table[dig][0]+1; i++)
+		printf("%d",table[dig][i]);
 }
 
 void extract(int fib) {
@@ -97,10 +55,8 @@ void extract(int fib) {
 	for(i=3; i>=0; i--) {
 		if(hex[i] == -1)
 			; // do nothing if no value stored
-		else {
+		else
 			lookup(hex[i]);
-			space();
-		}
 	}
 
 	printf("\n");
@@ -108,6 +64,8 @@ void extract(int fib) {
 
 int main(void) {
 	// variables
+	uint32_t timerFreq;
+	uint32_t x,y=0;
 	int f;
 
 	// board initilization
@@ -116,23 +74,26 @@ int main(void) {
 
 	// timer setup
 	Chip_TIMER_Init(LPC_TIMER32_0);
+	timerFreq = Chip_Clock_GetSystemClockRate();
+	printf("timerFreq: %u\n",timerFreq);
 	Chip_TIMER_Reset(LPC_TIMER32_0);
 	Chip_TIMER_Enable(LPC_TIMER32_0);
 
-//	while(1) {
-//		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
-//		if(x >= 48000000) {
-//			y++;
-//			printf("time: %u\n",y);
-//			Chip_TIMER_Reset(LPC_TIMER32_0);
-//		}
-//	}
+	while(1) {
+		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
+		if(x >= 48000000) {
+			y++;
+			printf("time: %u\n",y);
+			Chip_TIMER_Reset(LPC_TIMER32_0);
+		}
+	}
 
-	// calculate fibonacci sequence for index n fibonacci(n)
+	/* Enable timer interrupt */
+	NVIC_ClearPendingIRQ(TIMER_32_0_IRQn);
+	NVIC_EnableIRQ(TIMER_32_0_IRQn);
+
 	f = fibonacci(10);
-	// extract individual hex digits from fibonacci number and convert to morse code
-	while(1)
-		extract(f);
+	extract(f);
 
 	return 0;
 }
