@@ -2,8 +2,7 @@
 #include "board.h"
 #include "stdio.h"
 
-#define t_unit 12000000 // .25 sec time unit
-
+#define t_unit 24000000
 static const short table[16][6] = {
 {5,1,1,1,1,1}, /* 0 r0*/
 {5,0,1,1,1,1}, /* 1 r1*/
@@ -23,8 +22,6 @@ static const short table[16][6] = {
 {4,0,0,1,0,9}  /* F r15*/
 };
 
-extern int asm_fib(int n);
-
 int fibonacci(int n)
 {
 	if ( n == 0 )
@@ -35,7 +32,6 @@ int fibonacci(int n)
     	return ( fibonacci(n-1) + fibonacci(n-2) );
 }
 
-// 1 time unit led on
 void dot() {
 	uint32_t x=0;
 	Chip_TIMER_Reset(LPC_TIMER32_0);
@@ -45,7 +41,6 @@ void dot() {
 	Board_LED_Set(0, false);
 }
 
-// 3 time units led on
 void dash() {
 	uint32_t x=0;
 	Chip_TIMER_Reset(LPC_TIMER32_0);
@@ -55,7 +50,6 @@ void dash() {
 	Board_LED_Set(0, false);
 }
 
-// 3 time unit led off
 void space() {
 	uint32_t x=0;
 	Chip_TIMER_Reset(LPC_TIMER32_0);
@@ -64,7 +58,6 @@ void space() {
 		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
 }
 
-// 1 time unit led off
 void short_space() {
 	uint32_t x=0;
 	Chip_TIMER_Reset(LPC_TIMER32_0);
@@ -72,6 +65,7 @@ void short_space() {
 	while(x <= t_unit)
 		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
 }
+
 
 void lookup(int dig) {
 	// morse code lookup
@@ -126,10 +120,7 @@ int main(void) {
 	Chip_TIMER_Enable(LPC_TIMER32_0);
 
 	// calculate fibonacci sequence for index n fibonacci(n)
-	//f = fibonacci(20);
-	f = asm_fib(20);
-	printf("%d\n",f);
-
+	f = fibonacci(20);
 	// extract individual hex digits from fibonacci number and convert to morse code
 	while(1)
 		extract(f);

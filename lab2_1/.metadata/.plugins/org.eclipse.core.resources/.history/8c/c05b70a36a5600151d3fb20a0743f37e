@@ -126,10 +126,7 @@ int main(void) {
 	Chip_TIMER_Enable(LPC_TIMER32_0);
 
 	// calculate fibonacci sequence for index n fibonacci(n)
-	//f = fibonacci(20);
-	f = asm_fib(20);
-	printf("%d\n",f);
-
+	f = fibonacci(20);
 	// extract individual hex digits from fibonacci number and convert to morse code
 	while(1)
 		extract(f);

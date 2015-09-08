@@ -5,7 +5,7 @@
  * Generated linker script file for LPC11U14/201
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * LPCXpresso v7.9.0 [Build 455] [2015-07-23]  on Sep 8, 2015 2:02:05 PM
+ * LPCXpresso v7.9.0 [Build 455] [2015-07-23]  on Sep 8, 2015 4:58:39 PM
  */
 
 GROUP (

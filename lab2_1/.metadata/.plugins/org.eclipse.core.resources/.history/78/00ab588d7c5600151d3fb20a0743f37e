@@ -1,0 +1,21 @@
+ 	.syntax unified
+ 	.cpu cortex-m0
+ 	.align	2
+ 	.global	asm_fib
+ 	.thumb
+ 	.thumb_func
+
+ asm_fib:
+
+ check0:
+ 	cmp r0, #0 		;check if n==0
+ 	bne check1		;if n!=0 branch
+ 	str pc, lr		;if n==0 return
+
+ check1:
+ 	cmp r0, #1 		;check if n==1
+ 	bne recursive	;if n!=1 branch
+ 	str pc, lr		;if n==1 return
+
+ recursive:
+
