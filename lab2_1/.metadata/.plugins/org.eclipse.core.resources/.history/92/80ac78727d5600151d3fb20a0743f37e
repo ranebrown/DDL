@@ -127,7 +127,7 @@ int main(void) {
 
 	// calculate fibonacci sequence for index n fibonacci(n)
 	//f = fibonacci(20);
-	f = asm_fib(2);
+	f = asm_fib(20);
 	printf("%d\n",f);
 
 	// extract individual hex digits from fibonacci number and convert to morse code

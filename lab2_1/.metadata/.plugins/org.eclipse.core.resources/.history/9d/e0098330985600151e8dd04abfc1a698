@@ -20,7 +20,7 @@ check1:
  	b exit				/* if n==1 return 1 */
 
 recursive:
-	subs r4, r0, #1		/* calculate n-1 and store in r4 */
+	subs r0, r0, #1		/* calculate n-1 and store in r4 */
 	bl asm_fib			/* call fib function */
 
 	subs r0, r0, #2 	/* calculate n-2 */

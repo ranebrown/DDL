@@ -4,7 +4,7 @@
  * (c) NXP Semiconductors 2013-2015
  * Generated linker script file for LPC11U14/201
  * Created from generic_c.ld (7.9.0 ())
- * By LPCXpresso v7.9.0 [Build 455] [2015-07-23]  on Tue Sep 08 16:58:39 MDT 2015
+ * By LPCXpresso v7.9.0 [Build 455] [2015-07-23]  on Tue Sep 08 20:10:17 MDT 2015
  */
 
 
