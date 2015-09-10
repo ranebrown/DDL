@@ -1,0 +1,138 @@
+
+#include "board.h"
+#include "stdio.h"
+
+#define t_unit 12000000 // .25 sec time unit
+
+static const short table[16][6] = {
+{5,1,1,1,1,1}, /* 0 r0*/
+{5,0,1,1,1,1}, /* 1 r1*/
+{5,0,0,1,1,1}, /* 2 r2*/
+{5,0,0,0,1,1}, /* 3 r3*/
+{5,0,0,0,0,1}, /* 4 r4*/
+{5,0,0,0,0,0}, /* 5 r5*/
+{5,1,0,0,0,0}, /* 6 r6*/
+{5,1,1,0,0,0}, /* 7 r7*/
+{5,1,1,1,0,0}, /* 8 r8*/
+{5,1,1,1,1,0}, /* 9 r9*/
+{2,0,1,9,9,9}, /* A r10*/
+{4,1,0,0,0,9}, /* B r11*/
+{4,1,0,1,0,9}, /* C r12*/
+{3,1,0,0,9,9}, /* D r13*/
+{1,0,9,9,9,9}, /* E r14*/
+{4,0,0,1,0,9}  /* F r15*/
+};
+
+extern int asm_fib(int n);
+
+int fibonacci(int n)
+{
+	if ( n == 0 )
+    	return 0;
+	else if ( n == 1 )
+    	return 1;
+	else
+    	return ( fibonacci(n-1) + fibonacci(n-2) );
+}
+
+// 1 time unit led on
+void dot() {
+	uint32_t x=0;
+	Chip_TIMER_Reset(LPC_TIMER32_0);
+	Board_LED_Set(0, true);
+	while(x <= t_unit)
+		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
+	Board_LED_Set(0, false);
+}
+
+// 3 time units led on
+void dash() {
+	uint32_t x=0;
+	Chip_TIMER_Reset(LPC_TIMER32_0);
+	Board_LED_Set(0, true);
+	while(x <= t_unit*3)
+		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
+	Board_LED_Set(0, false);
+}
+
+// 3 time unit led off
+void space() {
+	uint32_t x=0;
+	Chip_TIMER_Reset(LPC_TIMER32_0);
+	Board_LED_Set(0, false);
+	while(x <= t_unit*3)
+		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
+}
+
+// 1 time unit led off
+void short_space() {
+	uint32_t x=0;
+	Chip_TIMER_Reset(LPC_TIMER32_0);
+	Board_LED_Set(0, false);
+	while(x <= t_unit)
+		x = Chip_TIMER_ReadCount(LPC_TIMER32_0);
+}
+
+void lookup(int dig) {
+	// morse code lookup
+	int i, temp;
+	for(i=1; i<table[dig][0]+1; i++) {
+		temp = table[dig][i];
+		if(temp == 0)
+			dot();
+		else
+			dash();
+		short_space();
+	}
+}
+
+void extract(int fib) {
+	printf("Hex value of fibonacci number: %x\n",fib);
+	int hex[4] = {-1,-1,-1,-1};
+	unsigned int mask, temp;
+	int i=0;
+	mask = 0xF;
+
+	// extract each hex digit (stored in reverse order)
+	for(i=0; fib!=0; i++) {
+		temp = fib & mask;
+		hex[i] = temp;
+		fib = fib >> 4;
+	}
+	// convert to morse
+	for(i=3; i>=0; i--) {
+		if(hex[i] == -1)
+			; // do nothing if no value stored
+		else {
+			lookup(hex[i]);
+			space();
+		}
+	}
+
+	printf("\n");
+}
+
+int main(void) {
+	// variables
+	int f;
+
+	// board initilization
+	SystemCoreClockUpdate();
+	Board_Init();
+
+	// timer setup
+	Chip_TIMER_Init(LPC_TIMER32_0);
+	Chip_TIMER_Reset(LPC_TIMER32_0);
+	Chip_TIMER_Enable(LPC_TIMER32_0);
+
+	// calculate fibonacci sequence for index n fibonacci(n)
+	//f = fibonacci(20);
+	f = asm_fib(4);
+	printf("%d\n",f);
+
+	// extract individual hex digits from fibonacci number and convert to morse code
+	while(1)
+		extract(f);
+
+	return 0;
+}

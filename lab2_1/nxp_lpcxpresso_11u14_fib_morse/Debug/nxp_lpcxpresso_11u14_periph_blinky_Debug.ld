@@ -5,7 +5,7 @@
  * Generated linker script file for LPC11U14/201
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * LPCXpresso v7.9.0 [Build 455] [2015-07-23]  on Sep 8, 2015 8:10:17 PM
+ * LPCXpresso v7.9.0 [Build 455] [2015-07-23]  on Sep 10, 2015 1:36:28 PM
  */
 
 INCLUDE "nxp_lpcxpresso_11u14_periph_blinky_Debug_library.ld"

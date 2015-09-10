@@ -1,0 +1,15 @@
+ 	.syntax unified
+ 	.cpu cortex-m0
+ 	.align	2
+ 	.global	asm_fib
+ 	.thumb
+ 	.thumb_func
+
+asm_fib:
+	mov r1, r0 			// store function argument in r1 (original value of n)
+	cmp{lt} r1,#1		// check if value of n <= 2
+	bls exit			// if value of n <= 2 exit function
+
+exit:
+	adds r0, r0, r1		// add up answer
+	mov pc, lr			// restore pc (exit function)

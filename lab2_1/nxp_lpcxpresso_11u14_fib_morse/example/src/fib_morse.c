@@ -94,10 +94,14 @@ void extract(int fib) {
 	mask = 0xF;
 
 	// extract each hex digit (stored in reverse order)
-	for(i=0; fib!=0; i++) {
-		temp = fib & mask;
-		hex[i] = temp;
-		fib = fib >> 4;
+	if(fib == 0)
+		hex[0] = 0;
+	else {
+		for(i=0; fib!=0; i++) {
+			temp = fib & mask;
+			hex[i] = temp;
+			fib = fib >> 4;
+		}
 	}
 	// convert to morse
 	for(i=3; i>=0; i--) {
@@ -114,7 +118,7 @@ void extract(int fib) {
 
 int main(void) {
 	// variables
-	int f;
+	int f,n;
 
 	// board initilization
 	SystemCoreClockUpdate();
@@ -125,14 +129,19 @@ int main(void) {
 	Chip_TIMER_Reset(LPC_TIMER32_0);
 	Chip_TIMER_Enable(LPC_TIMER32_0);
 
-	// calculate fibonacci sequence for index n fibonacci(n)
-	//f = fibonacci(20);
-	f = asm_fib(2);
-	printf("%d\n",f);
+	n=0;
+	while(1) {
+		if(n==21)
+			n=0;
+		// calculate fibonacci sequence for index n fibonacci(n)
+		//f = fibonacci(n);
+		f = asm_fib(n);
 
-	// extract individual hex digits from fibonacci number and convert to morse code
-	while(1)
+		printf("Fibonacci for index %d: %d\n",n,f);
+		// extract hex digits and convert to morse code
 		extract(f);
+		n++;
+	}
 
 	return 0;
 }

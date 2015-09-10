@@ -11,6 +11,14 @@
 		<item value="org.eclipse.platform:4.4.2.v20150204-1700"/>
 		<item value="org.eclipse.rcp:4.4.2.v20150204-1700"/>
 	</list>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="226" key="DIALOG_Y_ORIGIN"/>
+		<item value="342" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
 	<section name="ExternalProjectImportWizard">
 	</section>
 </section>

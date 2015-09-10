@@ -1,0 +1,17 @@
+ 	.syntax unified
+ 	.cpu cortex-m0
+ 	.align	2
+ 	.global	asm_fib
+ 	.thumb
+ 	.thumb_func
+
+asm_fib:
+	mov r1, r0 			// store function argument in r1 (original value of n)
+	cmp r1, #0		// check if value of n == 0
+	beq exit			// if value of n ==0 exit function
+	cmp r1, #1
+	beq exit
+
+exit:
+	adds r0, r0, r1		// add up answer
+	mov pc, lr			// restore pc (exit function)

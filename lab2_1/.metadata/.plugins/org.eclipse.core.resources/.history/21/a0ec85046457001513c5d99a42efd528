@@ -1,0 +1,28 @@
+ 	.syntax unified
+ 	.cpu cortex-m0
+ 	.align	2
+ 	.global	asm_fib
+ 	.thumb
+ 	.thumb_func
+
+asm_fib:
+	mov r1, r0 			// store function argument in r1 (original value of n)
+recursive:
+	cmp r1, #1			// check if value of n <= 1
+	ble exit
+
+	push {lr} 			// store return address
+	subs r1, r1, #2 		// get n-2
+	bl recursive		// call function recursivley to get fib(n-2)
+	push {r0} 			// store n-2 on stack
+
+	adds r1, r1, #1 	// get n-1
+	bl recursive
+	pop {r2} 			// pop n-2 off of stack
+
+	adds r0, r1, r2		// fib(n-1) + fib(n-2)
+	pop {pc}			// exit function
+
+exit:
+	movs r0, #1
+	mov pc, lr

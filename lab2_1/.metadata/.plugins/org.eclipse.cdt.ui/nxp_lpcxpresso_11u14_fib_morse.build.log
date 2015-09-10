@@ -1,6 +1,6 @@
-20:10:18 **** Incremental Build of configuration Debug for project nxp_lpcxpresso_11u14_fib_morse ****
+13:36:28 **** Incremental Build of configuration Debug for project nxp_lpcxpresso_11u14_fib_morse ****
 make -r all 
 make: Nothing to be done for `all'.
 
-20:10:18 Build Finished (took 47ms)
+13:36:28 Build Finished (took 82ms)
 

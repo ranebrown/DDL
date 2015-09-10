@@ -502,3 +502,114 @@ Caused by: org.eclipse.swt.SWTException: Device is disposed
 	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:593)
 	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
 	... 15 more
+!SESSION 2015-09-09 14:03:24.216 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Rane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/Rane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-09-09 14:03:37.760
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2015-09-09 14:03:45.535
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-09-09 14:03:45.535
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+!SESSION 2015-09-09 19:30:56.316 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Rane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/Rane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-09-09 19:31:06.089
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.crt.log 1 0 2015-09-09 20:21:50.934
+!MESSAGE Drivers loaded in 2859 milliseconds
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:21:51.130
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY org.eclipse.ui 4 4 2015-09-09 20:22:08.055
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-09-09 20:22:08.057
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:25:08.976
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:26:40.444
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:31:20.963
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:31:42.050
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:34:52.754
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:43:33.311
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:46:24.738
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:48:35.564
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:51:35.083
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:53:00.279
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:57:27.099
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:58:45.500
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 20:59:26.518
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 21:00:47.580
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 21:02:51.715
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+
+!ENTRY com.crt.lpcxpresso.brand 4 -1 2015-09-09 21:05:23.940
+!MESSAGE Internal error: cannot find image LPCXpresso_16x16
+!SESSION 2015-09-10 13:10:02.433 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Rane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/Rane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-09-10 13:10:22.051
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2015-09-10 13:10:28.389
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-09-10 13:10:28.390
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2015-09-10 13:16:10.627
+!MESSAGE Drivers loaded in 2881 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-09-10 13:16:59.486
+!MESSAGE Drivers loaded in 2607 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-09-10 13:17:55.870
+!MESSAGE Drivers loaded in 2639 milliseconds
