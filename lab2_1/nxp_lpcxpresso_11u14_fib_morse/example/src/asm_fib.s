@@ -6,29 +6,35 @@
  	.thumb_func
 
 asm_fib:
- 	push {r4, r5, lr} 	/* store n-1, n-2, and retun address */
- 	mov r4, r0			/* store r0 in r4 */
+	push {r4, r5, lr} 	// push to stack
+	mov r4, r0 			// store value of n in r4
 
-check0:
- 	cmp r0, #0 			/* check if n==0 */
- 	bne check1			/* if n!=0 branch */
- 	b exit				/* if n==0 return 0 */
+	// if(n==0) return 0
+	cmp r0, #0
+	ble neq0
 
-check1:
- 	cmp r0, #1 			/* check if n==1 */
- 	bne recursive		/* if n!=1 branch */
- 	b exit				/* if n==1 return 1 */
+	// if(n==1) return 1
+	cmp r4, #1
+	beq neq1
 
-recursive:
-	subs r4, r0, #1		/* calculate n-1 and store in r4 */
-	bl asm_fib			/* call fib function */
+	// fib(n-1)
+	subs r0, r4, #1
+	bl asm_fib
+	mov r5, r0 // r5 holds fib(n-1)
 
-	subs r0, r0, #2 	/* calculate n-2 */
-	mov r5, r0			/* store n-2 in r5 */
-	bl asm_fib			/* call fib function */
+	// fib(n-2)
+	subs r0, r4, #2
+	bl asm_fib
 
-	adds r0, r4, r5 	/* fib(n-1) + fib(n-2) */
-	b exit
+	// r0 = fib(n-2) + fib(n-1)
+	adds r0, r5, r0
+	pop {r4, r5, pc}
 
-exit:
-	pop {r4, r5, pc}	/* pop values stored on stack and restore pc */
+neq0: // n==0
+	movs r0, #0
+	pop {r4, r5, pc}
+
+neq1: // n==1
+	movs r0, #1
+	pop {r4, r5, pc}
+
