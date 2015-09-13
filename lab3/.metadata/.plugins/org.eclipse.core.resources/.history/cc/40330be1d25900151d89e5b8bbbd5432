@@ -1,0 +1,64 @@
+/*
+===============================================================================
+ Name        : Lab3.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC11Uxx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+#include <stdio.h>
+
+/* GPIO and GPIO Interrupt Initialization */
+void GPIOInit() {
+
+
+}
+
+/* TIMER32 and TIMER32 Interrupt Initialization */
+void TIMERInit() {
+	// access system clock control register and enable clock for 32-bit counter/timer 0
+	// see pg. 31 of UM10462 for details
+	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<9);
+
+
+
+}
+
+/* GPIO Interrupt Handler */
+void FLEX_INT0_IRQHandler(void) {
+
+
+}
+
+/* TIMER32 Interrupt Handler */
+void TIMER32_0_IRQHandler(void) {
+
+
+}
+
+int main(void) {
+	// basic system initialization taken care of in cr_startup_lpc11ux
+
+	SystemCoreClockUpdate(); // update system clock
+
+
+    /* Initialization code */
+    GPIOInit();                   // Initialize GPIO ports for both Interrupts and LED control
+    TIMERInit();                // Initialize Timer and Generate a 1ms interrupt
+
+    /* Infinite looping */
+    while(1) {
+    	__WFI(); // wait for an interrupt ot occur
+    }
+
+
+    return 0;
+}
