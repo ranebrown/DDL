@@ -16,6 +16,14 @@
 
 #include <stdio.h>
 
+// duty cycle definitions
+#define duty_25 0.25
+#define duty_75 0.75
+
+// global variables
+int frequency = 0;
+
+
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
 
@@ -46,6 +54,10 @@ void TIMERInit() {
 	// Enable interrupt for timer32_0, see pg. 72 of UM10462 for details
 	NVIC_ClearPendingIRQ(TIMER_32_0_IRQn);
 	NVIC_EnableIRQ(TIMER_32_0_IRQn);
+
+	// set interrupt priority
+	// see pg. 443 and 486 of UM10462 for details
+	NVIC_SetPriority(TIMER_32_0_IRQn, 2);
 }
 
 /* GPIO Interrupt Handler */
