@@ -21,8 +21,8 @@
 #define duty_75 0.75
 
 // global variables
-int frequency = 0;
-
+int oldfreq = 0;
+int newfreq = 0;
 
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
@@ -48,6 +48,10 @@ void TIMERInit() {
 	LPC_CT32B0->MCR = 3; // enable interrupt on match register 0 (bit 0), reset TC on match bit(1)
 	LPC_CT32B0->MR0 = 480000000; // set match value - interrupt every 10 sec
 
+	// enable interrupt for MR1 - 1ms interrupt
+	LPC_CT32B0->MCR |= 1<<3; // bit 3
+	LPC_CT32B0->MR1 = 48000; // match value - 1ms
+
 	// enable timer 32 ch0 (start counting)
 	LPC_CT32B0->TCR |= 1<<0; // bit 0
 
@@ -70,6 +74,11 @@ void FLEX_INT0_IRQHandler(void) {
 void TIMER32_0_IRQHandler(void) {
 	// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
 	LPC_CT32B0->IR &= 1<<0;
+
+
+	if(oldfreq != newfreq) {
+		// update led blink rate
+	}
 
 	printf("test\n");
 
