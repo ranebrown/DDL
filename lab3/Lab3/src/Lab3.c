@@ -16,6 +16,18 @@
 
 #include <stdio.h>
 
+// duty cycle definitions
+#define duty_25 0.25
+#define duty_75 0.75
+
+// Interrupt flags checking for match registers
+#define mr0_check 1
+#define mr1_check 2
+
+// global variables
+int oldfreq = 0;
+int newfreq = 0;
+
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);	//Enable AHB clock to the GPIO domain
@@ -73,8 +85,19 @@ void FLEX_INT0_IRQHandler(void) {
 
 /* TIMER32 Interrupt Handler */
 void TIMER32_0_IRQHandler(void) {
+	unsigned int x = LPC_CT32B0->IR;
+	if(LPC_CT32B0->IR & mr0_check)
 	// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
 	LPC_CT32B0->IR &= 1<<0;
+
+	// 1ms interrupt
+	if(oldfreq != newfreq) {
+		// update led blink rate
+	}
+
+	// 10 sec interrupt
+		// update duty cycle
+
 
 	printf("test\n");
 
