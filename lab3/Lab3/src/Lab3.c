@@ -40,13 +40,13 @@ void GPIOInit() {
 	NVIC_EnableIRQ(EINT0_IRQn);
 	NVIC_SetPriority(EINT0_IRQn,2);
 
-	LPC_GPIO0->DIR &= ~(0x1 << 0);	//Set PORT-0 pin-0 as an input
+	LPC_GPIO->DIR &= ~(0x1 << 0);	//Set PORT-0 pin-0 as an input
 	//LPC_GPIO0->IS & (0x1 << 0);		//Set PORT-0 pin-0 to accept interrupts
 	//LPC_GPIO0->IBE &= ~(0x1<<0);	//Set PORT-0 pin-0 as an edge interrupt
 
 	//Set the interrupt on GPIO0 Pin0
 		//Need to pick one or more of the below lines.
-	NVIC_EnableIRQ(EINT0_IRQn);
+	//NVIC_EnableIRQ(EINT0_IRQn);
 	//NVIC->ISER[0] = (1 << ((uint32_t)(IRQn) & 0x1F)); //This line is the function for NVIC_EnableIRQ(EINT0_IRQn);
 	//LPC_GPIO0->IE |= 1;//(0x1<<0);
 
@@ -110,13 +110,19 @@ void FLEX_INT0_IRQHandler(void) {
 /* TIMER32 Interrupt Handler */
 void TIMER32_0_IRQHandler(void) {
 	unsigned int x = LPC_CT32B0->IR;
-	if(LPC_CT32B0->IR & mr0_check)
-	// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
-	LPC_CT32B0->IR &= 1<<0;
+	x = x & 1;
+	if(x = 1) {
+		// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
+		LPC_CT32B0->IR &= 1<<0;
+	}
 
-	// 1ms interrupt
-	if(oldfreq != newfreq) {
-		// update led blink rate
+	unsigned int y = LPC_CT32B0->IR;
+	y = y & 2;
+	if(y = 2) {
+		// 1ms interrupt
+		if(oldfreq != newfreq) {
+			// update led blink rate
+		}
 	}
 
 	// 10 sec interrupt
