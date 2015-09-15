@@ -30,29 +30,11 @@ int newfreq = 0;
 
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
-
-	/* Enable AHB clock to the GPIO domain. */
-	  //Not sure if this is needed.
-	  //LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);
-
-	/*Need to set RESET_PIO0_0 register at address 0x40044000 to 31:11=x 00xx 0000 1001*/
-
-	NVIC_EnableIRQ(EINT0_IRQn);
-	NVIC_SetPriority(EINT0_IRQn,2);
-
-	LPC_GPIO->DIR &= ~(0x1 << 0);	//Set PORT-0 pin-0 as an input
-	//LPC_GPIO0->IS & (0x1 << 0);		//Set PORT-0 pin-0 to accept interrupts
-	//LPC_GPIO0->IBE &= ~(0x1<<0);	//Set PORT-0 pin-0 as an edge interrupt
-
-	//Set the interrupt on GPIO0 Pin0
-		//Need to pick one or more of the below lines.
-	//NVIC_EnableIRQ(EINT0_IRQn);
-	//NVIC->ISER[0] = (1 << ((uint32_t)(IRQn) & 0x1F)); //This line is the function for NVIC_EnableIRQ(EINT0_IRQn);
-	//LPC_GPIO0->IE |= 1;//(0x1<<0);
-
-	//Set GPIO0 Pin7 as an output
-	LPC_GPIO[0]->DIR |= 1<<6;
-
+	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);	//Enable AHB clock to the GPIO domain
+	LPC_GPIO->DIR[0] = 0;					//Set PORT-0 pin-0 as an input
+	NVIC_EnableIRQ(FLEX_INT0_IRQn); 		//Enable the interrupt
+	NVIC_SetPriority(FLEX_INT0_IRQn,2); 	//Set interrupt priority to 2, same as timer.
+	LPC_GPIO->DIR[0] |= (1<<7);  			//Set GPIO0 Pin7 as an output
 
 	return;
 }
@@ -75,20 +57,12 @@ void TIMERInit() {
 	LPC_CT32B0->MCR = 3; // enable interrupt on match register 0 (bit 0), reset TC on match bit(1)
 	LPC_CT32B0->MR0 = 480000000; // set match value - interrupt every 10 sec
 
-	// enable interrupt for MR1 - 1ms interrupt
-	LPC_CT32B0->MCR |= 1<<3; // bit 3
-	LPC_CT32B0->MR1 = 48000; // match value - 1ms
-
 	// enable timer 32 ch0 (start counting)
 	LPC_CT32B0->TCR |= 1<<0; // bit 0
 
 	// Enable interrupt for timer32_0, see pg. 72 of UM10462 for details
 	NVIC_ClearPendingIRQ(TIMER_32_0_IRQn);
 	NVIC_EnableIRQ(TIMER_32_0_IRQn);
-
-	// set interrupt priority
-	// see pg. 443 and 486 of UM10462 for details
-	NVIC_SetPriority(TIMER_32_0_IRQn, 2);
 }
 
 /* GPIO Interrupt Handler */
@@ -127,6 +101,7 @@ void TIMER32_0_IRQHandler(void) {
 
 	// 10 sec interrupt
 		// update duty cycle
+
 
 	printf("test\n");
 
