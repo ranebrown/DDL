@@ -31,7 +31,30 @@ int newfreq = 0;
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
 
+	/* Enable AHB clock to the GPIO domain. */
+	  //Not sure if this is needed.
+	  //LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);
 
+	/*Need to set RESET_PIO0_0 register at address 0x40044000 to 31:11=x 00xx 0000 1001*/
+
+	NVIC_EnableIRQ(EINT0_IRQn);
+	NVIC_SetPriority(EINT0_IRQn,2);
+
+	LPC_GPIO0->DIR &= ~(0x1 << 0);	//Set PORT-0 pin-0 as an input
+	//LPC_GPIO0->IS & (0x1 << 0);		//Set PORT-0 pin-0 to accept interrupts
+	//LPC_GPIO0->IBE &= ~(0x1<<0);	//Set PORT-0 pin-0 as an edge interrupt
+
+	//Set the interrupt on GPIO0 Pin0
+		//Need to pick one or more of the below lines.
+	NVIC_EnableIRQ(EINT0_IRQn);
+	//NVIC->ISER[0] = (1 << ((uint32_t)(IRQn) & 0x1F)); //This line is the function for NVIC_EnableIRQ(EINT0_IRQn);
+	//LPC_GPIO0->IE |= 1;//(0x1<<0);
+
+	//Set GPIO0 Pin7 as an output
+	LPC_GPIO[0]->DIR |= 1<<6;
+
+
+	return;
 }
 
 /* TIMER32 and TIMER32 Interrupt Initialization */
@@ -70,6 +93,16 @@ void TIMERInit() {
 
 /* GPIO Interrupt Handler */
 void FLEX_INT0_IRQHandler(void) {
+	//First clear the interrupt
+	//LPC_GPIO0->IC |= (0x1<<0);
+
+	//Turn on the LED at PORT0 PIN7
+	//LPC_GPIO0 |= ~(1<<6);
+	//LPC_GPIO[0]->MASKED_ACCESS[(1<<6)] = (bitVal<<6);
+
+	//Turn off the LED at PORT0 PIN7
+	//LPC_GPIO0 &= (1<<6);
+
 
 
 }
