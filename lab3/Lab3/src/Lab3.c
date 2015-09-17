@@ -16,25 +16,23 @@
 
 #include <stdio.h>
 
-// duty cycle definitions
-#define duty_25 0.25
-#define duty_75 0.75
-
-// Interrupt flags checking for match registers
-#define mr0_check 1
-#define mr1_check 2
-
-// global variables
-int oldfreq = 0;
-int newfreq = 0;
-
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);	//Enable AHB clock to the GPIO domain
-	LPC_GPIO->DIR[0] = 0;					//Set PORT-0 pin-0 as an input
-	NVIC_EnableIRQ(FLEX_INT0_IRQn); 		//Enable the interrupt
+
+	LPC_GPIO->DIR[0] &= ~(1<<0);			//Set PORT-0 Pin-0 as an input
+	LPC_GPIO->DIR[0] |= (1<<7);  			//Set PORT-0 Pin-7 as an output
+
+	LPC_SYSCON->PINTSEL[0]=0;				//Maps NVIC to port0 pin0
+
+	LPC_GPIO_PIN_INT->ISEL = 0;		//Edge Sensitive interrupt
+	LPC_GPIO_PIN_INT->IENR = 1;		//enable the interrupt
+
+
+	NVIC_EnableIRQ(FLEX_INT0_IRQn); 		//Enable the interrupt handler
 	NVIC_SetPriority(FLEX_INT0_IRQn,2); 	//Set interrupt priority to 2, same as timer.
-	LPC_GPIO->DIR[0] |= (1<<7);  			//Set GPIO0 Pin7 as an output
+
+
 
 	return;
 }
@@ -67,41 +65,27 @@ void TIMERInit() {
 
 /* GPIO Interrupt Handler */
 void FLEX_INT0_IRQHandler(void) {
+	int i = 0;
 	//First clear the interrupt
-	//LPC_GPIO0->IC |= (0x1<<0);
+	//LPC_GPIO->IC |= (0x1<<0);
+	NVIC_ClearPendingIRQ(FLEX_INT0_IRQn);
+
 
 	//Turn on the LED at PORT0 PIN7
-	//LPC_GPIO0 |= ~(1<<6);
+
+	LPC_GPIO->PIN[0] |= ~(1<<6);
 	//LPC_GPIO[0]->MASKED_ACCESS[(1<<6)] = (bitVal<<6);
+	for(i=0; i<900000; i++);
 
 	//Turn off the LED at PORT0 PIN7
-	//LPC_GPIO0 &= (1<<6);
-
-
+	LPC_GPIO->PIN[0] &= ~(1<<6);
 
 }
 
 /* TIMER32 Interrupt Handler */
 void TIMER32_0_IRQHandler(void) {
-	unsigned int x = LPC_CT32B0->IR;
-	x = x & 1;
-	if(x = 1) {
-		// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
-		LPC_CT32B0->IR &= 1<<0;
-	}
-
-	unsigned int y = LPC_CT32B0->IR;
-	y = y & 2;
-	if(y = 2) {
-		// 1ms interrupt
-		if(oldfreq != newfreq) {
-			// update led blink rate
-		}
-	}
-
-	// 10 sec interrupt
-		// update duty cycle
-
+	// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
+	LPC_CT32B0->IR &= 1<<0;
 
 	printf("test\n");
 
