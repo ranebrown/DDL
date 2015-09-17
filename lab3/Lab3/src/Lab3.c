@@ -20,22 +20,22 @@
 void GPIOInit() {
 	LPC_SYSCON->SYSAHBCLKCTRL |= 1<<6;	//Enable AHB clock to the GPIO domain
 
+	//Not sure if this is needed.
 	LPC_IOCON->RESET_PIO0_0 |= 1<<0;	//Set RESET_PIO0_0 to function as a GPIO not the RESET
-	//LPC_IOCON->RESET_PIO0_0 |=
 
-	LPC_GPIO->DIR[0] &= ~(1<<0);			//Set PORT-0 Pin-0 as an input
-	LPC_GPIO->DIR[0] |= 1<<7;  				//Set PORT-0 Pin-7 as an output
+	LPC_GPIO->DIR[0] &= ~(1<<0);		//Set PORT-0 Pin-0 as an input
+	LPC_GPIO->DIR[0] |= 1<<7;  			//Set PORT-0 Pin-7 as an output
 
-	LPC_GPIO->CLR[0] |= 1<<7;				//Turn the LED off initially
+	LPC_GPIO->CLR[0] |= 1<<7;			//Turn the LED off initially
 
-	LPC_SYSCON->PINTSEL[0] = 0;				//Maps NVIC to port0 pin0
+	LPC_SYSCON->PINTSEL[0] = 0;			//Maps NVIC to port0 pin0
 
-	LPC_GPIO_PIN_INT->ISEL = 0;		//Edge Sensitive interrupt
-	LPC_GPIO_PIN_INT->IENR = 1;		//Enable the interrupt
+	LPC_GPIO_PIN_INT->ISEL = 0;			//Edge Sensitive interrupt
+	LPC_GPIO_PIN_INT->IENR = 1;			//Enable the interrupt
 
 
-	NVIC_EnableIRQ(FLEX_INT0_IRQn); 		//Enable the interrupt handler
-	NVIC_SetPriority(FLEX_INT0_IRQn,2); 	//Set interrupt priority to 2, same as timer.
+	NVIC_EnableIRQ(FLEX_INT0_IRQn); 	//Enable the interrupt handler
+	NVIC_SetPriority(FLEX_INT0_IRQn,2); //Set interrupt priority to 2, same as timer.
 
 	return;
 }
@@ -97,7 +97,7 @@ void TIMER32_0_IRQHandler(void) {
 
 int main(void) {
 	// basic system initialization taken care of in cr_startup_lpc11ux
-	int i = 0;
+	int i=0;
 	SystemCoreClockUpdate(); // update system clock
 
 
@@ -106,31 +106,23 @@ int main(void) {
     TIMERInit();               	  // Initialize Timer and Generate a 1ms interrupt
 
 
-
-    LPC_GPIO->SET[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4000000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->CLR[0] |= 1<<7;
+    //For testing purposes,
+//	  int j=0;
+//    LPC_GPIO->SET[0] |= 1<<7;
+//    for(i=0; i<2400000; i++);
+//    for(j=0; j<20;j++)
+//    {
+//    	LPC_GPIO->NOT[0] |= 1<<7;
+//    	for(i=0; i<2400000; i++);
+//    }
+//    LPC_GPIO->CLR[0] |= 1<<7;
 
 
     /* Infinite looping */
     while(1) {
-    	__WFI(); // wait for an interrupt to occur
+    	LPC_GPIO->NOT[0] |= 1<<7;
+     	for(i=0; i<2400000; i++);
+    	//__WFI(); // wait for an interrupt to occur
     }
 
 
