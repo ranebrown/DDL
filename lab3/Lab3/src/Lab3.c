@@ -21,7 +21,9 @@ void GPIOInit() {
 	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);	//Enable AHB clock to the GPIO domain
 
 	LPC_GPIO->DIR[0] &= ~(1<<0);			//Set PORT-0 Pin-0 as an input
-	LPC_GPIO->DIR[0] |= (1<<7);  			//Set PORT-0 Pin-7 as an output
+	LPC_GPIO->DIR[0] |= 1<<6;  				//Set PORT-0 Pin-7 as an output
+
+	LPC_GPIO->CLR[0] |= 1<<6;				//Turn the LED off initially
 
 	LPC_SYSCON->PINTSEL[0]=0;				//Maps NVIC to port0 pin0
 
@@ -31,8 +33,6 @@ void GPIOInit() {
 
 	NVIC_EnableIRQ(FLEX_INT0_IRQn); 		//Enable the interrupt handler
 	NVIC_SetPriority(FLEX_INT0_IRQn,2); 	//Set interrupt priority to 2, same as timer.
-
-
 
 	return;
 }
@@ -73,12 +73,12 @@ void FLEX_INT0_IRQHandler(void) {
 
 	//Turn on the LED at PORT0 PIN7
 
-	LPC_GPIO->PIN[0] |= ~(1<<6);
+	LPC_GPIO->SET[0] |= 1<<6;
 	//LPC_GPIO[0]->MASKED_ACCESS[(1<<6)] = (bitVal<<6);
 	for(i=0; i<900000; i++);
 
 	//Turn off the LED at PORT0 PIN7
-	LPC_GPIO->PIN[0] &= ~(1<<6);
+	LPC_GPIO->CLR[0] &= 1<<6;
 
 }
 
@@ -94,13 +94,36 @@ void TIMER32_0_IRQHandler(void) {
 
 int main(void) {
 	// basic system initialization taken care of in cr_startup_lpc11ux
-
+	int i = 0;
 	SystemCoreClockUpdate(); // update system clock
 
 
     /* Initialization code */
     GPIOInit();                   // Initialize GPIO ports for both Interrupts and LED control
-    TIMERInit();                // Initialize Timer and Generate a 1ms interrupt
+    TIMERInit();               	  // Initialize Timer and Generate a 1ms interrupt
+
+
+
+    LPC_GPIO->SET[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4000000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->NOT[0] |= 1<<6;
+    for(i=0; i<4800000; i++);
+    LPC_GPIO->CLR[0] |= 1<<6;
+
 
     /* Infinite looping */
     while(1) {
