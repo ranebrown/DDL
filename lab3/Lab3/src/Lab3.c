@@ -1,10 +1,9 @@
 /*
 ===============================================================================
  Name        : Lab3.c
- Author      : $(author)
- Version     :
- Copyright   : $(copyright)
- Description : main definition
+ Author      : Brian Douglass and Rane Brown
+ Description : GPIO port 0 pin 9 functions as a digital oscilloscope. Every 10 sec duty cycle is switched
+ 	 	 	 	 between 25% and 75%
 ===============================================================================
 */
 
@@ -16,26 +15,28 @@
 
 #include <stdio.h>
 
+int off = 0;
+
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
 	LPC_SYSCON->SYSAHBCLKCTRL |= 1<<6;	//Enable AHB clock to the GPIO domain
+	LPC_SYSCON->SYSAHBCLKCTRL |= 1<<19; // enable clock to gpio pin interrupt register
 
-	LPC_IOCON->RESET_PIO0_0 |= 1<<0;	//Set RESET_PIO0_0 to function as a GPIO not the RESET
-	//LPC_IOCON->RESET_PIO0_0 |=
+//	LPC_IOCON->PIO0_9 // register controls the function of i/o pin
 
-	LPC_GPIO->DIR[0] &= ~(1<<0);			//Set PORT-0 Pin-0 as an input
+	LPC_GPIO->DIR[0] &= ~(1<<9);			//Set PORT-0 Pin-9 as an input
 	LPC_GPIO->DIR[0] |= 1<<7;  				//Set PORT-0 Pin-7 as an output
 
 	LPC_GPIO->CLR[0] |= 1<<7;				//Turn the LED off initially
 
-	LPC_SYSCON->PINTSEL[0] = 0;				//Maps NVIC to port0 pin0
+	LPC_SYSCON->PINTSEL[0] = 9;				//maps port 0 pin 9 to interrupt vector 0 (FLEX_INT0_IRQn)
 
 	LPC_GPIO_PIN_INT->ISEL = 0;		//Edge Sensitive interrupt
-	LPC_GPIO_PIN_INT->IENR = 1;		//Enable the interrupt
+	LPC_GPIO_PIN_INT->IENR = 1;		// Enable rising edge interrupt
 
-
-	NVIC_EnableIRQ(FLEX_INT0_IRQn); 		//Enable the interrupt handler
+	NVIC_ClearPendingIRQ(FLEX_INT0_IRQn);
 	NVIC_SetPriority(FLEX_INT0_IRQn,2); 	//Set interrupt priority to 2, same as timer.
+	NVIC_EnableIRQ(FLEX_INT0_IRQn); 		//Enable the interrupt handler
 
 	return;
 }
@@ -56,41 +57,35 @@ void TIMERInit() {
 
 	// enable interrupt for match register 0, see pg. 355 of UM10462 for details
 	LPC_CT32B0->MCR = 3; // enable interrupt on match register 0 (bit 0), reset TC on match bit(1)
-	LPC_CT32B0->MR0 = 480000000; // set match value - interrupt every 10 sec
+	LPC_CT32B0->MR0 = 480000000/3; // set match value - interrupt every 10 sec
 
 	// enable timer 32 ch0 (start counting)
 	LPC_CT32B0->TCR |= 1<<0; // bit 0
 
 	// Enable interrupt for timer32_0, see pg. 72 of UM10462 for details
 	NVIC_ClearPendingIRQ(TIMER_32_0_IRQn);
+	NVIC_SetPriority(TIMER_32_0_IRQn,2); 	//Set interrupt priority to 2, same as gpio
 	NVIC_EnableIRQ(TIMER_32_0_IRQn);
 }
 
 /* GPIO Interrupt Handler */
 void FLEX_INT0_IRQHandler(void) {
-	int i = 0;
-	//First clear the interrupt
-	//LPC_GPIO->IC |= (0x1<<0);
-	NVIC_ClearPendingIRQ(FLEX_INT0_IRQn);
+	LPC_GPIO_PIN_INT->RISE |= 1<<0; // clear pending interrupt
 
-
+	printf("in gpio int\n");
 	//Turn on the LED at PORT0 PIN7
-
-	LPC_GPIO->SET[0] |= 1<<6;
-	//LPC_GPIO[0]->MASKED_ACCESS[(1<<6)] = (bitVal<<6);
-	for(i=0; i<900000; i++);
-
-	//Turn off the LED at PORT0 PIN7
-	LPC_GPIO->CLR[0] &= 1<<6;
 
 }
 
 /* TIMER32 Interrupt Handler */
 void TIMER32_0_IRQHandler(void) {
 	// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
-	LPC_CT32B0->IR &= 1<<0;
+	LPC_CT32B0->IR |= 1<<0;
 
-	printf("test\n");
+	printf("switch duty cycle\n");
+
+	//printf("%d\n",LPC_GPIO->PIN[0] &= 1<<9);
+
 
 
 }
@@ -105,28 +100,8 @@ int main(void) {
     GPIOInit();                   // Initialize GPIO ports for both Interrupts and LED control
     TIMERInit();               	  // Initialize Timer and Generate a 1ms interrupt
 
-
-
-    LPC_GPIO->SET[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4000000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->NOT[0] |= 1<<7;
-    for(i=0; i<4800000; i++);
-    LPC_GPIO->CLR[0] |= 1<<7;
-
+    // led on LPC_GPIO->SET[0] |= 1<<7;
+    // led off LPC_GPIO->CLR[0] |= 1<<7;
 
     /* Infinite looping */
     while(1) {
