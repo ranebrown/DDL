@@ -15,7 +15,12 @@
 
 #include <stdio.h>
 
-int off = 0;
+volatile uint32_t newTime = 0;
+volatile uint32_t oldTime = 0;
+volatile uint32_t period = 0;
+volatile uint32_t timeKeeper = 0;
+volatile float dutyCycle = .25;
+volatile float onTime = 0;
 
 /* GPIO and GPIO Interrupt Initialization */
 void GPIOInit() {
@@ -57,7 +62,7 @@ void TIMERInit() {
 
 	// enable interrupt for match register 0, see pg. 355 of UM10462 for details
 	LPC_CT32B0->MCR = 3; // enable interrupt on match register 0 (bit 0), reset TC on match bit(1)
-	LPC_CT32B0->MR0 = 480000000/3; // set match value - interrupt every 10 sec
+	LPC_CT32B0->MR0 = 48000; // set match value - interrupt every 1ms
 
 	// enable timer 32 ch0 (start counting)
 	LPC_CT32B0->TCR |= 1<<0; // bit 0
@@ -66,15 +71,24 @@ void TIMERInit() {
 	NVIC_ClearPendingIRQ(TIMER_32_0_IRQn);
 	NVIC_SetPriority(TIMER_32_0_IRQn,2); 	//Set interrupt priority to 2, same as gpio
 	NVIC_EnableIRQ(TIMER_32_0_IRQn);
+
+	// timer 1
+	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<10); // enable timer 1
+	LPC_CT32B1->TC = 0; // clear count
+	LPC_CT32B1->TCR = 1; // enable counter
 }
 
 /* GPIO Interrupt Handler */
 void FLEX_INT0_IRQHandler(void) {
 	LPC_GPIO_PIN_INT->RISE |= 1<<0; // clear pending interrupt
 
-	printf("in gpio int\n");
-	//Turn on the LED at PORT0 PIN7
+	// calculate period
+	newTime = LPC_CT32B1->TC;
+	period = newTime - oldTime;
+	oldTime = newTime;
 
+	// calculate how long led should be on in ms
+	onTime = (period*dutyCycle)/48000;
 }
 
 /* TIMER32 Interrupt Handler */
@@ -82,32 +96,40 @@ void TIMER32_0_IRQHandler(void) {
 	// reset interrupt flag for match channel 0, see pg. 353 of UM10462 for details
 	LPC_CT32B0->IR |= 1<<0;
 
-	printf("switch duty cycle\n");
+	// every 10 seconds switch duty cycle
+	if(timeKeeper<10000) {
+		timeKeeper++;
+		dutyCycle = .25;
+	}
+	else if(timeKeeper >= 10000 && timeKeeper < 20000) {
+		timeKeeper++;
+		dutyCycle = .75;
+	}
+	else
+		timeKeeper = 0;
 
-	//printf("%d\n",LPC_GPIO->PIN[0] &= 1<<9);
-
-
-
+	if(onTime > 0) {
+		// led on for specified duty cycle
+		LPC_GPIO->SET[0] |= 1<<7;
+		onTime--;
+	}
+	else
+		// led off
+		LPC_GPIO->CLR[0] |= 1<<7;
 }
 
 int main(void) {
 	// basic system initialization taken care of in cr_startup_lpc11ux
-	int i = 0;
 	SystemCoreClockUpdate(); // update system clock
-
 
     /* Initialization code */
     GPIOInit();                   // Initialize GPIO ports for both Interrupts and LED control
     TIMERInit();               	  // Initialize Timer and Generate a 1ms interrupt
 
-    // led on LPC_GPIO->SET[0] |= 1<<7;
-    // led off LPC_GPIO->CLR[0] |= 1<<7;
-
     /* Infinite looping */
     while(1) {
     	__WFI(); // wait for an interrupt to occur
     }
-
 
     return 0;
 }
