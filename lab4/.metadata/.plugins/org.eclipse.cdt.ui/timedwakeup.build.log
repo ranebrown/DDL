@@ -1,0 +1,6 @@
+13:37:24 **** Incremental Build of configuration Release for project timedwakeup ****
+make -r all 
+make: Nothing to be done for `all'.
+
+13:37:24 Build Finished (took 52ms)
+

@@ -1,0 +1,14 @@
+14:33:44 **** Build of configuration Debug for project pmu ****
+make -r all 
+Building file: ../src/clkconfig.c
+In file included from ../src/clkconfig.c:30:0:
+../src/LPC11Uxx.h:99:93: fatal error: core_cm0.h: No such file or directory
+ #include "core_cm0.h"                       /*!< Cortex-M0 processor and core peripherals */
+                                                                                             ^
+compilation terminated.
+make: *** [src/clkconfig.o] Error 1
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/clkconfig.d" -MT"src/clkconfig.o" -MT"src/clkconfig.d" -o "src/clkconfig.o" "../src/clkconfig.c"
+
+14:33:44 Build Finished (took 141ms)
+
