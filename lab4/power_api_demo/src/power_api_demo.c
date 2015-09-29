@@ -15,6 +15,7 @@
 #include "rom_drivers.h"
 
 #include "gpio.h"
+#include <stdio.h>
 
 #include "timer16.h"
 #include "wakeupdefs.h"
@@ -46,10 +47,10 @@ volatile unsigned long int i;                   //counter variable
 
 // When changing any of the values below, check that none of the
 // 16-bit timer code overflows
-#define PROCDURATION_MS			5000
-#define  LEDDURATION_MS         5000
+#define PROCDURATION_MS			1000
+#define  LEDDURATION_MS         1000
 #define WAKEDURATION_MS			(PROCDURATION_MS + LEDDURATION_MS)
-#define SLEEPDURATION_MS        5000
+#define SLEEPDURATION_MS        1000
 #define WDOMEASUREDURATION_MS   WAKEDURATION_MS
 
 
@@ -393,15 +394,18 @@ void setup3(){
 	        //3 MHz setup end
 }
 
-int main (void)
-{
+void initilize() {
+
+}
+
+int main (void) {
     if((*rom)->pPWRD == (void *)0xFFFFFFFF)
     {
     	// This LPC does not have the power API
     	while(1);
     }
 
-    LPC_SYSCON->SYSAHBCLKCTRL = 0xFFFFFFFF; //enable all clocks except the WDT
+    LPC_SYSCON->SYSAHBCLKCTRL = 0xFFFFFFFF; //enable all clocks
 
     /* user must select correct PLL input source before calling power/pll routines */
     LPC_SYSCON->PDRUNCFG &= ~(1<<5);            //power-up the system oscillator
@@ -473,22 +477,25 @@ int main (void)
     /* PLL in to PLL out!!!
                                                           */
     int n = 1;
-    int i;
+    int i,j;
+    setup48();		// set clock freq to 48Mhz
     while(1){
 
-    	// adjust clock speed
-    	setup48();		// set clock freq to 48Mhz
+    	// small delay
+    	for (i = 0; i != 5000000; i++);
 
     	// blink number of times through loop
     	for(i=0; i<n; i++) {
     	    GPIOSetValue( LED_PORT, LED_BIT, LED_ON ); // turn led on
-    	    for (i = 0; i != 500000; i++);
+    	    for (j = 0; j < 500000; j++);
     	    GPIOSetValue( LED_PORT, LED_BIT, LED_OFF ); // turn led off
+    	    for (j = 0; j < 500000; j++);
       	}
 
     	// small delay
     	for (i = 0; i != 5000000; i++);
 
+    	setup48();		// set clock freq to 48Mhz
     	GPIOSetValue( LED_PORT, LED_BIT, LED_ON ); // turn led on
     	for (i = 0; i != 500000; i++);
     	GPIOSetValue( LED_PORT, LED_BIT, LED_OFF ); // turn led off
@@ -511,9 +518,13 @@ int main (void)
     	for (i = 0; i != 31250; i++);
     	GPIOSetValue( LED_PORT, LED_BIT, LED_OFF ); // turn led off
     	fibonacci(30);
+    	GPIOSetValue( LED_PORT, LED_BIT, LED_ON ); // turn led on
+    	for (i = 0; i != 31250; i++);
+    	GPIOSetValue( LED_PORT, LED_BIT, LED_OFF ); // turn led off
 
-    	// go to sleep
-    	EnterDeepSleep();
+    	setup48();		// set clock freq to 48Mhz
+
+    	EnterDeepSleep();	// go to sleep
 
     	n++;
     }
