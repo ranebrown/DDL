@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;nxp_lpcxpresso_11u14_usbd_lib_cdc_uart&apos;" deleteContents="true" description="Delete resource &apos;nxp_lpcxpresso_11u14_usbd_lib_cdc_uart&apos;" element1="/nxp_lpcxpresso_11u14_usbd_lib_cdc_uart" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1443556826141"/>
+</session>
