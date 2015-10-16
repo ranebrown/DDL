@@ -1,0 +1,30 @@
+/*
+ * lock.h
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: Rane
+ */
+
+#ifndef LOCK_H_
+#define LOCK_H_
+
+#include "timer32.h"
+
+/*
+ * Lock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+int lock();
+
+/*
+ * unlock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+int unlock();
+
+/*
+ * calculates the value needed to set the specified frequency
+ */
+int freq(float f);
+
+#endif /* LOCK_H_ */

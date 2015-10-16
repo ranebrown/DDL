@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/lock.c 
+../src/lock.c \
+../src/main.c 
 
 OBJS += \
-./src/lock.o 
+./src/lock.o \
+./src/main.o 
 
 C_DEPS += \
-./src/lock.d 
+./src/lock.d \
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

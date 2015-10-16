@@ -1,0 +1,43 @@
+/*
+ * lock.c
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: Rane
+ */
+#include "lock.h"
+#include "timer32.h"
+
+/*
+ * Lock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+int lock() {
+	disable_timer32(1);						// disable timer32_1
+
+	init_timer32PWM(1, freq(430), MATCH0);	/* set timer32_1 to generate pwm signal with period, use MR0
+											 * pwm signal on PIO1_1 (labeled as AD2)
+											 */
+	enable_timer32(1);						// enable timer32_1
+}
+
+/*
+ * unlock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+int unlock() {
+	disable_timer32(1);						// disable timer32_1
+
+	init_timer32PWM(1, freq(270), MATCH0);	/* set timer32_1 to generate pwm signal with period, use MR0
+											 * pwm signal on PIO1_1 (labeled as AD2)
+											 */
+	enable_timer32(1);						// enable timer32_1
+}
+
+/*
+ * calculates the value needed to set the specified frequency
+ */
+int freq(float f) {
+	float v = ((1/((f)/750))*64000);
+	return (int)v;
+}
+

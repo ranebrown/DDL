@@ -1,0 +1,35 @@
+/*
+ * lock.c
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: Rane
+ */
+#include "lock.h"
+
+/*
+ * Lock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+int lock() {
+
+}
+
+/*
+ * unlock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+int unlock() {
+
+}
+
+int freq(float f) {
+	float x = 0;
+	x = f/750;
+	x = 1/x;
+	x = x*64000;
+	return (int)x;
+
+//	int v = ((1/((f)/750))*64000);
+//	return v;
+}
+

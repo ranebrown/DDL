@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="265" key="DIALOG_WIDTH"/>
-		<item value="122" key="DIALOG_Y_ORIGIN"/>
+		<item value="183" key="DIALOG_Y_ORIGIN"/>
 		<item value="399" key="DIALOG_HEIGHT"/>
-		<item value="508" key="DIALOG_X_ORIGIN"/>
+		<item value="887" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,8 +13,15 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="GPIO" key="selection"/>
+		<item value="CONFIG_ADC_ENABLE_ADC_IRQHANDLER" key="selection"/>
 		<list key="findhistory">
+			<item value="reference"/>
+			<item value="CONFIG_ADC_ENABLE_ADC_IRQHANDLER"/>
+			<item value="done"/>
+			<item value="timer"/>
+			<item value="disable"/>
+			<item value="set"/>
+			<item value="match"/>
 			<item value="gpio"/>
 		</list>
 		<list key="replacehistory">

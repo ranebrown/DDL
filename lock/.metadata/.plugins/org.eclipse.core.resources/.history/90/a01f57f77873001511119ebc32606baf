@@ -1,0 +1,26 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: Rane
+ */
+
+#include "driver_config.h"
+#include "target_config.h"
+#include "timer32.h"
+#include "gpio.h"
+#include "lock.h"
+
+int main() {
+	GPIOInit();								// enable clock to gpio
+
+	int r = freq(430); 						// 430 Hz freq
+	int l = freq(270);						// 270 Hz freq
+
+	init_timer32PWM(1, l, MATCH0);			/* set timer32_1 to generate pwm signal with period, use MR0
+											 * pwm signal on PIO1_1 (labeled as AD2)
+											 */
+	enable_timer32(1);						// enable timer32_1
+
+	while(1);
+}

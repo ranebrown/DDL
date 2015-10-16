@@ -9,19 +9,29 @@
 #include "target_config.h"
 #include "timer32.h"
 #include "gpio.h"
+#include "adc.h"
+#include "uart.h"
 #include "lock.h"
+#include "stdio.h"
 
-volatile uint32_t period = 1000;  			//48Khz PWM frequency
+extern volatile uint32_t UARTCount;
+extern volatile uint8_t UARTBuffer[BUFSIZE];
 
 int main() {
-	GPIOInit();								// enable clock to gpio
+	GPIOInit();			// enable clock to gpio
+	UARTInit(9600);		// initialize uart at 9600 baud
+	ADCInit(ADC_CLK);
 
-	init_timer32PWM(1, period, MATCH0);		/* set timer32_1 to generate pwm signal with period, use MR0
-											 * pwm signal on PIO1_1
-											 */
-	setMatch_timer32PWM (1, 0, period/4);	// set the timer32_1 MR0 value
-	enable_timer32(1);						// enable timer32_1
-
-
-	return 0;
+	while (1) {
+		if ( UARTCount != 0 ) {
+			LPC_UART->IER = IER_THRE | IER_RLS;				/* Disable RBR */
+			UARTSend( (uint8_t *)UARTBuffer, UARTCount );
+			if(UARTBuffer[0] == 'o')
+				unlock();
+			else if(UARTBuffer[0] == 'c')
+				lock();
+			UARTCount = 0;
+			LPC_UART->IER = IER_THRE | IER_RLS | IER_RBR;	/* Re-enable RBR */
+		}
+	}
 }

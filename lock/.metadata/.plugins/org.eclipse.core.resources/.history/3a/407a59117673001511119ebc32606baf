@@ -1,0 +1,38 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: Rane
+ */
+
+#include "driver_config.h"
+#include "target_config.h"
+#include "timer32.h"
+#include "gpio.h"
+#include "lock.h"
+
+// frequency in kHz
+#define f_48k 1000
+#define f_24k 2000
+#define f_12k 4000
+#define f_6k 8000
+#define f_3k 16000
+
+// frequency in Hz
+#define f_270 177777
+#define f_430 112000
+
+#define freq(x) (int)((1/(x/750))*64000)
+
+int main() {
+	GPIOInit();								// enable clock to gpio
+
+	init_timer32PWM(1, f_270, MATCH0);		/* set timer32_1 to generate pwm signal with period, use MR0
+											 * pwm signal on PIO1_1 (labeled as AD2)
+											 */
+	//setMatch_timer32PWM (1, 0, f_1/4);	// set the timer32_1 MR0 value
+	enable_timer32(1);						// enable timer32_1
+
+
+	while(1);
+}

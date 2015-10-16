@@ -79,6 +79,21 @@
 						<entry kind="macro" name="__REDLIB__" value=""/>
 						<entry kind="macro" name="__USE_CMSIS" value=""/>
 					</resource>
+					<resource project-relative-path="src/blinky.c">
+						<entry kind="includePath" name="/${ProjName}/cmsis">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/config">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/driver">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value=""/>
+					</resource>
 					<resource project-relative-path="driver/small_gpio.c">
 						<entry kind="includePath" name="/${ProjName}/cmsis">
 							<flag value="VALUE_WORKSPACE_PATH"/>
@@ -110,21 +125,6 @@
 						<entry kind="macro" name="__USE_CMSIS" value=""/>
 					</resource>
 					<resource project-relative-path="driver/timer32.c">
-						<entry kind="includePath" name="/${ProjName}/cmsis">
-							<flag value="VALUE_WORKSPACE_PATH"/>
-						</entry>
-						<entry kind="includePath" name="/${ProjName}/config">
-							<flag value="VALUE_WORKSPACE_PATH"/>
-						</entry>
-						<entry kind="includePath" name="/${ProjName}/driver">
-							<flag value="VALUE_WORKSPACE_PATH"/>
-						</entry>
-						<entry kind="macro" name="DEBUG" value=""/>
-						<entry kind="macro" name="__CODE_RED" value=""/>
-						<entry kind="macro" name="__REDLIB__" value=""/>
-						<entry kind="macro" name="__USE_CMSIS" value=""/>
-					</resource>
-					<resource project-relative-path="driver/adc.c">
 						<entry kind="includePath" name="/${ProjName}/cmsis">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -184,7 +184,37 @@
 						<entry kind="macro" name="__REDLIB__" value=""/>
 						<entry kind="macro" name="__USE_CMSIS" value=""/>
 					</resource>
+					<resource project-relative-path="driver/adc.c">
+						<entry kind="includePath" name="/${ProjName}/cmsis">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/config">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/driver">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value=""/>
+					</resource>
 					<resource project-relative-path="driver/rs485.c">
+						<entry kind="includePath" name="/${ProjName}/cmsis">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/config">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="includePath" name="/${ProjName}/driver">
+							<flag value="VALUE_WORKSPACE_PATH"/>
+						</entry>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value=""/>
+					</resource>
+					<resource project-relative-path="src/main.c">
 						<entry kind="includePath" name="/${ProjName}/cmsis">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -274,7 +304,7 @@
 						<entry kind="macro" name="__REDLIB__" value=""/>
 						<entry kind="macro" name="__USE_CMSIS" value=""/>
 					</resource>
-					<resource project-relative-path="driver/debug_printf.c">
+					<resource project-relative-path="driver/uart.c">
 						<entry kind="includePath" name="/${ProjName}/cmsis">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
@@ -304,7 +334,7 @@
 						<entry kind="macro" name="__REDLIB__" value=""/>
 						<entry kind="macro" name="__USE_CMSIS" value=""/>
 					</resource>
-					<resource project-relative-path="driver/uart.c">
+					<resource project-relative-path="driver/debug_printf.c">
 						<entry kind="includePath" name="/${ProjName}/cmsis">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>

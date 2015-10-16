@@ -1,0 +1,68 @@
+/*
+ * lock.c
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: Rane
+ */
+#include "driver_config.h"
+#include "target_config.h"
+#include "lock.h"
+#include "timer32.h"
+
+/*
+ * Lock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+void lock() {
+	disable_timer32(1);
+	delaySec();
+
+	init_timer32PWM(1, freq(430), MATCH0);	/* set timer32_1 to generate pwm signal with period, use MR0
+											 * pwm signal on PIO1_1 (labeled as AD2)
+											 */
+	delaySec();
+	enable_timer32(1);						// enable timer32_1
+	while(adc > 500) {						// rotate servo until stop hit
+		adc = ADCRead(0);
+		delaySec();
+		printf("%d\n",adc);
+	}
+	disable_timer32(1);						// stop rotation
+}
+
+/*
+ * unlock deadbolt
+ * returns 0 for success, 1 for fail
+ */
+void unlock() {
+	int adc = 1023;
+	init_timer32PWM(1, freq(270), MATCH0);	/* set timer32_1 to generate pwm signal with period, use MR0
+											 * pwm signal on PIO1_1 (labeled as AD2)
+											 */
+	delaySec();
+	enable_timer32(1);						// enable timer32_1
+	while(adc > 500) {						// rotate servo until stop hit
+			adc = ADCRead(0);
+			delaySec();
+			printf("%d\n",adc);
+		}
+	}
+	disable_timer32(1);						// stop rotation
+}
+
+/*
+ * calculates the value needed to set the specified frequency
+ */
+int freq(float f) {
+	float v = ((1/((f)/750))*64000);
+	return (int)v;
+}
+
+/*
+ * delay in seconds
+ */
+void delaySec() {
+	int i = 0;
+	while(i<800000)
+		i++;
+}

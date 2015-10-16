@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: Rane
+ */
+
+#include "driver_config.h"
+#include "target_config.h"
+#include "timer32.h"
+#include "gpio.h"
+#include "lock.h"
+
+int main() {
+	GPIOInit();								// enable clock to gpio
+
+	while(1);
+}

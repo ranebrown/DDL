@@ -10,14 +10,24 @@
 
 /*
  * Lock deadbolt
- * returns 0 for success, 1 for fail
+ *
  */
-uint32_t lock();
+void lock();
 
 /*
  * unlock deadbolt
- * returns 0 for success, 1 for fail
+ *
  */
-uint32_t unlock();
+void unlock();
+
+/*
+ * calculates the value needed to set the specified frequency
+ */
+int freq(float f);
+
+/*
+ * delay in seconds
+ */
+void delaySec();
 
 #endif /* LOCK_H_ */

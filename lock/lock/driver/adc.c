@@ -135,7 +135,7 @@ void ADCInit( uint32_t ADC_Clk )
 #endif
   LPC_IOCON->R_PIO0_11   = 0x02;	// Select AD0 pin function
   LPC_IOCON->R_PIO1_0    = 0x02;	// Select AD1 pin function
-  LPC_IOCON->R_PIO1_1    = 0x02;	// Select AD2 pin function
+  //LPC_IOCON->R_PIO1_1    = 0x02;	// Select AD2 pin function
   LPC_IOCON->R_PIO1_2    = 0x02;	// Select AD3 pin function
 //  LPC_IOCON->ARM_SWDIO_PIO1_3    = 0x02;	// Select AD4 pin function
   LPC_IOCON->PIO1_4    = 0x01;	// Select AD5 pin function

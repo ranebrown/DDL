@@ -23,7 +23,7 @@
 #if  CONFIG_ENABLE_DRIVER_ADC==1
 
 #ifndef CONFIG_ADC_ENABLE_ADC_IRQHANDLER
-#define CONFIG_ADC_ENABLE_ADC_IRQHANDLER 1 /* 1 is interrupt driven, 0 is polling */
+#define CONFIG_ADC_ENABLE_ADC_IRQHANDLER 0 /* 1 is interrupt driven, 0 is polling */
 #endif
 
 #ifndef CONFIG_ADC_ENABLE_BURST_MODE
@@ -31,7 +31,7 @@
 #endif
 
 #ifndef CONFIG_ADC_ENABLE_DEBUG_MODE
-#define CONFIG_ADC_ENABLE_DEBUG_MODE			1
+#define CONFIG_ADC_ENABLE_DEBUG_MODE			0
 #endif
 
 
