@@ -4,7 +4,11 @@
  *  Created on: Oct 14, 2015
  *      Author: Rane
  */
+#include "driver_config.h"
+#include "target_config.h"
 #include "lock.h"
+#include "timer32.h"
+#include "adc.h"
 
 /*
  * Lock deadbolt
@@ -59,7 +63,7 @@ int freq(float f) {
  */
 void delay() {
 	int i = 0;
-	while(i<400000)
+	while(i<800000)
 		i++;
 }
 

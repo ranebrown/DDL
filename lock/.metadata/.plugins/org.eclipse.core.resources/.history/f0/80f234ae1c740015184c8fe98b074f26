@@ -5,7 +5,14 @@
  *      Author: Rane
  */
 
+#include "driver_config.h"
+#include "target_config.h"
+#include "timer32.h"
+#include "gpio.h"
+#include "adc.h"
+#include "uart.h"
 #include "lock.h"
+#include "stdio.h"
 
 extern volatile uint32_t UARTCount;
 extern volatile uint8_t UARTBuffer[BUFSIZE];

@@ -4,7 +4,11 @@
  *  Created on: Oct 14, 2015
  *      Author: Rane
  */
+#include "driver_config.h"
+#include "target_config.h"
 #include "lock.h"
+#include "timer32.h"
+#include "adc.h"
 
 /*
  * Lock deadbolt
@@ -22,8 +26,6 @@ void lock() {
 		delay();
 	}
 	disable_timer32(1);						// stop rotation
-	GPIOSetValue(PORT2,7,0); // green
-	GPIOSetValue(PORT2,6,1); // red
 }
 
 /*
@@ -42,8 +44,6 @@ void unlock() {
 		delay();
 	}
 	disable_timer32(1);						// stop rotation
-	GPIOSetValue(PORT2,6,0); // red
-	GPIOSetValue(PORT2,7,1); // green
 }
 
 /*
@@ -55,22 +55,10 @@ int freq(float f) {
 }
 
 /*
- * short delay
+ * delay in seconds
  */
 void delay() {
 	int i = 0;
-	while(i<400000)
+	while(i<800000)
 		i++;
-}
-
-/*
- * initilizes pins for multi color led
- */
-void initLED(){
-	GPIOSetDir(PORT2,6,1);
-	GPIOSetDir(PORT2,7,1);
-	GPIOSetDir(PORT2,8,1);
-	GPIOSetValue(PORT2,6,0); // red
-	GPIOSetValue(PORT2,7,0); // green
-	GPIOSetValue(PORT2,8,0); // blue
 }

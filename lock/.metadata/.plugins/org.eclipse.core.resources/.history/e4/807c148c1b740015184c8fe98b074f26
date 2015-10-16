@@ -8,14 +8,6 @@
 #ifndef LOCK_H_
 #define LOCK_H_
 
-#include "driver_config.h"
-#include "target_config.h"
-#include "timer32.h"
-#include "gpio.h"
-#include "adc.h"
-#include "uart.h"
-#include "stdio.h"
-
 /*
  * Lock deadbolt
  *
@@ -34,13 +26,8 @@ void unlock();
 int freq(float f);
 
 /*
- * short delay
+ * delay in seconds
  */
-void delay();
-
-/*
- * initilizes pins for multi color led
- */
-void initLED();
+void delaySec();
 
 #endif /* LOCK_H_ */

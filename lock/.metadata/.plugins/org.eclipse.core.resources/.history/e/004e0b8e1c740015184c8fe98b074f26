@@ -5,7 +5,14 @@
  *      Author: Rane
  */
 
+#include "driver_config.h"
+#include "target_config.h"
+#include "timer32.h"
+#include "gpio.h"
+#include "adc.h"
+#include "uart.h"
 #include "lock.h"
+#include "stdio.h"
 
 extern volatile uint32_t UARTCount;
 extern volatile uint8_t UARTBuffer[BUFSIZE];
@@ -13,9 +20,7 @@ extern volatile uint8_t UARTBuffer[BUFSIZE];
 int main() {
 	GPIOInit();			// enable clock to gpio
 	UARTInit(9600);		// initialize uart at 9600 baud
-	ADCInit(ADC_CLK);	// enable adc at 2.4MHz
-	initLED();			// initialize pins for led
-	GPIOSetValue(PORT2,7,1); // green
+	ADCInit(ADC_CLK);
 
 	while (1) {
 		if ( UARTCount != 0 ) {
