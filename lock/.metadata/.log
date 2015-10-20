@@ -785,3 +785,307 @@ Caused by: org.eclipse.swt.SWTException: Device is disposed
 	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:593)
 	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
 	... 15 more
+!SESSION 2015-10-18 08:15:10.511 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Rane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/Rane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-18 08:15:19.470
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2015-10-18 08:15:23.936
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-10-18 08:15:23.937
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-18 08:15:50.155
+!MESSAGE Indexed 'lock' (21 sources, 25 headers) in 2.38 sec: 737 declarations; 2,154 references; 5 unresolved inclusions; 11 syntax errors; 438 unresolved names (13%)
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:16:03.760
+!MESSAGE Drivers loaded in 1819 milliseconds
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-18 08:18:52.426
+!MESSAGE Indexed 'lock' (21 sources, 30 headers) in 1.25 sec: 1,175 declarations; 2,907 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:19:06.574
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:06.574
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:06.574
+!MESSAGE Not connected to emulator.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:06.574
+!MESSAGE Emu(0): InError. Was: Connected. CpuID: 00000000. Info: LPCLINK
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:19:22.142
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:22.142
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:22.142
+!MESSAGE Not connected to emulator.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:22.142
+!MESSAGE Emu(0): InError. Was: Connected. CpuID: 00000000. Info: LPCLINK
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:19:41.156
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:41.156
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:41.156
+!MESSAGE Not connected to emulator.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:41.156
+!MESSAGE Emu(0): InError. Was: Connected. CpuID: 00000000. Info: LPCLINK
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:19:54.217
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:54.217
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:54.217
+!MESSAGE Not connected to emulator.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:19:54.217
+!MESSAGE Emu(0): InError. Was: Connected. CpuID: 00000000. Info: LPCLINK
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:20:06.399
+!MESSAGE Drivers loaded in 1788 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:21:17.369
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:21:17.369
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:21:17.369
+!MESSAGE Not connected to emulator.
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-18 08:22:01.354
+!MESSAGE Indexed 'lock' (21 sources, 30 headers) in 1.02 sec: 1,175 declarations; 2,907 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY Program Flash 4 -1 2015-10-18 08:22:21.426
+!MESSAGE 02: Failed on connect: Ee(02). Not connected to emulator.
+
+!ENTRY Program Flash 4 -1 2015-10-18 08:22:43.904
+!MESSAGE 02: Failed on connect: Ee(02). Not connected to emulator.
+
+!ENTRY Program Flash 4 -1 2015-10-18 08:23:54.487
+!MESSAGE 02: Failed on connect: Ee(02). Not connected to emulator.
+
+!ENTRY Program Flash 4 -1 2015-10-18 08:24:58.510
+!MESSAGE 02: Failed on connect: Ee(02). Not connected to emulator.
+
+!ENTRY Program Flash 4 -1 2015-10-18 08:26:23.160
+!MESSAGE 02: Failed on connect: Ee(02). Not connected to emulator.
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:26:42.859
+!MESSAGE Drivers loaded in 1808 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:29:11.887
+!MESSAGE Drivers loaded in 1839 milliseconds
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-18 08:31:33.529
+!MESSAGE Indexed 'lock' (21 sources, 30 headers) in 1.29 sec: 1,175 declarations; 2,909 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:31:39.359
+!MESSAGE Drivers loaded in 1818 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-10-18 08:33:22.536
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@33c3ae7b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-10-18 08:33:22.536
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-10-18 08:33:48.879
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2015-10-18 08:33:48.879
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-10-18 08:36:05.266
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@40d0dfbc): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-10-18 08:36:05.266
+!MESSAGE Interrupt failed.
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:36:22.909
+!MESSAGE Drivers loaded in 1782 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-10-18 08:43:28.183
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@2544559): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-10-18 08:43:28.183
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-10-18 08:43:34.517
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@763b314c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-10-18 08:43:34.517
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2015-10-18 08:47:19.329
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@1ee32e2e): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2015-10-18 08:47:19.329
+!MESSAGE Interrupt failed.
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:47:26.854
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:47:26.854
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:47:26.854
+!MESSAGE Not connected to emulator.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:47:26.854
+!MESSAGE Emu(0): InError. Was: Connected. CpuID: 00000000. Info: LPCLINK
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:48:00.611
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:48:00.611
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:48:00.611
+!MESSAGE Not connected to emulator.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:48:00.612
+!MESSAGE Emu(0): InError. Was: Connected. CpuID: 00000000. Info: LPCLINK
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 08:48:18.948
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:48:18.948
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:48:18.948
+!MESSAGE Not connected to emulator.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 08:48:18.948
+!MESSAGE Emu(0): InError. Was: Connected. CpuID: 00000000. Info: LPCLINK
+!SESSION 2015-10-18 08:50:14.258 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Rane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/Rane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-10-18 08:50:20.026
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-18 08:50:25.717
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2015-10-18 08:50:31.013
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-10-18 08:50:31.014
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:51:30.867
+!MESSAGE Drivers loaded in 23280 milliseconds
+
+!ENTRY com.crt.debugcommon 4 -1 2015-10-18 08:51:31.016
+!MESSAGE Error received while booting LPC-Link v1.1:
+Timeout waiting for LPC-Link v1.1 to initialize (0).
+
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:51:48.022
+!MESSAGE Drivers loaded in 2186 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 08:52:29.647
+!MESSAGE Drivers loaded in 2261 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 09:07:22.096
+!MESSAGE Drivers loaded in 2160 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 09:07:50.554
+!MESSAGE Drivers loaded in 2186 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 09:26:19.040
+!MESSAGE Drivers loaded in 2205 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 09:27:01.050
+!MESSAGE Drivers loaded in 2558 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 09:27:22.928
+!MESSAGE Drivers loaded in 2183 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 09:27:55.377
+!MESSAGE Drivers loaded in 2203 milliseconds
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-18 09:36:02.588
+!MESSAGE Indexed 'lock' (21 sources, 25 headers) in 1.14 sec: 734 declarations; 2,158 references; 5 unresolved inclusions; 11 syntax errors; 438 unresolved names (13%)
+
+!ENTRY com.crt.log 1 0 2015-10-18 10:16:03.334
+!MESSAGE Drivers loaded in 2162 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 10:17:59.704
+!MESSAGE Drivers loaded in 2197 milliseconds
+
+!ENTRY com.crt.log 1 0 2015-10-18 10:24:51.936
+!MESSAGE Drivers loaded in 2252 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2015-10-18 10:27:17.443
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 10:27:17.443
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-10-18 10:27:17.444
+!MESSAGE Not connected to emulator.
+
+!ENTRY org.eclipse.cdt.dsf 4 -1 2015-10-18 10:28:50.923
+!MESSAGE Invocation exception when calling a service event handler method
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:519)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:463)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:390)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@4adf7d5c is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:85)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:260)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:103)
+	... 13 more
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1094)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:593)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
+	... 15 more
+Root exception:
+java.util.concurrent.RejectedExecutionException: Display org.eclipse.swt.widgets.Display@4adf7d5c is disposed
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:85)
+	at org.eclipse.cdt.dsf.ui.viewmodel.AbstractVMAdapter.handleEvent(AbstractVMAdapter.java:260)
+	at org.eclipse.cdt.dsf.ui.viewmodel.datamodel.AbstractDMVMAdapter.eventDispatched(AbstractDMVMAdapter.java:103)
+	at sun.reflect.GeneratedMethodAccessor35.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:519)
+	at org.eclipse.cdt.dsf.service.DsfSession.access$2(DsfSession.java:463)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:390)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1094)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:593)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.execute(SimpleDisplayExecutor.java:77)
+	... 15 more
+!SESSION 2015-10-20 13:06:56.371 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Rane/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/Rane/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-10-20 13:07:33.036
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2015-10-20 13:07:36.763
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-10-20 13:07:36.763
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator

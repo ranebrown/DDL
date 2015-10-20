@@ -12,14 +12,17 @@
  */
 void lock() {
 	int adc = 1023;
+	delay32Ms(0,100);
 	init_timer32PWM(1, freq(430), MATCH0);	/* set timer32_1 to generate pwm signal with period, use MR0
 											 * pwm signal on PIO1_1 (labeled as AD2)
 											 */
-	delay();
+	delay32Ms(0,100);
 	enable_timer32(1);						// enable timer32_1
 	while(adc > 500) {						// rotate servo until stop hit
+		if(LPC_TMR32B1->TCR != 1)
+			LPC_TMR32B1->TCR = 1;
 		adc = ADCRead(0);
-		delay();
+		delay32Ms(0,100);
 	}
 	disable_timer32(1);						// stop rotation
 	GPIOSetValue(PORT2,7,0); // green
@@ -32,14 +35,17 @@ void lock() {
  */
 void unlock() {
 	int adc = 1023;
+	delay32Ms(0,100);
 	init_timer32PWM(1, freq(270), MATCH0);	/* set timer32_1 to generate pwm signal with period, use MR0
 											 * pwm signal on PIO1_1 (labeled as AD2)
 											 */
-	delay();
+	delay32Ms(0,100);
 	enable_timer32(1);						// enable timer32_1
 	while(adc > 500) {						// rotate servo until stop hit
+		if(LPC_TMR32B1->TCR != 1)
+			LPC_TMR32B1->TCR = 1;
 		adc = ADCRead(0);
-		delay();
+		delay32Ms(0,100);
 	}
 	disable_timer32(1);						// stop rotation
 	GPIOSetValue(PORT2,6,0); // red
@@ -52,15 +58,6 @@ void unlock() {
 int freq(float f) {
 	float v = ((1/((f)/750))*64000);
 	return (int)v;
-}
-
-/*
- * short delay
- */
-void delay() {
-	int i = 0;
-	while(i<400000)
-		i++;
 }
 
 /*

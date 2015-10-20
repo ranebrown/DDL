@@ -15,6 +15,7 @@
 #include "adc.h"
 #include "uart.h"
 #include "stdio.h"
+//#include "timer16.h"
 
 /*
  * Lock deadbolt
@@ -32,11 +33,6 @@ void unlock();
  * calculates the value needed to set the specified frequency
  */
 int freq(float f);
-
-/*
- * short delay
- */
-void delay();
 
 /*
  * initilizes pins for multi color led
