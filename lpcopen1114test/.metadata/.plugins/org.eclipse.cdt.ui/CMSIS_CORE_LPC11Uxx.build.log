@@ -1,0 +1,22 @@
+14:20:09 **** Build of configuration Debug for project CMSIS_CORE_LPC11Uxx ****
+make -r all 
+Building file: ../src/system_LPC11Uxx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC11Uxx -I"/Users/Rane/LPCXpresso/lpcopen1114test/CMSIS_CORE_LPC11Uxx/inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC11Uxx.d" -MT"src/system_LPC11Uxx.o" -MT"src/system_LPC11Uxx.d" -o "src/system_LPC11Uxx.o" "../src/system_LPC11Uxx.c"
+Finished building: ../src/system_LPC11Uxx.c
+ 
+Building target: libCMSIS_CORE_LPC11Uxx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC11Uxx.a"  ./src/system_LPC11Uxx.o   
+arm-none-eabi-ar: creating libCMSIS_CORE_LPC11Uxx.a
+Finished building target: libCMSIS_CORE_LPC11Uxx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC11Uxx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC11Uxx.a" >"libCMSIS_CORE_LPC11Uxx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    428	      4	      0	    432	    1b0	system_LPC11Uxx.o (ex libCMSIS_CORE_LPC11Uxx.a)
+ 
+
+14:20:10 Build Finished (took 229ms)
+
