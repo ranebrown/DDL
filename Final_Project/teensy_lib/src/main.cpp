@@ -5,12 +5,17 @@ extern "C"
 #define Bluetooth Serial1 // using serial port 1 for bluetooth communication
 
 int main(void) {
-    Bluetooth.begin(9600); // initialize bluetooth at 9600 buad
+
+    Bluetooth.begin(9600);  // initialize bluetooth at 9600 buad
     char c = 'a';
     int adcVal = 0;
     pinMode(A0,INPUT); // set analog pin 0 as input
     pinMode(13, OUTPUT);
     uint32_t i = 0;
+
+    // https://www.pjrc.com/teensy/td_libs_SPI.html
+    // https://github.com/xxxajk/spi4teensy3  <----For a Teensy3 library
+    //SPI.begin();   // initialize SPI communication TODO pin configs for SPI
 
     while (1) {
         if(Bluetooth.available() > 0) {
@@ -23,6 +28,8 @@ int main(void) {
             c = 'a';
         }
     }
+
+    //Flash the LED a few times then write to the terminal.
     while (1) {
         digitalWriteFast(13, HIGH);
         delay(100);
