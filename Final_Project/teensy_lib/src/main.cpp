@@ -1,15 +1,20 @@
 #include "WProgram.h"
-#include "SPI.h"
+//#include "SPI.h"
+//#include "spi4teensy3.h"
 
-const int  cs=10; //chip select (for the RTC, can change to any ss pin)
+// const int  cs=10; //chip select (for the RTC, can change to any ss pin)
 
 
 extern "C"
 
 #define Bluetooth Serial1 // using serial port 1 for bluetooth communication
 
+// int RTC_init();
+// int SetTimeDate(int d, int mo, int y, int h, int mi, int s);
+// String ReadTimeDate();
+
 int main(void) {
-    Serial.begin(9600);     // initialize Serial for the RTC
+    //Serial.begin(9600);     // initialize Serial for the RTC
     Bluetooth.begin(9600);  // initialize bluetooth at 9600 buad
     char c = 'a';
     int adcVal = 0;
@@ -22,8 +27,8 @@ int main(void) {
     //SPI.begin();   // initialize SPI communication TODO pin configs for SPI
 
     while (1) {
-        Serial.println(ReadTimeDate());
-        delay(1000);
+        //Serial.println(ReadTimeDate());
+        //delay(1000);
         if(Bluetooth.available() > 0) {
             c = Bluetooth.read();
             Bluetooth.print(c);
@@ -54,7 +59,7 @@ int main(void) {
         i++;
     }
 }
-
+/*
 int RTC_init(){
       pinMode(cs,OUTPUT); // chip select
       // start the SPI library:
@@ -140,7 +145,7 @@ String ReadTimeDate(){
     temp.concat(TimeDate[0]);
   return(temp);
 }
-
+*/
 
 
 
