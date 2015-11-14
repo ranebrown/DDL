@@ -140,7 +140,7 @@ public:
 		KINETISK_SPI0.MCR = SPI_MCR_MSTR | SPI_MCR_MDIS | SPI_MCR_HALT | SPI_MCR_PCSIS(0x1F);
 		if (mode & 0x08) ctar |= SPI_CTAR_CPOL;
 		if (mode & 0x04) {
-			ctar |= SPI_CTAR_CPHA;
+		}			ctar |= SPI_CTAR_CPHA;
 			ctar |= (ctar & 0x0F) << 8;
 		} else {
 			ctar |= (ctar & 0x0F) << 12;
