@@ -1,8 +1,7 @@
 #include "WProgram.h"
-//#include "SPI.h"
-//#include "spi4teensy3.h"
+#include "SPIFIFO.h"
 
-// const int  cs=10; //chip select (for the RTC, can change to any ss pin)
+const int  cs=10; //chip select (for the RTC, can change to any ss pin)
 
 
 extern "C"
@@ -14,7 +13,7 @@ extern "C"
 // String ReadTimeDate();
 
 int main(void) {
-    //Serial.begin(9600);     // initialize Serial for the RTC
+    Serial.begin(9600);     // initialize Serial for the RTC
     Bluetooth.begin(9600);  // initialize bluetooth at 9600 buad
     char c = 'a';
     int adcVal = 0;
@@ -24,7 +23,7 @@ int main(void) {
 
     // https://www.pjrc.com/teensy/td_libs_SPI.html
     // https://github.com/xxxajk/spi4teensy3  <----For a Teensy3 library
-    //SPI.begin();   // initialize SPI communication TODO pin configs for SPI
+    SPI.begin();   // initialize SPI communication TODO pin configs for SPI
 
     while (1) {
         //Serial.println(ReadTimeDate());
