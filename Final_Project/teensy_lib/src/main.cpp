@@ -1,5 +1,6 @@
 #include "WProgram.h"
 #include "SPIFIFO.h"
+#include "spi4teensy.h"
 
 const int  cs=10; //chip select (for the RTC, can change to any ss pin)
 
@@ -23,7 +24,7 @@ int main(void) {
 
     // https://www.pjrc.com/teensy/td_libs_SPI.html
     // https://github.com/xxxajk/spi4teensy3  <----For a Teensy3 library
-    SPIFIFOclass.begin(cs,);   // initialize SPI communication TODO pin configs for SPI
+    //    SPIFIFOclass.begin(cs,);   // initialize SPI communication TODO pin configs for SPI
 
     while (1) {
         //Serial.println(ReadTimeDate());
