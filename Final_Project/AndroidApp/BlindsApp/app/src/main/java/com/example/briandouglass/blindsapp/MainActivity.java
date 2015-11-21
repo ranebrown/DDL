@@ -1,29 +1,38 @@
 package com.example.briandouglass.blindsapp;
 
+import java.util.Calendar;
+
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.app.Activity;
 import android.content.Intent;
-import android.bluetooth.*;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.AbsSeekBar;
+import android.widget.TimePicker;
+import android.widget.TimePicker.OnTimeChangedListener;
+
 
 import app.akexorcist.bluetotohspp.library.BluetoothSPP;
 import app.akexorcist.bluetotohspp.library.BluetoothState;
 import app.akexorcist.bluetotohspp.library.DeviceList;
 
 
+
+
 public class MainActivity extends Activity {
     BluetoothSPP bt;
     Button btButton;
-    TextView text;
+    Button oTimeSetButton;
+    Button cTimeSetButton;
+    TextView timePickView;
+    TimePicker timePick;
+    SeekBar theSeekBar;
+    ProgressBar theProgressBar;
+    String time = "0000";
+    String xtime = "";
+    String level= "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,38 +49,99 @@ public class MainActivity extends Activity {
                 connect();
             }
         });
+
+        theSeekBar = (SeekBar) findViewById(R.id.setLevelSeekBar);
+        theSeekBar.setOnSeekBarChangeListener(seekBarListener);
+        theProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        timePick = (TimePicker) findViewById(R.id.timePickerWidget);
+        timePickView = (TextView) findViewById(R.id.timeView);
+
+        oTimeSetButton = (Button) findViewById(R.id.openTimeSetter);
+        cTimeSetButton = (Button) findViewById(R.id.closeTimeSetter);
+
+
+        oTimeSetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //bt.send()
+                xtime = "";
+                xtime = "o" + time;
+                timePickView.setText(xtime);
+            }
+        });
+        cTimeSetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //bt.send()
+                xtime = "";
+                xtime = "c" + time;
+                timePickView.setText(xtime);
+            }
+        });
+
+
+
+        Calendar now = Calendar.getInstance();
+        timePick.setCurrentHour(now.get(Calendar.HOUR_OF_DAY));
+        timePick.setCurrentMinute(now.get(Calendar.MINUTE));
+        timePick.setOnTimeChangedListener(new OnTimeChangedListener() {
+
+            @Override
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+
+                time = "";
+                if (hourOfDay < 10)
+                {
+                    time = time + "0" + hourOfDay;
+                }
+                else
+                {
+                    time = time + hourOfDay;
+                }
+
+
+                if (minute < 10)
+                {
+                    time = time + "0" + minute;
+                }
+                else
+                {
+                    time = time + minute;
+                }
+
+            }
+        });
+
     }//onCreate
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
+    private SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener(){
 
-    /*public void openLock(View view){
-        bt.send("o",true);
-    }//openLock
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            //When the level on the seek bar has changed, send the level to the window
 
-    public void closeLock(View view){
-        bt.send("c",true);
-    }//closeLock
-    */
-
+            if (Integer.toString(progress).length() == 2)
+            {
+                level = "p" + "00" + progress;
+            }
+            else if (Integer.toString(progress).length() == 1)
+            {
+                level = "p" + "000" + progress;
+            }
+            else
+            {
+                level = "p" + "0" + progress;
+            }
+            timePickView.setText(level);
+            theProgressBar.setProgress(progress);
+            //bt.send();
+        }
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {}
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {}
+    };
 
     public void connect()
     {
@@ -132,6 +202,7 @@ public class MainActivity extends Activity {
         });
     }
 
+
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == BluetoothState.REQUEST_CONNECT_DEVICE) {
             if(resultCode == Activity.RESULT_OK)
@@ -147,4 +218,28 @@ public class MainActivity extends Activity {
         }
     }
 
+
 }//End of Class
+
+
+
+/*    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }*/
