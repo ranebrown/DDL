@@ -36,7 +36,8 @@ void RTC_DS3234::begin(uint8_t cs){
 	pinMode(_cs, OUTPUT);				//set chip select pin as output
 	digitalWrite(_cs, HIGH); 			//set chip select high to disable SPI communications
 	dataArray[0] = 0b00000101; 	//{_BV(INTCN) | _BV(A1IE)};
-	readWrite(CONTROL_WRITE, 1); 	//Write to control register to turn on alarm 1 interrupts
+	writeOut(CONTROL_WRITE, 1);
+	//readWrite(CONTROL_WRITE, 1); 	//Write to control register to turn on alarm 1 interrupts
 	delay(10);							//not sure this is necessary
 }
 
@@ -50,13 +51,15 @@ void RTC_DS3234::setRTCDateTime(uint8_t ss, uint8_t mm, uint8_t hh, uint8_t d, u
 	dataArray[4] = bin2bcd(d);
 	dataArray[5] = bin2bcd(m);
 	dataArray[6] = bin2bcd(y);
-	readWrite(DT_WRITE, 7);
+	writeOut(DT_WRITE, 7);
+//	readWrite(DT_WRITE, 7);
 }
 
 //read the date and time from the RTC
 //data is returned in a RTCDateTime struct (see header file)
 RTCDateTime RTC_DS3234::getRTCDateTime(){
-	readWrite(DT_READ, 7);
+	readIn(DT_READ, 7);
+	//readWrite(DT_READ, 7);
 	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]),
 							bcd2bin(dataArray[2]), bcd2bin(dataArray[4]),
 							bcd2bin(dataArray[5]), bcd2bin(dataArray[6])};
@@ -70,12 +73,14 @@ void RTC_DS3234::setAlarm1(uint8_t ss, uint8_t mm, uint8_t hh){
 	dataArray[1] = bin2bcd(mm);
 	dataArray[2] = bin2bcd(hh);
 	dataArray[3] = 0b10000000;
-	readWrite(A1_WRITE, 4);
+	writeOut(A1_WRITE, 4);
+	//readWrite(A1_WRITE, 4);
 }
 
 //returns the value that Alarm1 is set to
 RTCDateTime RTC_DS3234::getAlarm1(){
-	readWrite(A1_READ, 4);
+	readIn(A1_READ, 4);
+	//readWrite(A1_READ, 4);
 	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), bcd2bin(dataArray[2]), dataArray[3],0,0};
 }
 
@@ -87,12 +92,14 @@ void RTC_DS3234::setAlarm2(uint8_t ss, uint8_t mm, uint8_t hh){
 	dataArray[1] = bin2bcd(mm);
 	dataArray[2] = bin2bcd(hh);
 	dataArray[3] = 0b10000000;
-	readWrite(A2_WRITE, 4);
+	writeOut(A1_WRITE, 4);
+	//readWrite(A2_WRITE, 4);
 }
 
 //returns the value that Alarm2 is set to
 RTCDateTime RTC_DS3234::getAlarm2(){
-	readWrite(A2_READ, 4);
+	readIn(A1_READ, 4);
+	//readWrite(A2_READ, 4);
 	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), bcd2bin(dataArray[2]), dataArray[3],0,0};
 }
 
@@ -100,9 +107,11 @@ RTCDateTime RTC_DS3234::getAlarm2(){
 //this function should be called once soon after the call to begin()
 //and MUST be called after the alarm is triggered in order to allow the alarm to be triggered again in the future
 void RTC_DS3234::clearAlarmFlags(){
-	readWrite(STATUS_READ, 1); 			//read the value of the status register
+	readIn(STATUS_READ, 1);
+	//readWrite(STATUS_READ, 1); 			//read the value of the status register
 	dataArray[0] = dataArray[0] & ~(_BV(A1F) | _BV(A2F)); //set only the alarm flags back to zero without changing any of the other bits
-	readWrite(STATUS_WRITE, 1);			//write the new status register
+	writeOut(STATUS_WRITE, 1);
+	//readWrite(STATUS_WRITE, 1);			//write the new status register
 }
 
 //simultaneously reads and writes to the RTC
@@ -110,7 +119,7 @@ void RTC_DS3234::clearAlarmFlags(){
 void RTC_DS3234::readWrite(uint8_t address, uint8_t dataLength){
 	//oldSPISettings = SPCR; //store the old SPI control register settings
 
-	spi4teensy3::init(0); //Init SPI, 24MHz, cpol = 0, cpha = 1
+	spi4teensy3::init(0,0,1); //Init SPI, 24MHz, cpol = 0, cpha = 1
 
 	digitalWrite(_cs, LOW);	//Enable the device for communication
 	spi4teensy3::send(address);
@@ -121,6 +130,35 @@ void RTC_DS3234::readWrite(uint8_t address, uint8_t dataLength){
 	}
 	digitalWrite(_cs, HIGH); //Disable the device for SPI communication
 	//SPCR = oldSPISettings;  //Reset the SPI settings
+}
+
+
+
+
+void RTC_DS3234::readIn(uint8_t address, uint8_t dataLength){
+	spi4teensy3::init(3,0,1); //Init SPI, 24MHz, cpol = 0, cpha = 1
+
+	digitalWrite(_cs, LOW);	//Enable the device for communication
+	spi4teensy3::send(address);
+	spi4teensy3::receive(dataArray, dataLength);
+
+	// for(uint8_t i = 0; i<dataLength; i++){
+	// 	dataArray[i] = spi4teensy3::receive();
+	// }
+	digitalWrite(_cs, HIGH); //Disable the device for SPI communication
+}
+
+void RTC_DS3234::writeOut(uint8_t address, uint8_t dataLength){
+	spi4teensy3::init(3,0,1); //Init SPI, 24MHz, cpol = 0, cpha = 1
+
+	digitalWrite(_cs, LOW);	//Enable the device for communication
+	spi4teensy3::send(address);
+	spi4teensy3::send(dataArray, dataLength);
+
+	// for(uint8_t i = 0; i<dataLength; i++){
+	// 	spi4teensy3::send(dataArray[i]);
+	// }
+	digitalWrite(_cs, HIGH); //Disable the device for SPI communication
 }
 
 //convert binary coded decimal to binary

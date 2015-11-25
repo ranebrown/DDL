@@ -35,6 +35,8 @@ private:
 	uint8_t oldSPISettings;
 
 	void readWrite(uint8_t address, uint8_t dataLength);
+	void readIn(uint8_t address, uint8_t dataLength);
+	void writeOut(uint8_t address, uint8_t dataLength);
 	uint8_t bcd2bin (uint8_t val);
 	uint8_t bin2bcd (uint8_t val);
 

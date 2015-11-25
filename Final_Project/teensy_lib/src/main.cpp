@@ -23,7 +23,8 @@ int main(void) {
     //uint32_t i = 0;
 
     doRTC.begin(cs);
-    doRTC.setRTCDateTime(0,10,8,11,11,11);
+                       //ss, mm, hh, d, m, y
+    doRTC.setRTCDateTime(0,  10, 8,  11,11,15);
 
     while(1){
         time = doRTC.getRTCDateTime();
@@ -34,10 +35,7 @@ int main(void) {
         Serial.print("Seconds: ");
         Serial.println(time.seconds);
 
-        // Serial.print(time.hours);
-        // Serial.print(':');
-        // Serial.println(time.minutes);
-        delay(1777);
+        delay(1000);
     }
 
 
