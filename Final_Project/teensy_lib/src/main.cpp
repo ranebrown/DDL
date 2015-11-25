@@ -1,80 +1,83 @@
 #include "WProgram.h"
-#include "SPIFIFO.h"
-#include "spi4teensy.h"
+#include <spi4teensy.h>
+#include <RTC_DS3234.h>
 
-const int  cs=10; //chip select (for the RTC, can change to any ss pin)
+const int  cs = 10; //chip select (for the RTC, can change to any ss pin)
 
 
 extern "C"
 
-#define Bluetooth Serial1 // using serial port 1 for bluetooth communication
-
-// int RTC_init();
-// int SetTimeDate(int d, int mo, int y, int h, int mi, int s);
+// void RTC_init();
+// void SetTimeDate(int d, int mo, int y, int h, int mi, int s);
 // String ReadTimeDate();
 
 int main(void) {
+    RTC_DS3234 doRTC;
+    RTCDateTime time;
     Serial.begin(9600);     // initialize Serial for the RTC
-    Bluetooth.begin(9600);  // initialize bluetooth at 9600 buad
-    char c = 'a';
-    int adcVal = 0;
-    pinMode(A0,INPUT); // set analog pin 0 as input...pin14
+    //Bluetooth.begin(9600);  // initialize bluetooth at 9600 buad
+    //char c = 'a';
+    //int adcVal = 0;
+    //pinMode(A0,INPUT); // set analog pin 0 as input...pin14
     //pinMode(13, OUTPUT);
-    uint32_t i = 0;
+    //uint32_t i = 0;
 
-    // https://www.pjrc.com/teensy/td_libs_SPI.html
-    // https://github.com/xxxajk/spi4teensy3  <----For a Teensy3 library
-    //    SPIFIFOclass.begin(cs,);   // initialize SPI communication TODO pin configs for SPI
+    doRTC.begin(cs);
+    doRTC.setRTCDateTime(0,10,8,11,11,11);
 
-    while (1) {
-        //Serial.println(ReadTimeDate());
-        //delay(1000);
-        if(Bluetooth.available() > 0) {
-            c = Bluetooth.read();
-            Bluetooth.print(c);
-        }
-        if(c == 'r') {
-            adcVal = analogRead(0); // analog reading on A0
-            Bluetooth.println(adcVal);
-            c = 'a';
-        }
+    while(1){
+        time = doRTC.getRTCDateTime();
+        Serial.print("Hours: ");
+        Serial.println(time.hours);
+        Serial.print("Minutes: ");
+        Serial.println(time.minutes);
+        Serial.print("Seconds: ");
+        Serial.println(time.seconds);
+
+        // Serial.print(time.hours);
+        // Serial.print(':');
+        // Serial.println(time.minutes);
+        delay(1777);
     }
 
-    //Flash the LED a few times then write to the terminal.
-    while (1) {
-        digitalWriteFast(13, HIGH);
-        delay(100);
-        digitalWriteFast(13, LOW);
-        delay(100);
-        digitalWriteFast(13, HIGH);
-        delay(100);
-        digitalWriteFast(13, LOW);
-        delay(100);
-        digitalWriteFast(13, HIGH);
-        delay(1000);
-        digitalWriteFast(13, LOW);
-        delay(1000);
-        Serial.print("Good Test ");
-        Serial.println(i);
-        i++;
-    }
+
+    // while (1) {
+    //     //Serial.println(ReadTimeDate());
+    //     //delay(1000);
+    //     if(Bluetooth.available() > 0) {
+    //         c = Bluetooth.read();
+    //         Bluetooth.print(c);
+    //     }
+    //     if(c == 'r') {
+    //         adcVal = analogRead(0); // analog reading on A0
+    //         Bluetooth.println(adcVal);
+    //         c = 'a';
+    //     }
+    // }
 }
+
+
+
 /*
-int RTC_init(){
+void RTC_init(){
       pinMode(cs,OUTPUT); // chip select
       // start the SPI library:
-      SPI.begin();
-      SPI.setBitOrder(MSBFIRST);
-      SPI.setDataMode(SPI_MODE3); // both mode 1 & 3 should work
+      spi4teensy3::init(0,0,1);
+      //SPIFIFO.begin(cs,SPI_CLOCK_24MHz,SPI_MODE1);
+      //SPI.begin();
+      //SPI.setBitOrder(MSBFIRST);
+      //SPI.setDataMode(SPI_MODE3); // both mode 1 & 3 should work
       //set control register
       digitalWrite(cs, LOW);
-      SPI.transfer(0x8E);
-      SPI.transfer(0x60); //60= disable Osciallator and Battery SQ wave @1hz, temp compensation, Alarms disabled
+      spi4teensy3::send(0x8E);
+      spi4teensy3::send(0x60);//60= disable Osciallator and Battery SQ wave @1hz, temp compensation, Alarms disabled
+      //SPIFIFO.write(0x8E);
+      //SPIFIFO.write(0x60);
       digitalWrite(cs, HIGH);
       delay(10);
 }
 
-int SetTimeDate(int d, int mo, int y, int h, int mi, int s){
+void SetTimeDate(int d, int mo, int y, int h, int mi, int s){
     int TimeDate [7]={s,mi,h,0,d,mo,y};
     for(int i=0; i<=6;i++){
         if(i==3)
@@ -90,8 +93,14 @@ int SetTimeDate(int d, int mo, int y, int h, int mi, int s){
         TimeDate[i]= a+(b<<4);
 
         digitalWrite(cs, LOW);
-        SPI.transfer(i+0x80);
-        SPI.transfer(TimeDate[i]);
+
+        spi4teensy3::send(i+0x80);
+        spi4teensy3::send(TimeDate[i]);
+
+        //SPIFIFO.write(i+0x80);
+        //SPIFIFO.write(TimeDate[i]);
+        //SPI.transfer(i+0x80);
+        //SPI.transfer(TimeDate[i]);
         digitalWrite(cs, HIGH);
   }
 }
@@ -103,8 +112,12 @@ String ReadTimeDate(){
         if(i==3)
             i++;
         digitalWrite(cs, LOW);
-        SPI.transfer(i+0x00);
-        unsigned int n = SPI.transfer(0x00);
+        spi4teensy3::send(i+0x00);
+        //SPIFIFO.write(i+0x00);
+        //SPI.transfer(i+0x00);
+        unsigned int n = spi4teensy3::receive();
+        //unsigned int n = SPIFIFO.read();
+        //unsigned int n = SPI.transfer(0x00);
         digitalWrite(cs, HIGH);
         int a=n & B00001111;
         if(i==2){

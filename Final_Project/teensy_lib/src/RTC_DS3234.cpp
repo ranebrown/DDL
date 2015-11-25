@@ -1,10 +1,11 @@
 //Written by Schuyler Senft-Grupp skysg@mit.edu
 //3/27/12
-//Feel free to use this code however you wish! 
+//Feel free to use this code however you wish!
 //I've changed this line
 
-#include "RTC_DS3234.h"
-#include <SPI.h>
+#include <RTC_DS3234.h>
+//#include "SPI.h"
+#include <spi4teensy.h>
 
 RTC_DS3234 RTC;
 
@@ -33,8 +34,8 @@ const uint8_t A2F = 1;
 void RTC_DS3234::begin(uint8_t cs){
 	_cs = cs;
 	pinMode(_cs, OUTPUT);				//set chip select pin as output
-	digitalWrite(_cs, HIGH); 			//set chip select high to disable SPI communications  
-	dataArray[0] = 0b00000101; 	//{_BV(INTCN) | _BV(A1IE)}; 
+	digitalWrite(_cs, HIGH); 			//set chip select high to disable SPI communications
+	dataArray[0] = 0b00000101; 	//{_BV(INTCN) | _BV(A1IE)};
 	readWrite(CONTROL_WRITE, 1); 	//Write to control register to turn on alarm 1 interrupts
 	delay(10);							//not sure this is necessary
 }
@@ -56,8 +57,8 @@ void RTC_DS3234::setRTCDateTime(uint8_t ss, uint8_t mm, uint8_t hh, uint8_t d, u
 //data is returned in a RTCDateTime struct (see header file)
 RTCDateTime RTC_DS3234::getRTCDateTime(){
 	readWrite(DT_READ, 7);
-	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), 
-							bcd2bin(dataArray[2]), bcd2bin(dataArray[4]), 
+	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]),
+							bcd2bin(dataArray[2]), bcd2bin(dataArray[4]),
 							bcd2bin(dataArray[5]), bcd2bin(dataArray[6])};
 }
 
@@ -78,6 +79,23 @@ RTCDateTime RTC_DS3234::getAlarm1(){
 	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), bcd2bin(dataArray[2]), dataArray[3],0,0};
 }
 
+//sets Alarm2 on the RTC
+//the alarm interrupt pin will go low when the RTC seconds/minutes/hours matches the values ss, mm, hh
+//after the alarm has been triggered, the user must call clearAlarmFlags to manually reset the pin to high
+void RTC_DS3234::setAlarm2(uint8_t ss, uint8_t mm, uint8_t hh){
+	dataArray[0] = bin2bcd(ss);
+	dataArray[1] = bin2bcd(mm);
+	dataArray[2] = bin2bcd(hh);
+	dataArray[3] = 0b10000000;
+	readWrite(A2_WRITE, 4);
+}
+
+//returns the value that Alarm2 is set to
+RTCDateTime RTC_DS3234::getAlarm2(){
+	readWrite(A2_READ, 4);
+	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), bcd2bin(dataArray[2]), dataArray[3],0,0};
+}
+
 //clears the alarm flags in the status register
 //this function should be called once soon after the call to begin()
 //and MUST be called after the alarm is triggered in order to allow the alarm to be triggered again in the future
@@ -90,19 +108,19 @@ void RTC_DS3234::clearAlarmFlags(){
 //simultaneously reads and writes to the RTC
 //the values in dataArray are written to the RTC, and the bytes read are stored in dataArray
 void RTC_DS3234::readWrite(uint8_t address, uint8_t dataLength){
-	oldSPISettings = SPCR; //store the old SPI control register settings
-	SPI.setBitOrder(MSBFIRST); //Set the SPI settings for the DS3234
-	SPI.setDataMode(SPI_MODE1);
-	
+	//oldSPISettings = SPCR; //store the old SPI control register settings
+
+	spi4teensy3::init(0); //Init SPI, 24MHz, cpol = 0, cpha = 1
+
 	digitalWrite(_cs, LOW);	//Enable the device for communication
-	SPI.transfer(address);	//Send the register address to read/write to
-	
+	spi4teensy3::send(address);
+
 	for(uint8_t i = 0; i<dataLength; i++){
-		dataArray[i] = SPI.transfer(dataArray[i]); //Read/write all values in array
+		dataArray[i] = spi4teensy3::receive();
+		spi4teensy3::send(dataArray[i]);
 	}
-	
 	digitalWrite(_cs, HIGH); //Disable the device for SPI communication
-	SPCR = oldSPISettings;  //Reset the SPI settings
+	//SPCR = oldSPISettings;  //Reset the SPI settings
 }
 
 //convert binary coded decimal to binary

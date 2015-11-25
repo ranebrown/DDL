@@ -1,10 +1,11 @@
 //Written by Schuyler Senft-Grupp skysg@mit.edu
 //3/27/12
-//Feel free to use this code however you wish! 
+//Feel free to use this code however you wish!
 //I've changed this line
 
 #include "RTC_DS3234.h"
-#include <SPI.h>
+#include "SPI.h"
+//#include "SPIFIFO.h"
 
 RTC_DS3234 RTC;
 
@@ -33,8 +34,8 @@ const uint8_t A2F = 1;
 void RTC_DS3234::begin(uint8_t cs){
 	_cs = cs;
 	pinMode(_cs, OUTPUT);				//set chip select pin as output
-	digitalWrite(_cs, HIGH); 			//set chip select high to disable SPI communications  
-	dataArray[0] = 0b00000101; 	//{_BV(INTCN) | _BV(A1IE)}; 
+	digitalWrite(_cs, HIGH); 			//set chip select high to disable SPI communications
+	dataArray[0] = 0b00000101; 	//{_BV(INTCN) | _BV(A1IE)};
 	readWrite(CONTROL_WRITE, 1); 	//Write to control register to turn on alarm 1 interrupts
 	delay(10);							//not sure this is necessary
 }
@@ -56,8 +57,8 @@ void RTC_DS3234::setRTCDateTime(uint8_t ss, uint8_t mm, uint8_t hh, uint8_t d, u
 //data is returned in a RTCDateTime struct (see header file)
 RTCDateTime RTC_DS3234::getRTCDateTime(){
 	readWrite(DT_READ, 7);
-	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), 
-							bcd2bin(dataArray[2]), bcd2bin(dataArray[4]), 
+	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]),
+							bcd2bin(dataArray[2]), bcd2bin(dataArray[4]),
 							bcd2bin(dataArray[5]), bcd2bin(dataArray[6])};
 }
 
@@ -93,14 +94,14 @@ void RTC_DS3234::readWrite(uint8_t address, uint8_t dataLength){
 	oldSPISettings = SPCR; //store the old SPI control register settings
 	SPI.setBitOrder(MSBFIRST); //Set the SPI settings for the DS3234
 	SPI.setDataMode(SPI_MODE1);
-	
+
 	digitalWrite(_cs, LOW);	//Enable the device for communication
 	SPI.transfer(address);	//Send the register address to read/write to
-	
+
 	for(uint8_t i = 0; i<dataLength; i++){
 		dataArray[i] = SPI.transfer(dataArray[i]); //Read/write all values in array
 	}
-	
+
 	digitalWrite(_cs, HIGH); //Disable the device for SPI communication
 	SPCR = oldSPISettings;  //Reset the SPI settings
 }

@@ -1,6 +1,6 @@
 //Written by Schuyler Senft-Grupp skysg@mit.edu
 //3/27/12
-//Feel free to use this code however you wish! 
+//Feel free to use this code however you wish!
 
 //This library makes several assumptions and does not take full advantage of all the RTC DS3234 features.
 //Below is a list of some of these limitations:
@@ -12,6 +12,7 @@
 #define __RTC_DS3234_H__
 
 #include <stdio.h>
+#include <stdint.h>
 
 typedef struct {
 	uint8_t seconds, minutes, hours, days, months, year;
@@ -25,16 +26,16 @@ public:
 	void setAlarm1(uint8_t ss, uint8_t mm, uint8_t hh);
 	RTCDateTime getAlarm1();
 	void clearAlarmFlags();
-	
+
 private:
 	uint8_t _cs;
 	uint8_t dataArray [7];
 	uint8_t oldSPISettings;
-	
+
 	void readWrite(uint8_t address, uint8_t dataLength);
 	uint8_t bcd2bin (uint8_t val);
 	uint8_t bin2bcd (uint8_t val);
-	
+
 };
 
 extern RTC_DS3234 RTC;

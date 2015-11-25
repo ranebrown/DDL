@@ -6,7 +6,7 @@
  */
 
 #if defined(__MK20DX128__) || defined(__MK20DX256__)
-#include "spi4teensy3.h"
+#include <spi4teensy.h>
 /**
  * spi4teesny3 is a library for the freescale microcontroller
  * on a teensy 3.x from http://pjrc.com
