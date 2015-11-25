@@ -22,8 +22,8 @@ const uint8_t STATUS_READ = 0x0F;
 const uint8_t STATUS_WRITE = 0x8F;
 
 //RTC DS3234 register bit functions
-const uint8_t A1IE = 0;
-const uint8_t A2IE = 1;
+// const uint8_t A1IE = 0;
+// const uint8_t A2IE = 0;
 const uint8_t INTCN = 3;
 const uint8_t A1F = 0;
 const uint8_t A2F = 1;
@@ -35,7 +35,7 @@ void RTC_DS3234::begin(uint8_t cs){
 	_cs = cs;
 	pinMode(_cs, OUTPUT);				//set chip select pin as output
 	digitalWrite(_cs, HIGH); 			//set chip select high to disable SPI communications
-	dataArray[0] = 0b00000101; 	//{_BV(INTCN) | _BV(A1IE)};
+	dataArray[0] = 0b00000111; 	//{_BV(INTCN) | _BV(A2IE) | _BV(A1IE)};
 	writeOut(CONTROL_WRITE, 1);
 	//readWrite(CONTROL_WRITE, 1); 	//Write to control register to turn on alarm 1 interrupts
 	delay(10);							//not sure this is necessary
@@ -112,6 +112,7 @@ void RTC_DS3234::clearAlarmFlags(){
 	dataArray[0] = dataArray[0] & ~(_BV(A1F) | _BV(A2F)); //set only the alarm flags back to zero without changing any of the other bits
 	writeOut(STATUS_WRITE, 1);
 	//readWrite(STATUS_WRITE, 1);			//write the new status register
+
 }
 
 //simultaneously reads and writes to the RTC

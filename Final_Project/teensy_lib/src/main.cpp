@@ -1,15 +1,17 @@
 #include "WProgram.h"
 #include <spi4teensy.h>
 #include <RTC_DS3234.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
-const int  cs = 10; //chip select (for the RTC, can change to any ss pin)
 
 
 extern "C"
 
-// void RTC_init();
-// void SetTimeDate(int d, int mo, int y, int h, int mi, int s);
-// String ReadTimeDate();
+
+
+const int  cs = 10; //chip select (for the RTC, can change to any ss pin)
+void led_isr();
 
 int main(void) {
     RTC_DS3234 doRTC;
@@ -19,13 +21,30 @@ int main(void) {
     //char c = 'a';
     //int adcVal = 0;
     //pinMode(A0,INPUT); // set analog pin 0 as input...pin14
-    //pinMode(13, OUTPUT);
+    pinMode(23, OUTPUT);
     //uint32_t i = 0;
 
-    doRTC.begin(cs);
-                       //ss, mm, hh, d, m, y
-    doRTC.setRTCDateTime(0,  10, 8,  11,11,15);
+    digitalWrite(23,HIGH);
+    delay(200);
+    digitalWrite(23,LOW);
+    delay(200);
+    digitalWrite(23,HIGH);
+    delay(200);
+    digitalWrite(23,LOW);
+    //sei();
+    interrupts();
+    //attachInterrupt(1,led_isr,FALLING);
 
+    doRTC.begin(cs);
+    doRTC.clearAlarmFlags();
+                       //ss,  mm, hh, d, m, y
+    doRTC.setRTCDateTime(00,  10, 8, 11,11,15);
+                  //ss, mm, hh
+    doRTC.setAlarm1(5, 10, 8);
+    delay(500);
+    doRTC.clearAlarmFlags();
+    //doRTC.setAlarm2(20, 10, 8);
+    //doRTC.clearAlarmFlags();
     while(1){
         time = doRTC.getRTCDateTime();
         Serial.print("Hours: ");
@@ -54,8 +73,30 @@ int main(void) {
     // }
 }
 
+void led_isr(){
+    digitalWrite(23,HIGH);
+    //Flip bit 2 of PORT C (pin 23)
+    // if (PINC & (1<<2)) {
+    // /* Pin C2 is High */
+    //     digitalWrite(23,HIGH);
+    // } else {
+    // /* Pin D2 is Low */
+    //     digitalWrite(23,HIGH);
+    // }
+}
 
 
+
+
+
+
+
+
+
+
+// void RTC_init();
+// void SetTimeDate(int d, int mo, int y, int h, int mi, int s);
+// String ReadTimeDate();
 /*
 void RTC_init(){
       pinMode(cs,OUTPUT); // chip select
