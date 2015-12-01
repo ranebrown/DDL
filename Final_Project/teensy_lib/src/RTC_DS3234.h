@@ -25,7 +25,7 @@ public:
 	RTCDateTime getRTCDateTime();
 	void setAlarm1(uint8_t ss, uint8_t mm, uint8_t hh);
 	RTCDateTime getAlarm1();
-	void setAlarm2(uint8_t ss, uint8_t mm, uint8_t hh);
+	void setAlarm2(uint8_t mm, uint8_t hh);
 	RTCDateTime getAlarm2();
 	void clearAlarmFlags();
 

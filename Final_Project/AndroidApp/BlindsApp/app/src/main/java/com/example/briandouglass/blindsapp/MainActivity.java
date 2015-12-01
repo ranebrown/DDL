@@ -41,14 +41,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Bluetooth stuff
-        final Button connect = (Button)findViewById(R.id.btConnectButton);
-        connect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                connect();
-            }
-        });
+
 
         theSeekBar = (SeekBar) findViewById(R.id.setLevelSeekBar);
         theSeekBar.setOnSeekBarChangeListener(seekBarListener);
@@ -60,23 +53,31 @@ public class MainActivity extends Activity {
         oTimeSetButton = (Button) findViewById(R.id.openTimeSetter);
         cTimeSetButton = (Button) findViewById(R.id.closeTimeSetter);
 
+        //Bluetooth stuff
+        final Button connect = (Button)findViewById(R.id.btConnectButton);
+        connect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                connect();
+            }
+        });
 
         oTimeSetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //bt.send()
                 xtime = "";
                 xtime = "o" + time;
                 timePickView.setText(xtime);
+                //bt.send(xtime);
             }
         });
         cTimeSetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //bt.send()
                 xtime = "";
                 xtime = "c" + time;
                 timePickView.setText(xtime);
+                //bt.send(xtime);
             }
         });
 
@@ -91,22 +92,18 @@ public class MainActivity extends Activity {
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
 
                 time = "";
-                if (hourOfDay < 10)
-                {
+                if (hourOfDay < 10) {
                     time = time + "0" + hourOfDay;
                 }
-                else
-                {
+                else {
                     time = time + hourOfDay;
                 }
 
 
-                if (minute < 10)
-                {
+                if (minute < 10) {
                     time = time + "0" + minute;
                 }
-                else
-                {
+                else {
                     time = time + minute;
                 }
 
@@ -135,7 +132,7 @@ public class MainActivity extends Activity {
             }
             timePickView.setText(level);
             theProgressBar.setProgress(progress);
-            //bt.send();
+            bt.send(level, false);
         }
         @Override
         public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -185,6 +182,8 @@ public class MainActivity extends Activity {
             public void onDeviceDisconnected() {
                 // Do something when connection was disconnected
                 btButton.setText("Disconnnected");
+                int i;
+                for(i=0;i<5;i=i+1) connect(); //Try to reconnect 5 times
             }
 
             public void onDeviceConnectionFailed() {
@@ -195,7 +194,13 @@ public class MainActivity extends Activity {
 
         bt.setOnDataReceivedListener(new BluetoothSPP.OnDataReceivedListener() {
             public void onDataReceived(byte[] data, String message) {
-
+                if(data[0] == 'r'){
+                    timePickView.setText("rx'd:" + data);
+                }
+                else{
+                    theProgressBar.setProgress(data[1]);
+                    timePickView.setText(data[1]);
+                }
                 btButton.setText("GOT DATA!");
 
             }

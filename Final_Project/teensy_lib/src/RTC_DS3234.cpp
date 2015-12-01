@@ -80,26 +80,23 @@ void RTC_DS3234::setAlarm1(uint8_t ss, uint8_t mm, uint8_t hh){
 //returns the value that Alarm1 is set to
 RTCDateTime RTC_DS3234::getAlarm1(){
 	readIn(A1_READ, 4);
-	//readWrite(A1_READ, 4);
 	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), bcd2bin(dataArray[2]), dataArray[3],0,0};
 }
 
 //sets Alarm2 on the RTC
 //the alarm interrupt pin will go low when the RTC seconds/minutes/hours matches the values ss, mm, hh
 //after the alarm has been triggered, the user must call clearAlarmFlags to manually reset the pin to high
-void RTC_DS3234::setAlarm2(uint8_t ss, uint8_t mm, uint8_t hh){
-	dataArray[0] = bin2bcd(ss);
-	dataArray[1] = bin2bcd(mm);
-	dataArray[2] = bin2bcd(hh);
-	dataArray[3] = 0b10000000;
-	writeOut(A1_WRITE, 4);
-	//readWrite(A2_WRITE, 4);
+void RTC_DS3234::setAlarm2(uint8_t mm, uint8_t hh){
+	dataArray[0] = bin2bcd(mm);
+	dataArray[1] = bin2bcd(hh);
+	//dataArray[2] = bin2bcd(hh);
+	dataArray[2] = 0b10000000;
+	writeOut(A2_WRITE, 3);
 }
 
 //returns the value that Alarm2 is set to
 RTCDateTime RTC_DS3234::getAlarm2(){
-	readIn(A1_READ, 4);
-	//readWrite(A2_READ, 4);
+	readIn(A2_READ, 4);
 	return (RTCDateTime) {bcd2bin(dataArray[0]), bcd2bin(dataArray[1]), bcd2bin(dataArray[2]), dataArray[3],0,0};
 }
 
