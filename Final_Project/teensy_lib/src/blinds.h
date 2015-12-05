@@ -43,4 +43,14 @@ void initRTC();
 void rtc_isr1();
 void rtc_isr2();
 
+// parse buffer for a command
+	/*
+	s0000 initial rtc time
+	o0000 set open time
+	c0000 set close time
+	p0000 percentage to open 
+	*/
+	// return 0 success, 1 bad command in buffer
+int parse(char *buff, int *ind);
+
 #endif

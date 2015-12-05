@@ -37,7 +37,7 @@ void rotCount() {
 
 // set blinds open/close to given percentage
 void setPerc(int p) {
-	// IF GOING TO 100% CHECK CURRENT
+	/************** TODO -- send current percentage back to phone ***********/
 	
 	int x = (maxRot*p)/100;
 	if(x > maxRot) {
@@ -73,7 +73,7 @@ void setPerc(int p) {
 }
 
 // initialize RTC
-void initRTC(){
+void initRTC() {
 	// RTC interrupts
     attachInterrupt(rtcIP,rtc_isr1,FALLING);
     attachInterrupt(rtcIP,rtc_isr2,FALLING);
@@ -86,7 +86,73 @@ void initRTC(){
 void rtc_isr1() {
 	doRTC.clearAlarmFlags();
 }
-void rtc_isr2(){
+void rtc_isr2() {
 	doRTC.clearAlarmFlags();
 }
+
+// parse buffer for a command
+	/*
+	s0000 initial rtc time
+	o0000 set open time
+	c0000 set close time
+	p0000 percentage to open 
+	*/
+int parse(char *buff, int *ind) {
+	char cmd = buff[0];
+	int min=0, hour=0;
+	int p = 0;
+
+	// convert chars in buffer to ints
+	int d1,d2,d3,d4;
+	d1 = buff[1] - '0';
+	d2 = buff[2] - '0';
+	d3 = buff[3] - '0';
+	d4 = buff[4] - '0';
+
+	switch(cmd) {
+		case 's': // set initial rtc date and time
+			d1 = d1*10;
+			min = d1+d2;
+			d3 = d3*10;
+			hour = d3+d4;
+							   //ss,  mm,  hh,   d, m,  y
+    		doRTC.setRTCDateTime(00,  min, hour, 8, 12, 15);
+    		*ind = 0; // reset buffer index to 0
+    		return 0;
+			break;
+		case 'o': // set time to open blinds
+			d1 = d1*10;
+			min = d1+d2;
+			d3 = d3*10;
+			hour = d3+d4;
+		              	//ss, mm, hh
+    		doRTC.setAlarm1(0, min, hour);
+    		*ind = 0; // reset buffer index to 0
+    		return 0;
+			break;
+		case 'c':	// set time to close blinds
+			d1 = d1*10;
+			min = d1+d2;
+			d3 = d3*10;
+			hour = d3+d4;
+		              	// mm, hh
+    		doRTC.setAlarm2(min, hour);
+    		*ind = 0; // reset buffer index to 0
+    		return 0;
+			break;
+		case 'p':	// set blind position to specific percentage
+			d2 = d2*100;
+			d3 = d3*10;
+			p = d2+d3+d4;
+			setPerc(p);
+			*ind = 0; // reset buffer index to 0
+			return 0;
+			break;
+		default: // bad command in buffer
+			*ind = 0; // reset buffer index to 0
+			return 1;
+			break;
+	}
+}
+
 

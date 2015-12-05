@@ -14,23 +14,19 @@ int main(void) {
     pinMode(rtcIP,INPUT);
 
     // buffer for recieved/sent commands
-    char buff[10];
-    int index = 0;
+    char rxBuff[5];
+    char txBuff[5];
+    int i = 0;
+    int j = 0;
+    int *indRX = &i;
+    int *indTX = &j;
     
     int myP = 0;            // used for testing the set percentage to open/close
 
     // Interrupt from read switch to track blinds position
     attachInterrupt(2, rotCount, FALLING);    
 
-    initRTC(); // initialize real time clock
-
-    /* RTC functions
-    doRTC.setRTCDateTime(00,  10, 8, 11,11,15);
-                  //ss, mm, hh
-    doRTC.setAlarm1(5, 10, 8);
-                  //mm, hh
-    doRTC.setAlarm2(11, 8);  
-    */            
+    initRTC(); // initialize real time clock           
 
     while (1) {
         // check if start button pressed
@@ -48,25 +44,34 @@ int main(void) {
         // store command in buffer
         if(Bluetooth.available() > 0) {
             c = Bluetooth.read();
-            if(index < 10) {
-                buff[index] = c;
-                index++;
-            }
-            else {
-                Bluetooth.print("Buffer full\r\n");
+            if(i < 5) {
+                rxBuff[i] = c;
+                i++;
             }
         }
 
         // parse command
+        if(i >= 4)
+            parse(rxBuff, indRX);
+
+
+/************** BELOW IS FOR TESTING PURPOSES ****************************************************/
+
+        // grab command
+        if(Serial.available() > 0) {
+            c = Serial.read();
+        }
+
+        // print buffer
         if(c == 'p') {
-            for(index = 0; index < 10; index++) {
-                Bluetooth.print(buff[index]);
+            for(i = 0; i < 5; i++) {
+                Serial.print(rxBuff[i]);
             }
-            index = 0;
+            i = 0;
             c = 'a';
         }
 
-        // manual movement - testing
+        // set percentage to open/close
         if(c == 'i') {
             myP += 10;
             if(myP>=100)
@@ -85,9 +90,8 @@ int main(void) {
             setPerc(myP);
             c = 'a';
         }
-        if(Serial.available() > 0) {
-            c = Serial.read();
-        }
+        
+        // manual movement
         if(c == 'l') {
             left();
             c = 'a';
@@ -100,6 +104,8 @@ int main(void) {
             stop();
             c = 'a';
         }
+
+        // print stored rotations
         if(c=='q') {
             Serial.print("max: ");
             Serial.println(maxRot);
@@ -107,11 +113,5 @@ int main(void) {
             Serial.println(currRot);
             c = 'a';
         }
-
-        // s0000 initial rtc time
-        // p0000 percentage to open 
-        // o0000 set open time
-        // c0000 set close time
-        // send current percentage back to phone
     }
 }
