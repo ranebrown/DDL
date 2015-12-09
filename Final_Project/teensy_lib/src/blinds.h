@@ -20,6 +20,8 @@ extern RTC_DS3234 doRTC; 	// rtc class
 extern int currRot;
 extern int maxRot;
 extern int dir;
+extern int openF;
+extern int closeF;
 
 // turn servo left
 void left();
@@ -39,9 +41,8 @@ void setPerc(int p);
 // initialize RTC
 void initRTC();
 
-// rtc ISR's
+// rtc ISR
 void rtc_isr1();
-void rtc_isr2();
 
 // parse buffer for a command
 	/*

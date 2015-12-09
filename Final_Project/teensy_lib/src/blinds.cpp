@@ -4,6 +4,8 @@ int currRot = 0;
 int maxRot = 0;
 int dir = 0;
 RTC_DS3234 doRTC; // rtc class
+int openF = 0;
+int closeF = 0;
 
 // turn servo left
 void left() {
@@ -40,6 +42,7 @@ void setPerc(int p) {
 	/************** TODO -- send current percentage back to phone ***********/
 	
 	int x = (maxRot*p)/100;
+	float currP = currRot/maxRot;
 	if(x > maxRot) {
 		x = maxRot;
 	}
@@ -48,6 +51,8 @@ void setPerc(int p) {
 	   right();
         // measure current drawn by motor to detect full open position
         while((analogRead(A2) - analogRead(A1)) < 150) {
+        	currP = 100*currRot/maxRot;
+			Serial.println(currP);
         	if(currRot == maxRot)
         		break;
             delay(20);
@@ -70,23 +75,30 @@ void setPerc(int p) {
         }
         stop();
 	}
+	openF = 0;
+	closeF = 0;
 }
 
 // initialize RTC
 void initRTC() {
 	// RTC interrupts
     attachInterrupt(rtcIP,rtc_isr1,FALLING);
-    attachInterrupt(rtcIP,rtc_isr2,FALLING);
-
     doRTC.begin(cs);			// start rtc
     doRTC.clearAlarmFlags();	// clear alarms
 }
 
 // rtc ISR's
 void rtc_isr1() {
-	doRTC.clearAlarmFlags();
-}
-void rtc_isr2() {
+	RTCDateTime time = doRTC.getRTCDateTime();
+	RTCDateTime alarm1 = doRTC.getAlarm1();
+	if(time.minutes == alarm1.minutes && time.hours == alarm1.hours) {
+		Serial.println("in int open");
+		openF = 1;
+	}
+	else {
+		Serial.println("in int close");
+		closeF = 1;
+	}
 	doRTC.clearAlarmFlags();
 }
 
@@ -103,18 +115,23 @@ int parse(char *buff, int *ind) {
 	int p = 0;
 
 	// convert chars in buffer to ints
-	int d1,d2,d3,d4;
+	uint8_t d1,d2,d3,d4;
 	d1 = buff[1] - '0';
 	d2 = buff[2] - '0';
 	d3 = buff[3] - '0';
 	d4 = buff[4] - '0';
-
+	RTCDateTime time;
 	switch(cmd) {
 		case 's': // set initial rtc date and time
+			Serial.println("s");
 			d1 = d1*10;
-			min = d1+d2;
+			hour = d1+d2;
 			d3 = d3*10;
-			hour = d3+d4;
+			min = d3+d4;
+			delay(10);
+			Serial.print(hour);
+			Serial.print("  ");
+			Serial.println(min);
 							   //ss,  mm,  hh,   d, m,  y
     		doRTC.setRTCDateTime(00,  min, hour, 8, 12, 15);
     		*ind = 0; // reset buffer index to 0
@@ -122,25 +139,36 @@ int parse(char *buff, int *ind) {
 			break;
 		case 'o': // set time to open blinds
 			d1 = d1*10;
-			min = d1+d2;
+			hour = d1+d2;
 			d3 = d3*10;
-			hour = d3+d4;
+			min = d3+d4-1;
+			delay(10);
 		              	//ss, mm, hh
     		doRTC.setAlarm1(0, min, hour);
+    		time = doRTC.getAlarm1();
+			Serial.print(time.hours);
+			Serial.print("  ");
+			Serial.println(time.minutes);
     		*ind = 0; // reset buffer index to 0
     		return 0;
 			break;
 		case 'c':	// set time to close blinds
+			Serial.println("c");
 			d1 = d1*10;
-			min = d1+d2;
+			hour = d1+d2;
 			d3 = d3*10;
-			hour = d3+d4;
+			min = d3+d4;
+			Serial.print(hour);
+			Serial.print("  ");
+			Serial.println(min);
 		              	// mm, hh
+			delay(10);
     		doRTC.setAlarm2(min, hour);
     		*ind = 0; // reset buffer index to 0
     		return 0;
 			break;
 		case 'p':	// set blind position to specific percentage
+			Serial.println('p');
 			d2 = d2*100;
 			d3 = d3*10;
 			p = d2+d3+d4;
